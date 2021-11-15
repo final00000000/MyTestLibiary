@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    tools:context=".java.DateUtilsActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/java_tv_1"
+        style="@style/tv_style"
+        android:text="@string/java_get_current_millis" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/java_tv_2"
+        style="@style/tv_style"
+        android:text="@string/java_get_current_alldate" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/newapp_pop_shape">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/delete_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="删除图片"
+        android:textColor="@color/color3E3E3F"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorEBEBEB"
+        app:layout_constraintTop_toBottomOf="@id/delete_photo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/compile_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="编辑图片"
+        android:textColor="@color/color3E3E3F"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorEBEBEB"
+        app:layout_constraintTop_toBottomOf="@id/compile_photo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dismiss_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color3E3E3F"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".kotlin.KotlinActivity">
+
+
+    <TextView
+        android:id="@+id/tv_01"
+        style="@style/tv_style"
+        android:text="@string/DescribeWebView" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        style="@style/tv_style"
+        android:text="@string/DescribeKeyBoard" />
+
+    <TextView
+        android:id="@+id/tv_03"
+        style="@style/tv_style"
+        android:text="@string/DescribeRichText" />
+
+</LinearLayout>

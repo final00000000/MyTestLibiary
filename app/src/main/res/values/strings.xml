@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">MyDemo</string>
+
+    <string name="Describe">Hello World!\n有练习的东西直接添加按钮 跳转新页面</string>
+    <string name="Kotlin">Kotlin</string>
+    <string name="Java">Java</string>
+
+    <!--  java-->
+    <string name="java_date_utils">时间工具类</string>
+    <string name="java_get_current_millis">获取当前时间戳</string>
+    <string name="java_get_current_alldate">获取当前时间</string>
+
+    <!-- kotlin   -->
+    <string name="DescribeWebView">WebView页面</string>
+    <!--  软键盘测试页面 -->
+    <string name="DescribeKeyBoard">软键盘的弹出隐藏页面</string>
+    <string name="DescribeKeyBoardET">这是一个测试软键盘的弹出隐藏</string>
+    <string name="DescribeKeyBoardETDesc">测试防止被软键盘顶起布局</string>
+    <string name="DescribeKeyBoardCompileTV">编辑</string>
+
+    <!--  富文本 -->
+    <string name="DescribeRichText">富文本</string>
+    <string name="DescribeRichTextDesc">可以滑动</string>
+    <string name="tv_1">小号</string>
+    <string name="tv_2">标准</string>
+    <string name="tv_3">大号</string>
+    <string name="tv_4">超大</string>
 </resources>

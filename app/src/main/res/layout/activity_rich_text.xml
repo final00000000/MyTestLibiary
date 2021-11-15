@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--  关闭软键盘要传一个et 懒得改了 写一个隐藏  -->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zhang.mydemo.kotlin.richtext.RichEditor
+        android:id="@+id/rich_Editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/hcll1"
+        app:layout_constraintTop_toBottomOf="@id/et_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/DescribeRichTextDesc"
+        android:textColor="@color/colorFFC107"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/hcll1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorEBEBEB"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/hsll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_undo"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/rich_undo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_do"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/rich_do" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_1"
+                style="@style/rich_iv_style"
+                android:gravity="center"
+                android:text="@string/tv_1"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_2"
+                style="@style/rich_iv_style"
+                android:gravity="center"
+                android:text="@string/tv_2"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_3"
+                style="@style/rich_iv_style"
+                android:gravity="center"
+                android:text="@string/tv_3"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_4"
+                style="@style/rich_iv_style"
+                android:gravity="center"
+                android:text="@string/tv_3"
+                android:textSize="26sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_color"
+                style="@style/rich_iv_style"
+                android:src="@drawable/iv_color" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorEBEBEB"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/desc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_ul"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/list_ul" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_ol"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/list_ol" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_keyboard_down"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_keyboard_down"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_align_left"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_align_left" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_align_mid"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_align_mid_grey" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_align_right"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_align_right_grey" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bold"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_italic"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_italic" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_underline"
+                style="@style/rich_iv_style"
+                android:src="@mipmap/underline" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h1"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h2"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h3"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h4"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h5"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_h6"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_rich_h6" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_video"
+                style="@style/rich_iv_style"
+                android:src="@drawable/ic_video" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

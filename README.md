@@ -2,7 +2,7 @@
 
 #### 介绍
 自己进行测试的demo  
-涵盖了kotlin、Java、flutter
+涵盖了kotlin、Java  
 
 #### 软件架构
 软件架构说明
