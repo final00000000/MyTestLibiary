@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gyf.immersionbar.ImmersionBar
 import com.zhang.mydemo.R
+import org.greenrobot.eventbus.EventBus
+
 
 /**
  * @Author : zhang
@@ -11,7 +13,7 @@ import com.zhang.mydemo.R
  * @Class Describe : 描述
  * @Project Name : KotlinDemo
  */
-open class BaseActivity : AppCompatActivity() {
+class BaseActivity : AppCompatActivity() {
 
     /**
      * 是否需要使用带有TitleBar的父容器
@@ -22,9 +24,9 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ImmersionBar.with(this)
-            .autoDarkModeEnable(true)
-            .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
-            .init()
+                .autoDarkModeEnable(true)
+                .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+                .init()
 
 
         if (isUseParentLayout()) {

@@ -24,4 +24,9 @@
         style="@style/tv_style"
         android:text="@string/DescribeRichText" />
 
+    <TextView
+        android:id="@+id/tv_04"
+        style="@style/tv_style"
+        android:text="@string/DescribeRV" />
+
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.zhang.mydemo.kotlin
 import android.os.Bundle
 import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.kotlin.RecyclerView.RecyclerViewActivity
 import com.zhang.mydemo.kotlin.keyboard.KeyBoard
 import com.zhang.mydemo.kotlin.richtext.RichTextActivity
 import com.zhang.mydemo.kotlin.webview.WebViewActivity
@@ -26,6 +27,9 @@ class KotlinActivity : BaseActivity() {
         }
         tv_03.singleClick {
             startActivity<RichTextActivity>()
+        }
+        tv_04.singleClick {
+            startActivity<RecyclerViewActivity>()
         }
     }
 }

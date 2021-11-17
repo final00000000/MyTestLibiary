@@ -35,12 +35,10 @@ android {
 
 dependencies {
 
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -62,4 +60,12 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     // 日志打印器
     implementation 'com.elvishew:xlog:1.10.1'
+    //base Adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    // 约束布局
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    //Eventbus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+
 }

@@ -20,9 +20,11 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".java.DateUtilsActivity"
+            android:name=".kotlin.RecyclerView.RecyclerViewActivity"
             android:exported="false" />
-        <!-- 刘海屏适配 -->
+        <activity
+            android:name=".java.DateUtilsActivity"
+            android:exported="false" /> <!-- 刘海屏适配 -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->

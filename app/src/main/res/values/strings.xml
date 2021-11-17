@@ -25,4 +25,9 @@
     <string name="tv_2">标准</string>
     <string name="tv_3">大号</string>
     <string name="tv_4">超大</string>
+    <string name="DescribeRV">普通RecyclerView</string>
+    <string name="DescribeRVGetData">取值</string>
+    <string name="DescribeRVGetAll">全选</string>
+    <string name="DescribeRVGetUnAll">取消</string>
+
 </resources>
