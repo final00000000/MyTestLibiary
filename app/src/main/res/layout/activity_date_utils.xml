@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="0dp"
-    tools:context=".java.DateUtilsActivity">
+    tools:context=".java.date.DateUtilsActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/java_tv_1"

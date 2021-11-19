@@ -6,8 +6,8 @@ import com.zhang.mydemo.R
 import com.zhang.mydemo.kotlin.RecyclerView.RecyclerViewActivity
 import com.zhang.mydemo.kotlin.keyboard.KeyBoard
 import com.zhang.mydemo.kotlin.richtext.RichTextActivity
-import com.zhang.mydemo.kotlin.webview.WebViewActivity
 import com.zhang.mydemo.kotlin.utils.singleClick
+import com.zhang.mydemo.kotlin.webview.WebViewActivity
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import org.jetbrains.anko.startActivity
 

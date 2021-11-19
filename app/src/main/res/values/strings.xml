@@ -9,6 +9,8 @@
     <string name="java_date_utils">时间工具类</string>
     <string name="java_get_current_millis">获取当前时间戳</string>
     <string name="java_get_current_alldate">获取当前时间</string>
+    <string name="scroll">ScrollView</string>
+    <string name="starbar">星级评分</string>
 
     <!-- kotlin   -->
     <string name="DescribeWebView">WebView页面</string>

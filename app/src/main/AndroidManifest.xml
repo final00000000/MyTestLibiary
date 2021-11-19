@@ -20,10 +20,22 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".java.starbar.StarRatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.dynamicheight.DynamicRecyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.viewpager.ViewpagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.scrollview.NestedScrollViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".kotlin.RecyclerView.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".java.DateUtilsActivity"
+            android:name=".java.date.DateUtilsActivity"
             android:exported="false" /> <!-- 刘海屏适配 -->
         <meta-data
             android:name="android.max_aspect"
