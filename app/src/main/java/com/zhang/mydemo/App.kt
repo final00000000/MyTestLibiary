@@ -19,7 +19,6 @@ class App : Application() {
         val config = LogConfiguration.Builder()
             .enableThreadInfo() // 允许打印线程信息
 //            .enableBorder()     // 边框
-//            .enableBorder()
             .build()
         XLog.init(config)
 

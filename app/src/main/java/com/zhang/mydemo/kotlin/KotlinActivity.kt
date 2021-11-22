@@ -5,6 +5,7 @@ import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
 import com.zhang.mydemo.kotlin.RecyclerView.RecyclerViewActivity
 import com.zhang.mydemo.kotlin.keyboard.KeyBoard
+import com.zhang.mydemo.kotlin.pickerview.PickerDateActivity
 import com.zhang.mydemo.kotlin.richtext.RichTextActivity
 import com.zhang.mydemo.kotlin.utils.singleClick
 import com.zhang.mydemo.kotlin.webview.WebViewActivity
@@ -30,6 +31,9 @@ class KotlinActivity : BaseActivity() {
         }
         tv_04.singleClick {
             startActivity<RecyclerViewActivity>()
+        }
+        tv_05.singleClick {
+            startActivity<PickerDateActivity>()
         }
     }
 }

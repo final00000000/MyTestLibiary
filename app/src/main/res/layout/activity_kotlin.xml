@@ -29,4 +29,9 @@
         style="@style/tv_style"
         android:text="@string/DescribeRV" />
 
+    <TextView
+        android:id="@+id/tv_05"
+        style="@style/tv_style"
+        android:text="@string/DescribePickerView" />
+
 </LinearLayout>

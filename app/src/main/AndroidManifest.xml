@@ -20,6 +20,9 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".kotlin.pickerview.PickerDateActivity"
+            android:exported="false" />
+        <activity
             android:name=".java.starbar.StarRatingActivity"
             android:exported="false" />
         <activity

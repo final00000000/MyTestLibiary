@@ -4,6 +4,8 @@
     <string name="Describe">Hello World!\n有练习的东西直接添加按钮 跳转新页面</string>
     <string name="Kotlin">Kotlin</string>
     <string name="Java">Java</string>
+    <string name="cancel">取消</string>
+    <string name="submit">确定</string>
 
     <!--  java-->
     <string name="java_date_utils">时间工具类</string>
@@ -31,5 +33,9 @@
     <string name="DescribeRVGetData">取值</string>
     <string name="DescribeRVGetAll">全选</string>
     <string name="DescribeRVGetUnAll">取消</string>
+    <string name="DescribePickerView">时间选择器</string>
 
+    <string name="stateTV">审核通过</string>
+    <string name="resultTV">审核驳回</string>
+    <string name="score">请评分</string>
 </resources>
