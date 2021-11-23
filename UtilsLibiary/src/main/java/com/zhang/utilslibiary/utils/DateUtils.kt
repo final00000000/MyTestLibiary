@@ -1,6 +1,8 @@
 package com.zhang.utilslibiary.utils
 
 import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
+import android.util.Log
 import java.text.ParseException
 import java.text.ParsePosition
 import java.text.SimpleDateFormat
@@ -46,12 +48,12 @@ object DateUtil {
         //获取当前时间
         val c = Calendar.getInstance() //可以对每个时间域单独修改
         val year = c[Calendar.YEAR]
-        val month = c[Calendar.MONTH]
+        val month = c[Calendar.MONTH] + 1
         val date = c[Calendar.DATE]
         val hour = c[Calendar.HOUR_OF_DAY]
         val minute = c[Calendar.MINUTE]
         val second = c[Calendar.SECOND]
-        return year.toString() + "-" + month + 1 + "-" + date
+        return "$year-$month-$date"
     }
 
     /*
@@ -94,11 +96,11 @@ object DateUtil {
      */
     fun getNowDate(): Date {
         val currentTime = Date()
-        val formatter =
-            SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
         val dateString = formatter.format(currentTime)
         val pos = ParsePosition(8)
-        return formatter.parse(dateString, pos)
+        Log.e(TAG, "getNowDate: " + pos)
+        return formatter.parse(dateString)
     }
 
     /**

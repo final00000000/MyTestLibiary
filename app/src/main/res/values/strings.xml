@@ -13,7 +13,10 @@
     <string name="java_date_utils">时间工具类</string>
     <string name="java_get_current_millis">获取当前时间戳</string>
     <string name="java_get_current_alldate">获取当前时间</string>
+    <string name="java_get_dateToStamp">将时间转换为时间戳</string>
+    <string name="java_get_getNowDate">获取当前的时间</string>
     <string name="starbar">星级评分</string>
+    <string name="PathText">文字路径的绘制</string>
 
 
     <!-- kotlin   -->

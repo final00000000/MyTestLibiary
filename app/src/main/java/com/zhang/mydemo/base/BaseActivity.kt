@@ -9,7 +9,7 @@ import com.gyf.immersionbar.ImmersionBar
  * @Author : zhang
  * @Create Time : 2021-11-15 13:11:13
  * @Class Describe : 描述
- * @Project Name : KotlinDemo
+ * @Project Name : MyDemo
  */
 open class BaseActivity : AppCompatActivity() {
 

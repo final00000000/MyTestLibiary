@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/name_dp20"
+    tools:context=".java.jump.JumpTextActivity">
+
+    <com.zhang.mydemo.java.widget.MeiTextPathView
+        android:id="@+id/jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_dp20"
+        android:padding="@dimen/dp_10"
+        app:cycle="true"
+        app:duration="8000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:text="存在BUG"
+        app:textColor="@color/red"
+        app:textSize="32sp" />
+
+</LinearLayout>

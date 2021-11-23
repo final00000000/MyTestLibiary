@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.zhang.kotlindemo.base.BaseActivity;
 import com.zhang.mydemo.R;
 import com.zhang.mydemo.java.date.DateUtilsActivity;
+import com.zhang.mydemo.java.jump.JumpTextActivity;
 import com.zhang.mydemo.java.starbar.StarRatingActivity;
 
 public class JavaActivity extends BaseActivity {
@@ -23,6 +24,9 @@ public class JavaActivity extends BaseActivity {
         });
         findViewById(R.id.java_1).setOnClickListener(v -> {
             startActivity(new Intent(this, StarRatingActivity.class));
+        });
+        findViewById(R.id.java_2).setOnClickListener(v -> {
+            startActivity(new Intent(this, JumpTextActivity.class));
         });
     }
 }
