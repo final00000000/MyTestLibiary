@@ -8,7 +8,6 @@
     android:paddingTop="20dp"
     tools:context=".kotlin.KotlinActivity">
 
-
     <TextView
         android:id="@+id/tv_01"
         style="@style/tv_style"
@@ -27,11 +26,6 @@
     <TextView
         android:id="@+id/tv_04"
         style="@style/tv_style"
-        android:text="@string/DescribeRV" />
-
-    <TextView
-        android:id="@+id/tv_05"
-        style="@style/tv_style"
-        android:text="@string/DescribePickerView" />
+        android:text="@string/DescribeBottomDialog" />
 
 </LinearLayout>

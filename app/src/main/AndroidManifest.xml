@@ -4,9 +4,10 @@
     package="com.zhang.mydemo">
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
-    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 使用照相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/><!-- 使用照相机权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /><!-- 读取联系人权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取当前wifi状态 -->
 
     <application
         android:name=".App"
@@ -19,36 +20,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".kotlin.pickerview.PickerDateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".java.starbar.StarRatingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.dynamicheight.DynamicRecyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.viewpager.ViewpagerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".java.scrollview.NestedScrollViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.RecyclerView.RecyclerViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".java.date.DateUtilsActivity"
-            android:exported="false" /> <!-- 刘海屏适配 -->
+
+        <!-- 刘海屏适配 -->
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+            android:value="2.4" />
+
+        <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+            android:value="true" />
+
+        <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" /> <!-- Android 7.0权限 -->
+            android:value="portrait|landscape" />
+
+        <!-- Android 7.0权限 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.zhang.mydemo.file_provider"
@@ -70,17 +58,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".java.JavaActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".kotlin.KotlinActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".kotlin.webview.WebViewActivity"
             android:screenOrientation="portrait" />
+
         <!--
   防止键盘弹起布局edittext
             android:windowSoftInputMode="adjustResize"
@@ -88,11 +80,29 @@
         <activity
             android:name=".kotlin.keyboard.KeyBoard"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name=".kotlin.richtext.RichTextActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".kotlin.pickerview.PickerDateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".java.starbar.StarRatingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".java.date.DateUtilsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

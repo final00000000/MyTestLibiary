@@ -4,23 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginTop="20dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_01"
+        style="@style/tv_style"
+        android:layout_weight="1"
+        android:gravity="center"
         android:text="@string/Describe"
-        style="@style/tv_style"/>
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/kotlin"
+        style="@style/tv_style"
+        android:layout_weight="2"
+        android:gravity="center"
         android:text="@string/Kotlin"
-        style="@style/tv_style" />
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/java"
+        style="@style/tv_style"
+        android:layout_weight="2"
+        android:gravity="center"
         android:text="@string/Java"
-        style="@style/tv_style" />
+        android:textSize="40sp" />
 
 </LinearLayout>

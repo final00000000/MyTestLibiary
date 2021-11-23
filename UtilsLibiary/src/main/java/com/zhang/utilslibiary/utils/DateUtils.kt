@@ -1,6 +1,6 @@
-package com.zhang.mydemo.kotlin.utils
+package com.zhang.utilslibiary.utils
 
-import java.lang.Exception
+import android.annotation.SuppressLint
 import java.text.ParseException
 import java.text.ParsePosition
 import java.text.SimpleDateFormat
@@ -12,8 +12,9 @@ import java.util.*
  * @Class Describe : 描述
  * @Project Name : KotlinDemo
  */
-object DateUtil {
 
+@SuppressLint("SimpleDateFormat")
+object DateUtil {
     /**
      * 获取当前时间戳
      */
@@ -29,12 +30,12 @@ object DateUtil {
         //获取当前时间
         val c = Calendar.getInstance() //可以对每个时间域单独修改
         val year = c[Calendar.YEAR]
-        val month = c[Calendar.MONTH]
+        val month = c[Calendar.MONTH] + 1
         val date = c[Calendar.DATE]
         val hour = c[Calendar.HOUR_OF_DAY]
         val minute = c[Calendar.MINUTE]
         val second = c[Calendar.SECOND]
-        return year.toString() + "-" + month + 1 + "-" + date + " " + hour + ":" + minute + ":" + second
+        return "$year-$month-$date $hour:$minute:$second"
     }
 
     /**
@@ -268,7 +269,7 @@ object DateUtil {
     /**
      * 二个小时时间间的差值,必须保证二个时间都是"HH:MM"的格式，返回字符型的分钟
      */
-/*    fun getTwoHour(st1: String, st2: String): String {
+    fun getTwoHour(st1: String, st2: String): String {
         var kk: Array<String>? = null
         var jj: Array<String>? = null
         kk = st1.split(":").toTypedArray()
@@ -276,11 +277,9 @@ object DateUtil {
         return if (kk[0].toInt() < jj[0].toInt()) "0" else {
             val y = kk[0].toDouble() + kk[1].toDouble() / 60
             val u = jj[0].toDouble() + jj[1].toDouble() / 60
-            if (y - u > 0){
-                y - u.toString() + ""
-            }else "0"
+            if (y - u > 0) (y - u).toString() + "" else "0"
         }
-    }*/
+    }
 
     /**
      * 得到二个日期间的间隔天数
@@ -292,7 +291,7 @@ object DateUtil {
             val date = myFormatter.parse(sj1)
             val mydate = myFormatter.parse(sj2)
             (date.time - mydate.time) / (24 * 60 * 60 * 1000)
-        } catch (e: Exception) {
+        } catch (e: java.lang.Exception) {
             return ""
         }
         return day.toString() + ""
@@ -309,7 +308,7 @@ object DateUtil {
             val Time = date1.time / 1000 + jj.toInt() * 60
             date1.time = Time * 1000
             mydate1 = format.format(date1)
-        } catch (e: Exception) {
+        } catch (e: java.lang.Exception) {
         }
         return mydate1
     }
@@ -326,7 +325,7 @@ object DateUtil {
             d.time = myTime * 1000
             mdate = format.format(d)
             mdate
-        } catch (e: Exception) {
+        } catch (e: java.lang.Exception) {
             ""
         }
     }
@@ -505,7 +504,7 @@ object DateUtil {
         try {
             date = myFormatter.parse(date1)
             mydate = myFormatter.parse(date2)
-        } catch (e: Exception) {
+        } catch (e: java.lang.Exception) {
         }
         return (date!!.time - mydate!!.time) / (24 * 60 * 60 * 1000)
     }

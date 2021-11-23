@@ -9,19 +9,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.luck.picture.lib.PictureSelector
 import com.luck.picture.lib.config.PictureConfig
 import com.luck.picture.lib.config.PictureMimeType
 import com.luck.picture.lib.entity.LocalMedia
+import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
-import com.zhang.mydemo.kotlin.utils.GlideEngine
-import com.zhang.mydemo.kotlin.utils.singleClick
+import com.zhang.utilslibiary.utils.GlideEngine
+import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_rich_text.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 
-class RichTextActivity : AppCompatActivity() {
+class RichTextActivity : BaseActivity() {
 
 
     //编辑图片的pop

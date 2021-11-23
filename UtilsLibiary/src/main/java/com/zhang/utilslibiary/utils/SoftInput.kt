@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.utils
+package com.zhang.utilslibiary.utils
 import android.app.Activity
 import android.content.Context
 import android.view.View

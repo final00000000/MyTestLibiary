@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F44336</color>
+
     <color name="color005BAB">#005BAB</color>
     <color name="color00BCD4">#00BCD4</color>
     <color name="colorFFC107">#FFC107</color>
@@ -17,5 +18,7 @@
     <color name="colorBBBBBB">#BBBBBB</color>
     <color name="colorF8F8F8">#F8F8F8</color>
     <color name="color979797">#979797</color>
+    <color name="color000000">#000000</color>
+    <color name="colorD8D8D8">#D8D8D8</color>
 
 </resources>

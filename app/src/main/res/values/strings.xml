@@ -1,18 +1,20 @@
 <resources>
     <string name="app_name">MyDemo</string>
 
-    <string name="Describe">Hello World!\n有练习的东西直接添加按钮 跳转新页面</string>
+    <string name="Describe">Hello World</string>
     <string name="Kotlin">Kotlin</string>
     <string name="Java">Java</string>
     <string name="cancel">取消</string>
-    <string name="submit">确定</string>
+    <string name="confirm">确定</string>
+    <string name="submit">提交</string>
+    <string name="close">关闭</string>
 
     <!--  java-->
     <string name="java_date_utils">时间工具类</string>
     <string name="java_get_current_millis">获取当前时间戳</string>
     <string name="java_get_current_alldate">获取当前时间</string>
-    <string name="scroll">ScrollView</string>
     <string name="starbar">星级评分</string>
+
 
     <!-- kotlin   -->
     <string name="DescribeWebView">WebView页面</string>
@@ -29,11 +31,10 @@
     <string name="tv_2">标准</string>
     <string name="tv_3">大号</string>
     <string name="tv_4">超大</string>
-    <string name="DescribeRV">普通RecyclerView</string>
     <string name="DescribeRVGetData">取值</string>
     <string name="DescribeRVGetAll">全选</string>
     <string name="DescribeRVGetUnAll">取消</string>
-    <string name="DescribePickerView">时间选择器</string>
+    <string name="DescribeBottomDialog">底部弹窗,测试通过or驳回</string>
 
     <string name="stateTV">审核通过</string>
     <string name="resultTV">审核驳回</string>

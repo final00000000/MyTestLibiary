@@ -4,7 +4,8 @@
     android:id="@+id/cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:paddingTop="@dimen/name_dp20">
 
     <!--  关闭软键盘要传一个et 懒得改了 写一个隐藏  -->
     <EditText

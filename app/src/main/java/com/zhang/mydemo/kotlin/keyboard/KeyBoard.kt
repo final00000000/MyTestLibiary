@@ -3,8 +3,8 @@ package com.zhang.mydemo.kotlin.keyboard
 import android.os.Bundle
 import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
-import com.zhang.mydemo.kotlin.utils.SoftInput
-import com.zhang.mydemo.kotlin.utils.singleClick
+import com.zhang.utilslibiary.utils.SoftInput
+import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_key_board.*
 
 
@@ -18,16 +18,12 @@ class KeyBoard : BaseActivity() {
     }
 
     fun initData() {
-        et.setOnClickListener {
-            SoftInput.showSoftInput(this@KeyBoard, et)
-            compileTV.text = "完成"
-        }
-
         //判断键盘显示还是隐藏
         SoftKeyBoardListener.setListener(this, object :
             SoftKeyBoardListener.OnSoftKeyBoardChangeListener {
             override fun keyBoardShow(height: Int) {
                 // 弹出键盘
+                compileTV.text = "完成"
             }
 
             override fun keyBoardHide(height: Int) {
@@ -50,6 +46,4 @@ class KeyBoard : BaseActivity() {
         }
 
     }
-
-
 }
