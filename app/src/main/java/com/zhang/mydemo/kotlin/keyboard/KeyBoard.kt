@@ -1,23 +1,25 @@
 package com.zhang.mydemo.kotlin.keyboard
 
 import android.os.Bundle
-import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.utilslibiary.utils.SoftInput
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_key_board.*
+import kotlinx.android.synthetic.main.layout_title.*
 
 
 class KeyBoard : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_key_board)
 
-        initData()
+    override fun getLayoutId(): Int = R.layout.activity_key_board
+
+    override fun initView() {
+        ivPageBack.singleClick { killMyself() }
+        tvPageTitle.text = "软键盘"
     }
 
-    fun initData() {
+    override fun initData() {
         //判断键盘显示还是隐藏
         SoftKeyBoardListener.setListener(this, object :
             SoftKeyBoardListener.OnSoftKeyBoardChangeListener {
@@ -44,6 +46,10 @@ class KeyBoard : BaseActivity() {
                 compileTV.text = "编辑"
             }
         }
+
+    }
+
+    override fun setListener() {
 
     }
 }

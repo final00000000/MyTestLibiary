@@ -13,11 +13,12 @@ import com.luck.picture.lib.PictureSelector
 import com.luck.picture.lib.config.PictureConfig
 import com.luck.picture.lib.config.PictureMimeType
 import com.luck.picture.lib.entity.LocalMedia
-import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.utilslibiary.utils.GlideEngine
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_rich_text.*
+import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 
@@ -27,22 +28,34 @@ class RichTextActivity : BaseActivity() {
     //编辑图片的pop
     private var popupWindow: CommonPopupWindow? = null
 
+    //图片地址
     private var currentUrl = ""
 
+    //颜色选择dialog
+    private var colorSelectDialog: ColorSelectDialog? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rich_text)
+    // 接收的颜色值
+    private var lastColor = 0
+
+
+    override fun getLayoutId(): Int = R.layout.activity_rich_text
+
+    override fun initView() {
+        ivPageBack.singleClick { killMyself() }
+        tvPageTitle.text = "富文本"
 
         // 初始化编辑器
         initRichText()
 
         // 初始化popupwindow
         initPopup()
+    }
 
-        // 下方点击事件-
-        getBottomClick()
+    override fun initData() {
 
+    }
+
+    override fun setListener() {
         rich_Editor.setOnDecorationChangeListener { text, types ->
             val flagArr = mutableListOf<String>()
             for (i in types.indices) {
@@ -85,26 +98,8 @@ class RichTextActivity : BaseActivity() {
                 iv_align_right.setImageResource(R.drawable.ic_align_right_grey)
             }
         }
-    }
 
-    private fun initRichText() {
-        //输入框显示字体的大小
-        rich_Editor.setEditorFontSize(16)
-        //输入框显示字体的颜色
-        rich_Editor.setEditorFontColor(resources.getColor(R.color.color3D3D3D))
-        //输入框背景设置
-        rich_Editor.setEditorBackgroundColor(Color.WHITE)
-        //输入框文本padding
-        rich_Editor.setPadding(10, 10, 10, 10)
-        //输入提示文本
-        rich_Editor.setPlaceholder("请开始你的创作！~")
-    }
 
-    private var colorSelectDialog: ColorSelectDialog? = null
-
-    private var lastColor = 0
-
-    fun getBottomClick() {
         iv_image.singleClick {
             //选择图片
             getPhoto()
@@ -268,6 +263,20 @@ class RichTextActivity : BaseActivity() {
             currentUrl = it
             popupWindow!!.showBottom(cl, 0.5f)
         }
+
+    }
+
+    private fun initRichText() {
+        //输入框显示字体的大小
+        rich_Editor.setEditorFontSize(16)
+        //输入框显示字体的颜色
+        rich_Editor.setEditorFontColor(resources.getColor(R.color.color3D3D3D))
+        //输入框背景设置
+        rich_Editor.setEditorBackgroundColor(Color.WHITE)
+        //输入框文本padding
+        rich_Editor.setPadding(10, 10, 10, 10)
+        //输入提示文本
+        rich_Editor.setPlaceholder("请开始你的创作！~")
     }
 
     private fun initPopup() {

@@ -9,12 +9,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.java.starbar.StarBarView
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_picker_date.*
 import kotlinx.android.synthetic.main.item_picker.*
+import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.find
 import org.jetbrains.anko.textColor
@@ -22,13 +23,19 @@ import java.util.*
 
 
 class PickerDateActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_picker_date)
-        initView()
+    override fun getLayoutId(): Int = R.layout.activity_picker_date
+
+    override fun initView() {
+        ivPageBack.singleClick { killMyself() }
+        tvPageTitle.text = "底部弹窗功能"
+
     }
 
-    fun initView() {
+    override fun initData() {
+
+    }
+
+    override fun setListener() {
         btn.singleClick {
             if (btn.text.toString() != "") {
                 btn.text = ""

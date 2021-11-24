@@ -26,6 +26,24 @@
         <item name="android:layout_margin">10dp</item>
     </style>
 
+    <style name="tv_style2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:background">@drawable/tv_bg_shape1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="tv_style3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:background">@drawable/tv_bg_shape1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
     <style name="rich_iv_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -50,4 +68,5 @@
         <!-- 是否自动开启-->
         <attr name="autoStart" format="boolean" />
     </declare-styleable>
+
 </resources>

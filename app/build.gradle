@@ -44,7 +44,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // 引入工具库
-//    implementation project(path: ':UtilsLibiary')
     implementation project(':UtilsLibiary')
 
     //kotlin 扩展库
@@ -53,15 +52,10 @@ dependencies {
 
     //以下三个为沉浸式状态栏  基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
-    // fragment快速实现（可选）
     implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
-    // kotlin扩展（可选）
     implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
     //选择图片.视频-
     implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
-    // 加载图片
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     // 日志打印器
     implementation 'com.elvishew:xlog:1.11.0'
     //base Adapter
@@ -70,9 +64,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     //Eventbus
     implementation 'org.greenrobot:eventbus:3.2.0'
-    //时间选择器
-    implementation 'com.contrarywind:Android-PickerView:4.1.9'
-
+    // GSY播放器
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.7-release-jitpack'
 
 
 }

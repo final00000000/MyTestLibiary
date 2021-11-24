@@ -3,20 +3,24 @@ package com.zhang.mydemo.kotlin.webview
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AppCompatActivity
-import com.zhang.kotlindemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_web_view.*
 
 
 class WebViewActivity : BaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_web_view)
-        initData()
+
+    override fun getLayoutId(): Int = R.layout.activity_web_view
+
+    override fun isLayoutToolbar(): Boolean {
+        return false
     }
 
-    fun initData() {
+    override fun initView() {
+
+    }
+
+    override fun initData() {
 
         // 防止链接跳到自带浏览器
         web.webViewClient = object : WebViewClient() {
@@ -32,6 +36,10 @@ class WebViewActivity : BaseActivity() {
 
         web.settings.javaScriptEnabled = true // 开启Android和js交互
         //需要添加上面这个 因为会报这个错-> You need to enable javaScript to run this app.
+
+    }
+
+    override fun setListener() {
 
     }
 }

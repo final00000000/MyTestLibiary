@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/name_dp20"
     tools:context=".java.jump.JumpTextActivity">
 
     <com.zhang.mydemo.java.widget.MeiTextPathView

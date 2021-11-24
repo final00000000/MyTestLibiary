@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".kotlin.imageorvideo.PickViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/name_dp20" />
+
+        <RelativeLayout
+            android:id="@+id/test_parent_play"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/black">
+
+            <SurfaceView
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/videoTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="已销毁"
+                android:textColor="@color/red"
+                android:textSize="40sp"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/play"
+                style="@style/tv_style1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Describe_play" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pause"
+                style="@style/tv_style1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Describe_pause" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/stop"
+                style="@style/tv_style1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Describe_stop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_single_camera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_single_nocamera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv3"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_multiple_camera" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv4"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_multiple_camera_max" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv5"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_multiple_nocamera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv6"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_image_multiple_nocamera_max" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv7"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_video_single_camera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv8"
+                style="@style/tv_style3"
+                android:layout_weight="1"
+                android:text="@string/Describe_picker_video_single_nocamera" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

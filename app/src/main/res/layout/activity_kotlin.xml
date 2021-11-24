@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="20dp"
     tools:context=".kotlin.KotlinActivity">
 
     <TextView
@@ -27,5 +26,15 @@
         android:id="@+id/tv_04"
         style="@style/tv_style"
         android:text="@string/DescribeBottomDialog" />
+
+    <TextView
+        android:id="@+id/tv_05"
+        style="@style/tv_style"
+        android:text="@string/DescribeTestGlide" />
+
+    <TextView
+        android:id="@+id/tv_06"
+        style="@style/tv_style"
+        android:text="@string/DescribeTestSelectImageOrVideo" />
 
 </LinearLayout>

@@ -21,16 +21,26 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
 
-        <!-- 刘海屏适配 -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+            android:value="2.4" /> <!-- 刘海屏适配 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+            android:value="true" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" /> <!-- Android 7.0权限 -->
+            android:value="portrait|landscape" /> <!-- 适配小米（xiaomi）刘海屏 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.zhang.mydemo.file_provider"
@@ -41,17 +51,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"
                 tools:replace="android:resource" />
-        </provider>
-
+        </provider> <!-- Android 7.0权限 -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".java.JavaActivity"
             android:exported="false"
@@ -63,15 +66,11 @@
         <activity
             android:name=".kotlin.webview.WebViewActivity"
             android:screenOrientation="portrait" />
-        <!--
-  防止键盘弹起布局edittext
-            android:windowSoftInputMode="adjustResize"
-        -->
         <activity
             android:name=".kotlin.keyboard.KeyBoard"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan" /> <!-- 防止键盘弹起布局edittextandroid:windowSoftInputMode="adjustResize" -->
         <activity
             android:name=".kotlin.richtext.RichTextActivity"
             android:exported="false"
@@ -88,11 +87,18 @@
             android:name=".java.date.DateUtilsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".java.jump.JumpTextActivity"
             android:exported="false"
-            android:screenOrientation="portrait"  />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kotlin.imageorvideo.PickViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kotlin.glide.TestGlideActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
