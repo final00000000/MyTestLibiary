@@ -1,15 +1,11 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.ui
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
-import com.elvishew.xlog.XLog
-import com.gyf.immersionbar.BarHide
-import com.gyf.immersionbar.ImmersionBar
+import com.zhang.mydemo.R
 import com.zhang.utilslibiary.utils.AppManager
 import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.base
 
 import android.app.Application
 import com.elvishew.xlog.LogConfiguration

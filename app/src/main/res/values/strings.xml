@@ -63,4 +63,7 @@
     <string name="stateTV">审核通过</string>
     <string name="resultTV">审核驳回</string>
     <string name="score">请评分</string>
+
+    <string name="Describe_test_recyclerview">RecyclerView各种练习</string>
+
 </resources>

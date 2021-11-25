@@ -39,7 +39,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/dp_10</item>
-        <item name="android:background">@drawable/tv_bg_shape1</item>
+        <item name="android:background">@drawable/tv_bg_shape2</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_margin">10dp</item>
     </style>

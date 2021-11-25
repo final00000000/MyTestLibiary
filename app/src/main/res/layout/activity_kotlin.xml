@@ -37,4 +37,9 @@
         style="@style/tv_style"
         android:text="@string/DescribeTestSelectImageOrVideo" />
 
+    <TextView
+        android:id="@+id/tv_07"
+        style="@style/tv_style"
+        android:text="@string/Describe_test_recyclerview" />
+
 </LinearLayout>

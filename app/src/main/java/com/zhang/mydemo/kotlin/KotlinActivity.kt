@@ -1,8 +1,5 @@
 package com.zhang.mydemo.kotlin
 
-import android.annotation.SuppressLint
-import android.os.Bundle
-import com.elvishew.xlog.XLog
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.kotlin.glide.TestGlideActivity
@@ -10,12 +7,11 @@ import com.zhang.mydemo.kotlin.imageorvideo.PickViewActivity
 import com.zhang.mydemo.kotlin.keyboard.KeyBoard
 import com.zhang.mydemo.kotlin.pickerview.PickerDateActivity
 import com.zhang.mydemo.kotlin.richtext.RichTextActivity
+import com.zhang.mydemo.kotlin.testrv.TestRecyclerViewActivity
 import com.zhang.mydemo.kotlin.webview.WebViewActivity
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import kotlinx.android.synthetic.main.layout_title.*
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.startActivity
 
 class KotlinActivity : BaseActivity() {
@@ -49,6 +45,9 @@ class KotlinActivity : BaseActivity() {
         }
         tv_06.singleClick {
             startActivity<PickViewActivity>()
+        }
+        tv_07.singleClick {
+            startActivity<TestRecyclerViewActivity>()
         }
     }
 }

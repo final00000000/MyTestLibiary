@@ -64,9 +64,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     //Eventbus
     implementation 'org.greenrobot:eventbus:3.2.0'
-    // GSY播放器 //完整版引入
-//     implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.7-release-jitpack'
-    implementation 'com.shuyu:GSYVideoPlayer:8.1.2'
+    // 饺子播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
 
 
 

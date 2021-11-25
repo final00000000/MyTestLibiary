@@ -1,7 +1,8 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.ui
 
 import android.view.KeyEvent
 import android.view.View
+import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.java.JavaActivity
 import com.zhang.mydemo.kotlin.KotlinActivity
@@ -9,7 +10,6 @@ import com.zhang.utilslibiary.utils.AppManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
-import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
