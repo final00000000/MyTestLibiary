@@ -18,10 +18,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        ImmersionBar
-            .with(this)
-            .hideBar(BarHide.FLAG_HIDE_BAR)
-            .init()
+//        ImmersionBar
+//            .with(this)
+//            .hideBar(BarHide.FLAG_HIDE_BAR)
+//            .init()
         initView()
     }
 

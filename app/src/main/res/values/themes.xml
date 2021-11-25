@@ -15,6 +15,12 @@
     <!-- 欢迎页专用的主题   -->
     <style name="SplashTheme" parent="Base.Theme.NoActionBar">
         <item name="android:windowBackground">@drawable/ic_pl</item>
+        //隐藏标题栏
+        <item name="windowNoTitle">true</item>
+        //窗口全屏
+        <item name="android:windowFullscreen">true</item>
+        //透明状态栏
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
 

@@ -27,12 +27,6 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
      */
     override fun isLayoutToolbar(): Boolean = true
 
-    /**
-     * 是否需要自己注册EventBus
-     * @return Boolean
-     */
-    override fun isEventbus(): Boolean = true
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppManager.addActivity(this)
@@ -71,11 +65,6 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
      * 初始化设置沉浸式状态栏
      */
     fun initImmerBar() {
-        val barColor: Int =
-            ArgbEvaluatorCompat.getInstance().evaluate(1.0f, Color.BLACK, Color.WHITE)
-        val textColor: Int =
-            ArgbEvaluatorCompat.getInstance().evaluate(1.0f, Color.WHITE, Color.BLACK)
-
         ImmersionBar.with(this)
             .statusBarDarkFont(true, 0.2f)
             .init()
@@ -83,7 +72,8 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
 
     override fun onStart() {
         super.onStart()
-        if (isEventbus()) {
+        // 存在BUG 先注释掉了
+/*        if (isEventbus()) {
             if (!EventBus.getDefault().isRegistered(this)) {
                 EventBus.getDefault().register(this)
             }
@@ -91,14 +81,14 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
             if (EventBus.getDefault().isRegistered(this)) {
                 EventBus.getDefault().unregister(this)
             }
-        }
+        }*/
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        if (EventBus.getDefault().isRegistered(this)) {
+      /*  if (EventBus.getDefault().isRegistered(this)) {
             EventBus.getDefault().unregister(this)
-        }
+        }*/
         AppManager.removeActivity(this)
     }
 

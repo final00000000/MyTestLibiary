@@ -9,6 +9,7 @@ import com.zhang.utilslibiary.utils.AppManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
+import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
@@ -21,6 +22,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initData() {
+
     }
 
     override fun setListener() {
