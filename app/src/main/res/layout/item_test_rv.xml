@@ -8,11 +8,12 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_bg"
-        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/name_dp200"
         android:layout_marginStart="@dimen/name_dp15"
         android:layout_marginEnd="@dimen/name_dp15"
-        android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_pl" />
 

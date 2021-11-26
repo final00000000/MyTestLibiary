@@ -17,6 +17,7 @@
     <string name="java_get_getNowDate">获取当前的时间</string>
     <string name="starbar">星级评分</string>
     <string name="PathText">文字路径的绘制</string>
+    <string name="TestSurfaceView">SurfaceView播放视频</string>
 
 
     <!-- kotlin   -->

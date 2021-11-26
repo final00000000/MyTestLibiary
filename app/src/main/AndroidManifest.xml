@@ -20,9 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
-
         <activity
-            android:name="com.zhang.mydemo.SplashActivity"
+            android:name=".java.ui.TestSurfaceViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -53,7 +55,7 @@
                 tools:replace="android:resource" />
         </provider> <!-- Android 7.0权限 -->
         <activity
-            android:name="com.zhang.mydemo.MainActivity"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".java.JavaActivity"
@@ -64,10 +66,10 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.WebViewActivity"
+            android:name=".kotlin.ui.activity.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.KeyBoard"
+            android:name=".kotlin.ui.activity.KeyBoard"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" /> <!-- 防止键盘弹起布局edittextandroid:windowSoftInputMode="adjustResize" -->
@@ -76,31 +78,31 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.PickerDateActivity"
+            android:name=".kotlin.ui.activity.PickerDateActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.java.ui.StarRatingActivity"
+            android:name=".java.ui.StarRatingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.date.DateUtilsActivity"
+            android:name=".java.ui.DateUtilsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.jump.JumpTextActivity"
+            android:name=".java.ui.JumpTextActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.PickViewActivity"
+            android:name=".kotlin.ui.activity.PickViewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.TestGlideActivity"
+            android:name=".kotlin.ui.activity.TestGlideActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zhang.mydemo.kotlin.ui.activity.TestRecyclerViewActivity"
+            android:name=".kotlin.ui.activity.TestRecyclerViewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
     </application>

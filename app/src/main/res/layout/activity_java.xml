@@ -22,4 +22,9 @@
         style="@style/tv_style"
         android:text="@string/PathText" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/java_3"
+        style="@style/tv_style"
+        android:text="@string/TestSurfaceView" />
+
 </LinearLayout>

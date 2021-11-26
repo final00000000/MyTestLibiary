@@ -8,6 +8,7 @@ import com.zhang.mydemo.base.BaseActivity;
 import com.zhang.mydemo.java.ui.DateUtilsActivity;
 import com.zhang.mydemo.java.ui.JumpTextActivity;
 import com.zhang.mydemo.java.ui.StarRatingActivity;
+import com.zhang.mydemo.java.ui.TestSurfaceViewActivity;
 
 public class JavaActivity extends BaseActivity {
 
@@ -35,6 +36,9 @@ public class JavaActivity extends BaseActivity {
         });
         findViewById(R.id.java_2).setOnClickListener(v -> {
             startActivity(new Intent(this, JumpTextActivity.class));
+        });
+        findViewById(R.id.java_3).setOnClickListener(v -> {
+            startActivity(new Intent(this, TestSurfaceViewActivity.class));
         });
     }
 

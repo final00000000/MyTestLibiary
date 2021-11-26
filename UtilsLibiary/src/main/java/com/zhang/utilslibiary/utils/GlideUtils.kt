@@ -129,7 +129,7 @@ object GlideUtils {
      * @param corners Int
      * @param view ImageView
      */
-    fun loadImageCorners(context: Context, url: String, corners: Int, view: ImageView) {
+    fun loadImageCorners(context: Context, url: Any, corners: Int, view: ImageView) {
         Glide.with(context)
             .load(url)
             .apply(RequestOptions.bitmapTransform(RoundedCorners(corners)))
