@@ -1,15 +1,13 @@
 package com.zhang.mydemo.java;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.zhang.mydemo.R;
 import com.zhang.mydemo.base.BaseActivity;
-import com.zhang.mydemo.java.date.DateUtilsActivity;
-import com.zhang.mydemo.java.jump.JumpTextActivity;
-import com.zhang.mydemo.java.starbar.StarRatingActivity;
+import com.zhang.mydemo.java.ui.DateUtilsActivity;
+import com.zhang.mydemo.java.ui.JumpTextActivity;
+import com.zhang.mydemo.java.ui.StarRatingActivity;
 
 public class JavaActivity extends BaseActivity {
 

@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.zhang.mydemo.java.starbar.StarBarView
+        <com.zhang.mydemo.java.widget.StarBarView
             android:id="@+id/startbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -1,4 +1,5 @@
 package com.zhang.utilslibiary.utils
+
 import android.view.View
 
 /**
@@ -6,7 +7,7 @@ import android.view.View
  */
 class SingleClickListener(
     private val isCheckLogin: Boolean = false,
-    private val click: (v: View) -> Unit
+    private val click: (v: View) -> Unit,
 ) : View.OnClickListener {
 
     companion object {

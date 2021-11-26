@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".kotlin.KotlinActivity">
+    tools:context=".kotlin.ui.activity.KotlinActivity">
 
     <TextView
         android:id="@+id/tv_01"

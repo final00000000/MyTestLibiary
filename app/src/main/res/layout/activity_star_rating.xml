@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".java.starbar.StarRatingActivity">
+    tools:context=".java.ui.StarRatingActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.zhang.mydemo.java.starbar.StarBarView
+    <com.zhang.mydemo.java.widget.StarBarView
         android:id="@+id/sbv_starbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         app:star_solid="@drawable/ic_star_yellow_selected"
         app:star_width="@dimen/dp_40" />
 
-    <com.zhang.mydemo.java.starbar.StarBarView
+    <com.zhang.mydemo.java.widget.StarBarView
         android:id="@+id/starBarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
