@@ -20,7 +20,9 @@ class KotlinActivity : BaseActivity() {
     }
 
     override fun initData() {
-/*        val networkConnected = IsNetwork.isNetworkConnected(this)
+/*
+        提交不上去了?只能提交一次?
+        val networkConnected = IsNetwork.isNetworkConnected(this)
         if (networkConnected) {
             toast("有网络")
         } else {
