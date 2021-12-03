@@ -16,6 +16,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //运行环境，要上传Google Play必须兼容64位，这里仅兼容ARM架构
+        //对于ARM架构，32 位库位于armeabi-v7a 中。64 位等效项是arm64-v8a。
+        //对于x86体系结构，查找x86（用于 32 位）和 x86_64（用于 64 位）。
+
+        ndk { abiFilters "armeabi-v7a", "armeabi-v8a" }
     }
 
     buildTypes {
@@ -24,6 +30,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +38,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -68,8 +76,5 @@ dependencies {
     implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-
-
-
 
 }

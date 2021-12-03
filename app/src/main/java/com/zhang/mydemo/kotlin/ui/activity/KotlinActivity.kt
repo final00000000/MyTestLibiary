@@ -1,11 +1,14 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
+import com.elvishew.xlog.XLog
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
+import com.zhang.utilslibiary.utils.IsNetwork
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class KotlinActivity : BaseActivity() {
 
@@ -17,7 +20,12 @@ class KotlinActivity : BaseActivity() {
     }
 
     override fun initData() {
-
+/*        val networkConnected = IsNetwork.isNetworkConnected(this)
+        if (networkConnected) {
+            toast("有网络")
+        } else {
+            toast("没有网络")
+        }*/
     }
 
     override fun setListener() {
