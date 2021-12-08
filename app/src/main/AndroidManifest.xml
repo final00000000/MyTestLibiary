@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 使用照相机权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WiFi状态-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WiFi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".base.App"
@@ -22,7 +22,7 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".java.ui.TestSurfaceViewActivity"
+            android:name=".java.ui.activity.HorizontalProActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -83,15 +83,15 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.StarRatingActivity"
+            android:name=".java.ui.activity.StarRatingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.DateUtilsActivity"
+            android:name=".java.ui.activity.DateUtilsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.JumpTextActivity"
+            android:name=".java.ui.activity.JumpTextActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -106,6 +106,16 @@
             android:name=".kotlin.ui.activity.TestRecyclerViewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".kotlin.ui.activity.HorLineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.HorizontalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.activity.TestSurfaceViewActivity"
+            android:exported="false" />
+        <activity android:name=".java.timelinetest.TimeDividerActivity" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui.widgetkt;
+package com.zhang.mydemo.kotlin.ui.widgetkt.richeditor;
 
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
@@ -22,6 +22,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.zhang.mydemo.kotlin.ui.widgetkt.Utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

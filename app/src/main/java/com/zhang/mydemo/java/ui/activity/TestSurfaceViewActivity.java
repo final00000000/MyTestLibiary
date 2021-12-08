@@ -1,4 +1,4 @@
-package com.zhang.mydemo.java.ui;
+package com.zhang.mydemo.java.ui.activity;
 
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;

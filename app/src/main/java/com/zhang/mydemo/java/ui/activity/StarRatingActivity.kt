@@ -1,4 +1,4 @@
-package com.zhang.mydemo.java.ui
+package com.zhang.mydemo.java.ui.activity
 
 import android.view.View
 import android.widget.TextView

@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui.widgetkt
+package com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor
 
 import android.content.Context
 import android.graphics.Color
@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.util.Log
 import kotlin.jvm.JvmOverloads
 import android.widget.LinearLayout
-import com.zhang.mydemo.kotlin.ui.widgetkt.ColorBoard
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup

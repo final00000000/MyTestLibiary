@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui.widgetkt;
+package com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

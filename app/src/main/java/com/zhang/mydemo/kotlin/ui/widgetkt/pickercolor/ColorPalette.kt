@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui.widgetkt
+package com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor
 
 import android.content.Context
 import android.graphics.Color
@@ -124,7 +124,8 @@ class ColorPalette @JvmOverloads constructor(
         gravity = Gravity.CENTER_HORIZONTAL
         setPadding(5, 10, 5, 2)
         colorBoard = ColorBoard(context)
-        colorPicker = ColorPicker(context)
+        colorPicker =
+            ColorPicker(context)
         lastColor = View(context)
         currColor = View(context)
         alphaSeekBar = SeekBar(context)

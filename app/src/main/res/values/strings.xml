@@ -18,6 +18,8 @@
     <string name="starbar">星级评分</string>
     <string name="PathText">文字路径的绘制</string>
     <string name="TestSurfaceView">SurfaceView播放视频</string>
+    <string name="Testorlin">竖向物流时间轴</string>
+    <string name="TestHorlin">横向物流时间轴</string>
 
 
     <!-- kotlin   -->
@@ -66,5 +68,6 @@
     <string name="score">请评分</string>
 
     <string name="Describe_test_recyclerview">RecyclerView各种练习</string>
+    <string name="Describe_test_horline">时间轴</string>
 
 </resources>

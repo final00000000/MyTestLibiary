@@ -14,10 +14,10 @@ import com.luck.picture.lib.config.PictureMimeType
 import com.luck.picture.lib.entity.LocalMedia
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
-import com.zhang.mydemo.kotlin.ui.widgetkt.ColorSelectDialog
+import com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor.ColorSelectDialog
 import com.zhang.mydemo.kotlin.ui.widgetkt.CommonPopupWindow
 import com.zhang.mydemo.kotlin.ui.widgetkt.KeyBoardUtils
-import com.zhang.mydemo.kotlin.ui.widgetkt.RichUtils
+import com.zhang.mydemo.kotlin.ui.widgetkt.richeditor.RichUtils
 import com.zhang.utilslibiary.utils.GlideEngine
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_rich_text.*

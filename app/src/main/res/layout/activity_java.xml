@@ -27,4 +27,14 @@
         style="@style/tv_style"
         android:text="@string/TestSurfaceView" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/java_4"
+        style="@style/tv_style"
+        android:text="@string/Testorlin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/java_5"
+        style="@style/tv_style"
+        android:text="@string/TestHorlin" />
+
 </LinearLayout>

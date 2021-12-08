@@ -21,11 +21,13 @@
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_date_utils.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_dynamic_recy.xml" value="0.2421875" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_glide.xml" value="0.2265625" />
-        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_java.xml" value="0.264" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_hor_line.xml" value="0.176" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_horizontal_pro.xml" value="0.23505434782608695" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_java.xml" value="0.4" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_jump_text.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_key_board.xml" value="0.2421875" />
-        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_kotlin.xml" value="0.4" />
-        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_kotlin.xml" value="0.264" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_nested_scroll_view.xml" value="0.2421875" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_pick_view.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_picker_date.xml" value="0.2421875" />
@@ -36,6 +38,10 @@
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_test_glide.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_test_recycler_view.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_test_surface_view.xml" value="0.24114583333333334" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_time_divider.xml" value="0.23867753623188406" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_timeline.xml" value="0.21739130434782608" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_trace.xml" value="0.23505434782608695" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_underline_horizontal.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_video.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_view_pager.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/activity_viewpager.xml" value="0.2" />
@@ -45,15 +51,22 @@
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/demo_pics_rv_item.xml" value="0.121875" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/demo_viewpage_ims_item.xml" value="0.2421875" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/dynamic_view_toast_custom.xml" value="0.24114583333333334" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_horizontal.xml" value="0.4" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_picker.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_score.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_test_rv.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_test_rv_footer.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_test_rv_header.xml" value="0.24114583333333334" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/layout_common.xml" value="0.1109375" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/layout_title.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/newapp_pop_picture.xml" value="0.24114583333333334" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/node_item.xml" value="0.1" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/picker_item.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/recycler_view_item.xml" value="0.264" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/trace_button.xml" value="0.1" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/trace_image.xml" value="0.1" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/trace_marker_text.xml" value="0.1" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/trace_time.xml" value="0.1" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13802083333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25729166666666664" />
       </map>

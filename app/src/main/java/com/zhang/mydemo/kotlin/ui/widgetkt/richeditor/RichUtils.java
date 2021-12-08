@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui.widgetkt;
+package com.zhang.mydemo.kotlin.ui.widgetkt.richeditor;
 
 import android.text.TextUtils;
 
