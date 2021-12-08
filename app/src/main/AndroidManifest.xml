@@ -63,7 +63,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kotlin.ui.activity.KotlinActivity"
+            android:name=".kotlin.KotlinActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

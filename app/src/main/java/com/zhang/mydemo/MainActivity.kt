@@ -4,7 +4,7 @@ import android.view.KeyEvent
 import android.view.View
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.java.JavaActivity
-import com.zhang.mydemo.kotlin.ui.activity.KotlinActivity
+import com.zhang.mydemo.kotlin.KotlinActivity
 import com.zhang.utilslibiary.utils.AppManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*

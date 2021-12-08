@@ -1,7 +1,8 @@
-package com.zhang.mydemo.kotlin.ui.activity
+package com.zhang.mydemo.kotlin
 
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.kotlin.ui.activity.*
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import kotlinx.android.synthetic.main.layout_title.*
