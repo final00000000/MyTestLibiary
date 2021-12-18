@@ -51,5 +51,8 @@ class KotlinActivity : BaseActivity() {
         tv_08.singleClick {
             startActivity<HorLineActivity>()
         }
+        tv_09.singleClick {
+            startActivity<SearchActivity>()
+        }
     }
 }

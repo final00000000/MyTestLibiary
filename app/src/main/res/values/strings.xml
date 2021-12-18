@@ -69,5 +69,6 @@
 
     <string name="Describe_test_recyclerview">RecyclerView各种练习</string>
     <string name="Describe_test_horline">时间轴</string>
+    <string name="Describe_test_search">搜索</string>
 
 </resources>

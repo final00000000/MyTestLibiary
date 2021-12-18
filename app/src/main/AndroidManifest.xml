@@ -22,6 +22,9 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".kotlin.ui.activity.SearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".java.ui.activity.HorizontalProActivity"
             android:exported="false" />
         <activity

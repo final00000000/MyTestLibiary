@@ -552,7 +552,7 @@ object DateUtil {
         if (i == 0) return ""
         var jj = ""
         for (k in 0 until i) {
-            jj = jj + jjj.nextInt(9)
+            jj += jjj.nextInt(9)
         }
         return jj
     }

@@ -73,4 +73,6 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.2.0'
     // 饺子播放器
     implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
+    //搜索
+    implementation 'com.github.YangsBryant:BSearchEdit:1.0.8'
 }

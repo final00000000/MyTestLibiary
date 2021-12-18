@@ -46,5 +46,9 @@
         android:id="@+id/tv_08"
         style="@style/tv_style"
         android:text="@string/Describe_test_horline" />
+    <TextView
+        android:id="@+id/tv_09"
+        style="@style/tv_style"
+        android:text="@string/Describe_test_search" />
 
 </LinearLayout>

@@ -26,5 +26,8 @@
     <color name="gray_deep">#999</color>
     <color name="tv_grey">#989898</color>
     <color name="grey">#b4b4b4</color>
+    <color name="colorDefault">#ffffff</color>
+    <color name="colorBackground">#f1f0f6</color>
+    <color name="colorText">#9b9b9b</color>
 
 </resources>

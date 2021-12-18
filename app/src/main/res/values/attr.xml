@@ -50,4 +50,18 @@
             <enum name="Bottom" value="3"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="HighLightTextView">
+        <attr name="heightLightColor" format="color" />
+        <attr name="heightLightText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Search_View">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" />
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+
 </resources>
