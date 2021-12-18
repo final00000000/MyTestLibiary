@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Gravity
+import android.view.View
+import android.view.ViewGroup
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.kotlin.model.bean.User
 import com.zhang.mydemo.kotlin.ui.adapter.SearchAdapter
+import com.zhang.utilslibiary.utils.PopupWindowUtils
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -48,6 +52,14 @@ class SearchActivity : BaseActivity() {
         search_rv.adapter = sAdapter
         sAdapter.setNewInstance(seList)
 
+        if (et_search.text.toString().isNotEmpty()) {
+            clear.visibility = View.VISIBLE
+        }
+        clear.singleClick {
+            et_search.setText("")
+            et_search.visibility = View.INVISIBLE
+        }
+
         et_search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
@@ -63,13 +75,22 @@ class SearchActivity : BaseActivity() {
 
     var sList = mutableListOf<User>()
     fun QueryData(search: String) {
-        for (i in sAdapter.data.indices) {
+        val inflate = layoutInflater.inflate(R.layout.item_search_popup, null)
+        PopupWindowUtils.DownPopup(
+            this,
+            inflate,
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            Gravity.CENTER, et_search
+        )
+
+        /*for (i in sAdapter.data.indices) {
             if (sAdapter.data[i].name.contains(search)) {
                 sList.add(sAdapter.data[i])
             }
         }
         sAdapter.setNewInstance(sList)
-        sAdapter.notifyDataSetChanged()
+        sAdapter.notifyDataSetChanged()*/
     }
 
     override fun setListener() {

@@ -8,12 +8,29 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_search"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="键入查询关键字！"
         android:imeOptions="actionSearch"
+        android:maxLines="1"
         android:singleLine="true"
+        android:textCursorDrawable="@drawable/et_style"
+        app:layout_constraintEnd_toStartOf="@id/clear"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/name_dp10"
+        android:paddingEnd="@dimen/name_dp10"
+        android:src="@drawable/clear"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/et_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_search"
+        tools:visibility="visible" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_rv"

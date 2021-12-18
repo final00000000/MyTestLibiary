@@ -74,5 +74,5 @@ dependencies {
     // 饺子播放器
     implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
     //搜索
-    implementation 'com.github.YangsBryant:BSearchEdit:1.0.8'
+//    implementation 'com.github.YangsBryant:BSearchEdit:1.0.8'
 }
