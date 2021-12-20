@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:id="@+id/poRV"
-    android:background="@color/red"
+    android:background="@color/white"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     tools:listitem="@layout/item_rv_search">
 

@@ -7,14 +7,20 @@ import android.text.TextWatcher
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.elvishew.xlog.XLog
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.kotlin.model.bean.User
 import com.zhang.mydemo.kotlin.ui.adapter.SearchAdapter
+import com.zhang.mydemo.kotlin.ui.adapter.SearchFilterAdapter
+import com.zhang.mydemo.kotlin.ui.widgetkt.popup.SearchFilterPopUpView
 import com.zhang.utilslibiary.utils.PopupWindowUtils
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.layout_title.*
+import org.jetbrains.anko.find
 
 class SearchActivity : BaseActivity() {
 
@@ -23,6 +29,7 @@ class SearchActivity : BaseActivity() {
     var seList = mutableListOf<User>()
 
     lateinit var sAdapter: SearchAdapter
+    lateinit var pAdapter: SearchFilterAdapter
 
     override fun initView() {
         addData()
@@ -67,30 +74,50 @@ class SearchActivity : BaseActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
-                QueryData(s.toString())
+                    QueryData(s.toString())
             }
-
         })
     }
 
-    var sList = mutableListOf<User>()
-    fun QueryData(search: String) {
-        val inflate = layoutInflater.inflate(R.layout.item_search_popup, null)
-        PopupWindowUtils.DownPopup(
-            this,
-            inflate,
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            Gravity.CENTER, et_search
-        )
+    var sList = arrayListOf<User>()
 
-        /*for (i in sAdapter.data.indices) {
+    private lateinit var sePopup: SearchFilterPopUpView
+
+    fun QueryData(search: String) {
+        for (i in sAdapter.data.indices) {
             if (sAdapter.data[i].name.contains(search)) {
                 sList.add(sAdapter.data[i])
             }
         }
-        sAdapter.setNewInstance(sList)
-        sAdapter.notifyDataSetChanged()*/
+        sePopup = SearchFilterPopUpView.create(this@SearchActivity, sList, search).apply()
+        sePopup.setBackgroundDimEnable(true).setDimView(et_search).setDimValue(0.5F)
+        sePopup.setFocusAndOutsideEnable(false)
+        sePopup.showAsDropDown(et_search)
+        sList.clear()
+
+        /*  val inflate = layoutInflater.inflate(R.layout.item_search_popup, null)
+          PopupWindowUtils.DownPopup(
+              this,
+              inflate,
+              ViewGroup.LayoutParams.MATCH_PARENT,
+              ViewGroup.LayoutParams.WRAP_CONTENT,
+              Gravity.CENTER, et_search
+          )
+
+          val poRv = inflate.find<RecyclerView>(R.id.poRV)
+          pAdapter = SearchFilterAdapter(mutableListOf(),search)
+          poRv.adapter = pAdapter
+
+
+          for (i in sAdapter.data.indices) {
+              if (sAdapter.data[i].name.contains(search)) {
+                  sList.add(sAdapter.data[i])
+              }
+          }
+
+          XLog.e("SearchActivity_102行_2021/12/20_10:52：${sList}")
+          pAdapter.setNewInstance(sList)
+          pAdapter.notifyDataSetChanged()*/
     }
 
     override fun setListener() {
