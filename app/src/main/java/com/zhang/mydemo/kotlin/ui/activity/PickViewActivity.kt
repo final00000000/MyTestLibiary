@@ -14,8 +14,6 @@ import kotlinx.android.synthetic.main.layout_title.*
 
 class PickViewActivity : BaseActivity() {
 
-    private var currentVideoUrl = ""
-
     override fun getLayoutId(): Int = com.zhang.mydemo.R.layout.activity_pick_view
 
     override fun initData() {
@@ -47,24 +45,6 @@ class PickViewActivity : BaseActivity() {
         tv6.singleClick {
             PickerImageOrVideo.selectImageMultipleCameraMax(this, 6)
         }
-
-        tv7.singleClick {
-            PickerImageOrVideo.selectVideoCamera(this)
-        }
-        tv8.singleClick {
-            PickerImageOrVideo.selectVideoNoCamera(this)
-        }
-        play.singleClick {
-            if(currentVideoUrl!=""){
-                video.setUp(currentVideoUrl,"这是一个标题")
-            }
-        }
-
-        pause.singleClick {
-        }
-
-        stop.singleClick {
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -76,15 +56,8 @@ class PickViewActivity : BaseActivity() {
                     PictureConfig.TYPE_IMAGE -> {
                         GlideUtils.loadImage(this, selectList[0].path, image)
                     }
-                    PictureConfig.TYPE_VIDEO -> {
-                        currentVideoUrl = selectList[0].path
-                    }
                 }
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 }

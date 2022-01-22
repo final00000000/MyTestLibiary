@@ -52,7 +52,8 @@ dependencies {
     //时间选择器
     implementation 'com.contrarywind:Android-PickerView:4.1.9'
     //选择图片.视频-
-    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
+    //implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
+    implementation 'io.github.lucksiege:pictureselector:v3.0.2'
     //动态权限申请
     implementation 'com.guolindev.permissionx:permissionx:1.6.1'
 

@@ -27,7 +27,6 @@ import org.jetbrains.anko.toast
 
 class RichTextActivity : BaseActivity() {
 
-
     //编辑图片的pop
     private var popupWindow: CommonPopupWindow? = null
 

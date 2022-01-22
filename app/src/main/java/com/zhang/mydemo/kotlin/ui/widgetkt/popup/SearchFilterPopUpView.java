@@ -13,9 +13,6 @@ import com.zhang.mydemo.kotlin.ui.widgetkt.popup.basepopup.BasePopup;
 
 import java.util.ArrayList;
 
-/**
- * @author Hugo
- */
 public class SearchFilterPopUpView extends BasePopup<SearchFilterPopUpView> {
 
     private RecyclerView mSearchRv;

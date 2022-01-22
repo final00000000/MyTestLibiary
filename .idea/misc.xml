@@ -55,7 +55,7 @@
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/dynamic_view_toast_custom.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_horizontal.xml" value="0.4" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_picker.xml" value="0.24114583333333334" />
-        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_rv_search.xml" value="0.2" />
+        <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_rv_search.xml" value="0.12" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_score.xml" value="0.264" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_search_popup.xml" value="0.24114583333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/item_test_rv.xml" value="0.24114583333333334" />
@@ -74,6 +74,11 @@
         <entry key="..\:/demo/MyDemo/app/src/main/res/layout/trace_time.xml" value="0.1" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13802083333333334" />
         <entry key="..\:/demo/MyDemo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/picker_sele.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_pick_view.xml" value="0.264" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/dynamic_view_toast_custom.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_picker.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_search_popup.xml" value="0.24114583333333334" />
       </map>
     </option>
   </component>

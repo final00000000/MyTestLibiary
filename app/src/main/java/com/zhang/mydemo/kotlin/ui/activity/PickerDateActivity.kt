@@ -63,42 +63,22 @@ class PickerDateActivity : BaseActivity() {
         val cancelTV = inflate.find<TextView>(R.id.cancel)
 
         stateTV.singleClick {
+            stateTV.isPressed = true
             stateTV.textColor = Color.parseColor("#3D3D3E")
             stateTV.textSize = 20F
-            stateTV.backgroundColor = Color.parseColor("#f8f8f8")
             resultTV.textColor = Color.parseColor("#BBBBBB")
             resultTV.textSize = 16F
-            resultTV.backgroundColor = Color.parseColor("#ffffff")
-            val task: TimerTask = object : TimerTask() {
-                override fun run() {
-                    runOnUiThread {
-                        bot.dismiss()
-                        showScore()
-                    }
-                }
-            }
-            val timer = Timer()
-            timer.schedule(task, 100)
+            bot.dismiss()
+            showScore()
         }
 
         resultTV.singleClick {
             resultTV.textColor = Color.parseColor("#3D3D3E")
             resultTV.textSize = 20F
-            resultTV.backgroundColor = Color.parseColor("#f8f8f8")
 
             stateTV.textColor = Color.parseColor("#BBBBBB")
             stateTV.textSize = 16F
-            stateTV.backgroundColor = Color.parseColor("#ffffff")
-            val task: TimerTask = object : TimerTask() {
-                override fun run() {
-                    runOnUiThread {
-                        bot.dismiss()
-                        showScore()
-                    }
-                }
-            }
-            val timer = Timer()
-            timer.schedule(task, 100)
+            bot.dismiss()
         }
 
         cancelTV.singleClick {
