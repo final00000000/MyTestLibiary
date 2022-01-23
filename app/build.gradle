@@ -11,11 +11,13 @@ android {
     defaultConfig {
         applicationId "com.zhang.mydemo"
         minSdk 21
-        targetSdk 31
+        targetSdk compileSdk
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // 避免编译不必要的资源
+        resConfigs "cn"
 
         //运行环境，要上传Google Play必须兼容64位，这里仅兼容ARM架构
         //对于ARM架构，32 位库位于armeabi-v7a 中。64 位等效项是arm64-v8a。
@@ -24,8 +26,27 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "CPU_TYPE", "64"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
             minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            ndk {
+                abiFilters  "armeabi-v7a", "arm64-v8a", "x86"
+            }
+        }
+
+        release {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -61,13 +82,14 @@ dependencies {
     implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
     implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
     //选择图片.视频-
-    //implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
-    implementation 'io.github.lucksiege:pictureselector:v3.0.2'
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
+//    implementation 'io.github.lucksiege:pictureselector:v3.0.2'
     // 日志打印器
     implementation 'com.elvishew:xlog:1.11.0'
+
     //base Adapter
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
-    implementation 'com.github.liangjingkanji:BRV:1.3.51'
+
     // 约束布局
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     //Eventbus

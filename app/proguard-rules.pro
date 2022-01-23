@@ -20,6 +20,45 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+
+#--------------------------------------基础保留--------------------------------------------#
+    -keep public class * extends android.app.Fragment
+    -keep public class * extends android.app.Activity
+    -keep public class * extends android.app.Application
+    -keep public class * extends android.app.Service
+    -keep public class * extends android.content.BroadcastReceiver
+    -keep public class * extends android.content.ContentProvider
+    -keep public class * extends android.app.backup.BackupAgentHelper
+    -keep public class * extends android.preference.Preference
+    -keep public class com.google.vending.licensing.ILicensingService
+    -keep public class com.android.vending.licensing.ILicensingService
+    -keepclasseswithmembernames class * { ####
+        native <methods>;
+    }
+    -keepclassmembers class * implements java.io.Serializable {
+        static final long serialVersionUID;
+        private static final java.io.ObjectStreamField[] serialPersistentFields;
+        !static !transient <fields>;
+        !private <fields>;
+        !private <methods>;
+        private void writeObject(java.io.ObjectOutputStream);
+        private void readObject(java.io.ObjectInputStream);
+        java.lang.Object writeReplace();
+        java.lang.Object readResolve();
+    }
+    -keepnames class * implements java.io.Serializable
+    -keep class * implements android.os.Parcelable {
+        public static final android.os.Parcelable$Creator *;
+    }
+    -keep class **.R$* { *; }
+    -keepclassmembers enum * {
+        public static **[] values();
+        public static ** valueOf(java.lang.String);
+    }
+    -keepclassmembers class * extends android.app.Activity {
+        public void *(android.view.View);
+    }
+
 # eventbus 混淆
 -keepattributes *Annotation*
 -keepclassmembers class * {

@@ -22,9 +22,6 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".kotlin.ui.activity.SearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".java.ui.activity.HorizontalProActivity"
             android:exported="false" />
         <activity
@@ -86,10 +83,6 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".java.ui.activity.StarRatingActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".java.ui.activity.DateUtilsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -106,19 +99,16 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kotlin.ui.activity.TestRecyclerViewActivity"
+            android:name=".java.ui.activity.TestSurfaceViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.timelinetest.TimeDividerActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kotlin.ui.activity.HorLineActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.HorizontalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".java.ui.activity.TestSurfaceViewActivity"
-            android:exported="false" />
-        <activity android:name=".java.timelinetest.TimeDividerActivity" />
+            android:name=".kotlin.ui.activity.TestTag"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

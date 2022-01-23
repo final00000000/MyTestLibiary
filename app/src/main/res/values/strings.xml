@@ -24,13 +24,6 @@
 
     <!-- kotlin   -->
     <string name="DescribeWebView">WebView页面</string>
-    <!--  软键盘测试页面 -->
-    <string name="DescribeKeyBoard">软键盘的弹出隐藏页面</string>
-    <string name="DescribeKeyBoardET">这是一个测试软键盘的弹出隐藏</string>
-    <string name="DescribeKeyBoardETDesc">测试防止被软键盘顶起布局</string>
-    <string name="DescribeKeyBoardCompileTV">编辑</string>
-
-    <!--  富文本 -->
     <string name="DescribeRichText">富文本</string>
     <string name="DescribeRichTextDesc">可以滑动</string>
     <string name="tv_1">小号</string>
@@ -47,28 +40,22 @@
     <string name="DescribeTestGlideGif">测试UtilsLibiary库的Glide  gif图片</string>
     <string name="DescribeTestGlideRound">测试UtilsLibiary库的Glide  圆形图片</string>
     <string name="DescribeTestGlideCorens">测试UtilsLibiary库的Glide  圆角图片</string>
-    <string name="DescribeTestSelectImageOrVideo">测试UtilsLibiary库的SelectImageOrVideo</string>
-
+    <string name="DescribeTestSelectImageOrVideo">测试UtilsLibiary库的SelectImage</string>
     <string name="Describe_picker_image_single_camera">单选图片 带相机</string>
     <string name="Describe_picker_image_single_nocamera">单选图片 不带相机</string>
     <string name="Describe_picker_image_multiple_camera">多选图片 带相机</string>
     <string name="Describe_picker_image_multiple_camera_max">多选图片 带相机 一次性最大张数</string>
     <string name="Describe_picker_image_multiple_nocamera">多选图片 不带相机</string>
     <string name="Describe_picker_image_multiple_nocamera_max">多选图片 不带相机  一次性最大张数</string>
-
     <string name="Describe_picker_video_single_camera">选择视频 带相机</string>
     <string name="Describe_picker_video_single_nocamera">选择视频 不带相机</string>
-    <string name="Describe_play">播放视频</string>
-    <string name="Describe_pause">暂停视频</string>
-    <string name="Describe_stop">停止视频</string>
-
-
     <string name="stateTV">审核通过</string>
     <string name="resultTV">审核驳回</string>
     <string name="score">请评分</string>
-
-    <string name="Describe_test_recyclerview">RecyclerView各种练习</string>
-    <string name="Describe_test_horline">时间轴</string>
-    <string name="Describe_test_search">搜索</string>
-
+    <string name="DescribeKeyBoard">软键盘的弹出隐藏页面</string>
+    <string name="DescribeKeyBoardET">这是一个测试软键盘的弹出隐藏</string>
+    <string name="DescribeKeyBoardETDesc">测试防止被软键盘顶起布局</string>
+    <string name="DescribeKeyBoardCompileTV">编辑</string>
+    <string name="DescribePopUp">弹出</string>
+    <string name="DescribeTestTag">纯文本话题测试</string>
 </resources>

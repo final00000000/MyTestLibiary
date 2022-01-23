@@ -6,18 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!--  关闭软键盘要传一个et 懒得改了 写一个隐藏  -->
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:textColor="@color/color84F106"
+        android:background="@drawable/rich_text_shape"
+        android:textCursorDrawable="@drawable/et_style"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.zhang.mydemo.kotlin.ui.widgetkt.richeditor.RichEditor

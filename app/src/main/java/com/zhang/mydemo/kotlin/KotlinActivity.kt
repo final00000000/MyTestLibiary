@@ -46,13 +46,7 @@ class KotlinActivity : BaseActivity() {
             startActivity<PickViewActivity>()
         }
         tv_07.singleClick {
-            startActivity<TestRecyclerViewActivity>()
-        }
-        tv_08.singleClick {
-            startActivity<HorLineActivity>()
-        }
-        tv_09.singleClick {
-            startActivity<SearchActivity>()
+            startActivity<TestTag>()
         }
     }
 }

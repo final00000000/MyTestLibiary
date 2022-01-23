@@ -10,15 +10,15 @@ import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
-import com.zhang.mydemo.java.widget.StarBarView
+import com.zhang.mydemo.kotlin.ui.widgetkt.SimpleRatingBar
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_picker_date.*
 import kotlinx.android.synthetic.main.item_picker.*
 import kotlinx.android.synthetic.main.layout_title.*
-import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.find
 import org.jetbrains.anko.textColor
 import java.util.*
+import kotlin.math.ceil
 
 
 class PickerDateActivity : BaseActivity() {
@@ -62,6 +62,7 @@ class PickerDateActivity : BaseActivity() {
         val resultTV = inflate.find<TextView>(R.id.resultTV)
         val cancelTV = inflate.find<TextView>(R.id.cancel)
 
+        stateTV.isPressed = true
         stateTV.singleClick {
             stateTV.isPressed = true
             stateTV.textColor = Color.parseColor("#3D3D3E")
@@ -73,9 +74,9 @@ class PickerDateActivity : BaseActivity() {
         }
 
         resultTV.singleClick {
+            resultTV.isPressed = true
             resultTV.textColor = Color.parseColor("#3D3D3E")
             resultTV.textSize = 20F
-
             stateTV.textColor = Color.parseColor("#BBBBBB")
             stateTV.textSize = 16F
             bot.dismiss()
@@ -83,6 +84,7 @@ class PickerDateActivity : BaseActivity() {
 
         cancelTV.singleClick {
             bot.dismiss()
+            btn.text = "审核驳回"
         }
 
         bot.show()
@@ -98,19 +100,27 @@ class PickerDateActivity : BaseActivity() {
 
         //设置点击dialog外部不消失
         bot.setCanceledOnTouchOutside(false)
-
         bot.setContentView(inflate)
 
-        val startbar = inflate.find<StarBarView>(R.id.startbar)
-        startbar.singleClick {
-            inflate.find<TextView>(R.id.number).text = "${startbar.starRating.toInt()}分"
-        }
+        // 默认五分
+        var score = 5
+        inflate.find<SimpleRatingBar>(R.id.startbar)
+            .setOnRatingBarChangeListener(object : SimpleRatingBar.OnRatingChangeListener {
+                override fun onRatingChanged(
+                    ratingBar: SimpleRatingBar,
+                    grade: Float,
+                    touch: Boolean
+                ) {
+                    inflate.find<TextView>(R.id.number).text = "${ceil(grade.toDouble()).toInt()}分"
+                    score = ceil(grade).toInt()
+                }
+            })
 
         inflate.find<TextView>(R.id.cancel).singleClick { bot.dismiss() }
         inflate.find<TextView>(R.id.submit).singleClick {
             bot.dismiss()
             myToast("操作成功")
-            btn.text = "操作成功：${startbar.starRating.toInt()}分"
+            btn.text = "操作成功：${score}分"
         }
 
         bot.show()

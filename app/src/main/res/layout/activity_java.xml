@@ -13,11 +13,6 @@
         android:text="@string/java_date_utils" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java_1"
-        style="@style/tv_style"
-        android:text="@string/starbar" />
-
-    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/java_2"
         style="@style/tv_style"
         android:text="@string/PathText" />

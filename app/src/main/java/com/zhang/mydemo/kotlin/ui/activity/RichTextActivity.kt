@@ -105,13 +105,13 @@ class RichTextActivity : BaseActivity() {
         iv_image.singleClick {
             //选择图片
             getPhoto()
-            KeyBoardUtils.closeKeybord(et_name, this@RichTextActivity)
+            KeyBoardUtils.closeKeybord(et_title, this@RichTextActivity)
         }
 
         iv_video.singleClick {
             //选择视频
             getVideo()
-            KeyBoardUtils.closeKeybord(et_name, this@RichTextActivity)
+            KeyBoardUtils.closeKeybord(et_title, this@RichTextActivity)
         }
 
         iv_bold.singleClick {
@@ -333,7 +333,7 @@ class RichTextActivity : BaseActivity() {
                     if (selectList.size > 0) {
                         againEdit()
                         rich_Editor.insertImage(selectList[0].path, "RichText-ImageView")
-                        KeyBoardUtils.openKeybord(et_name, this@RichTextActivity)
+                        KeyBoardUtils.openKeybord(et_title, this@RichTextActivity)
                     }
                 }
                 // 视频
@@ -352,7 +352,7 @@ class RichTextActivity : BaseActivity() {
     private fun againEdit() {
         //如果第一次点击例如加粗，没有焦点时，获取焦点并弹出软键盘
         rich_Editor.focusEditor()
-        KeyBoardUtils.openKeybord(et_name, this@RichTextActivity)
+        KeyBoardUtils.openKeybord(et_title, this@RichTextActivity)
         rich_Editor.postDelayed({
             if (rich_Editor != null) {
                 rich_Editor.scrollToBottom()

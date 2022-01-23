@@ -9,7 +9,6 @@ import com.zhang.mydemo.java.timelinetest.TimeDividerActivity;
 import com.zhang.mydemo.java.ui.activity.DateUtilsActivity;
 import com.zhang.mydemo.java.ui.activity.HorizontalProActivity;
 import com.zhang.mydemo.java.ui.activity.JumpTextActivity;
-import com.zhang.mydemo.java.ui.activity.StarRatingActivity;
 import com.zhang.mydemo.java.ui.activity.TestSurfaceViewActivity;
 
 public class JavaActivity extends BaseActivity {
@@ -34,9 +33,6 @@ public class JavaActivity extends BaseActivity {
     protected void setListener() {
         findViewById(R.id.date_utils).setOnClickListener(v -> {
             startActivity(new Intent(this, DateUtilsActivity.class));
-        });
-        findViewById(R.id.java_1).setOnClickListener(v -> {
-            startActivity(new Intent(this, StarRatingActivity.class));
         });
         findViewById(R.id.java_2).setOnClickListener(v -> {
             startActivity(new Intent(this, JumpTextActivity.class));

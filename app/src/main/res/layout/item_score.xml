@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/score"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_40"
+        android:layout_height="@dimen/name_dp40"
         android:gravity="center"
         android:text="@string/score"
         android:textColor="@color/color3D3D3D"
@@ -41,23 +42,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.zhang.mydemo.java.widget.StarBarView
+        <com.zhang.mydemo.kotlin.ui.widgetkt.SimpleRatingBar
             android:id="@+id/startbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            app:grade="5"
+            app:gradeCount="5"
+            app:gradeHeight="25dp"
+            app:gradeSpace="@dimen/name_dp12"
+            app:gradeStep="one"
+            app:gradeWidth="@dimen/name_dp25"
             app:layout_constraintEnd_toStartOf="@id/number"
             app:layout_constraintStart_toEndOf="@id/score1"
-            app:layout_constraintTop_toTopOf="@id/score1"
-            app:space_width="18dp"
-            app:star_height="25dp"
-            app:star_hollow="@drawable/ic_star_yellow_normal"
-            app:star_isIndicator="false"
-            app:star_max="5"
-            app:star_rating="5"
-            app:star_solid="@drawable/ic_star_yellow_selected"
-            app:star_width="25dp" />
+            app:layout_constraintTop_toTopOf="@id/score1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/number"
@@ -78,7 +77,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/name_dp10"
             android:background="@drawable/cancel_solid_stroke_shape"
             android:gravity="center"
             android:text="@string/cancel"
@@ -96,7 +95,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/name_dp10"
             android:background="@drawable/cancel_solid_stroke_005bab_shape"
             android:gravity="center"
             android:text="@string/confirm"
