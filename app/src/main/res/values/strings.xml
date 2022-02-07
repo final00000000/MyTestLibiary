@@ -58,4 +58,7 @@
     <string name="DescribeKeyBoardCompileTV">编辑</string>
     <string name="DescribePopUp">弹出</string>
     <string name="DescribeTestTag">纯文本话题测试</string>
+    <string name="DescribeTestStartActivity">替换StartActivityForResult过时方法</string>
+    <string name="jump">跳转</string>
+    <string name="jump1">传值跳转</string>
 </resources>

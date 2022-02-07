@@ -7,40 +7,45 @@
     android:orientation="vertical"
     tools:context=".kotlin.KotlinActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_01"
         style="@style/tv_style"
         android:text="@string/DescribeWebView" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_02"
         style="@style/tv_style"
         android:text="@string/DescribeKeyBoard" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_03"
         style="@style/tv_style"
         android:text="@string/DescribeRichText" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_04"
         style="@style/tv_style"
         android:text="@string/DescribeBottomDialog" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_05"
         style="@style/tv_style"
         android:text="@string/DescribeTestGlide" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_06"
         style="@style/tv_style"
         android:text="@string/DescribeTestSelectImageOrVideo" />
 
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_07"
         style="@style/tv_style"
         android:text="@string/DescribeTestTag" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_08"
+        style="@style/tv_style"
+        android:text="@string/DescribeTestStartActivity" />
 
 </LinearLayout>

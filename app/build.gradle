@@ -94,4 +94,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     //Eventbus
     implementation 'org.greenrobot:eventbus:3.2.0'
+    // 官方二次封装控件
+    implementation "androidx.appcompat:appcompat:1.4.1"
 }

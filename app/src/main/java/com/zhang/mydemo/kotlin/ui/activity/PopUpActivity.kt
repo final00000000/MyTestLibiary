@@ -21,7 +21,7 @@ import java.util.*
 import kotlin.math.ceil
 
 
-class PickerDateActivity : BaseActivity() {
+class PopUpActivity : BaseActivity() {
     override fun getLayoutId(): Int = R.layout.activity_picker_date
 
     override fun initView() {
@@ -41,12 +41,13 @@ class PickerDateActivity : BaseActivity() {
                 showSelectDialog()
             } else showSelectDialog()
         }
+
     }
 
 
     //单项选择
     fun showSelectDialog() {
-        val bot = BottomSheetDialog(this@PickerDateActivity)
+        val bot = BottomSheetDialog(this@PopUpActivity)
         val inflate = layoutInflater.inflate(R.layout.item_picker, null)
         inflate.layoutParams = ViewGroup.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -91,7 +92,7 @@ class PickerDateActivity : BaseActivity() {
     }
 
     fun showScore() {
-        val bot = BottomSheetDialog(this@PickerDateActivity)
+        val bot = BottomSheetDialog(this@PopUpActivity)
         val inflate = layoutInflater.inflate(R.layout.item_score, null)
         inflate.layoutParams = ViewGroup.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,

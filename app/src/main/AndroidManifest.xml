@@ -22,6 +22,12 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".kotlin.ui.activity.Jump2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.JumpActivity"
+            android:exported="false" />
+        <activity
             android:name=".java.ui.activity.HorizontalProActivity"
             android:exported="false" />
         <activity
@@ -79,7 +85,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kotlin.ui.activity.PickerDateActivity"
+            android:name=".kotlin.ui.activity.PopUpActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

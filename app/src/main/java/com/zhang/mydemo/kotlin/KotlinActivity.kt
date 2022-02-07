@@ -37,7 +37,7 @@ class KotlinActivity : BaseActivity() {
             startActivity<RichTextActivity>()
         }
         tv_04.singleClick {
-            startActivity<PickerDateActivity>()
+            startActivity<PopUpActivity>()
         }
         tv_05.singleClick {
             startActivity<TestGlideActivity>()
@@ -47,6 +47,9 @@ class KotlinActivity : BaseActivity() {
         }
         tv_07.singleClick {
             startActivity<TestTag>()
+        }
+        tv_08.singleClick {
+            startActivity<JumpActivity>()
         }
     }
 }

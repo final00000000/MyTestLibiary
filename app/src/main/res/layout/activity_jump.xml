@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.ui.activity.JumpActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/jump" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jump1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/jump1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_dp50"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
