@@ -22,6 +22,9 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".kotlin.ui.activity.MotionLayoutyActivity"
+            android:exported="false" />
+        <activity
             android:name=".kotlin.ui.activity.Jump2Activity"
             android:exported="false" />
         <activity

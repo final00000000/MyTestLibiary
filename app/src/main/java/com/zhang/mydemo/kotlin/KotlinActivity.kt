@@ -51,5 +51,8 @@ class KotlinActivity : BaseActivity() {
         tv_08.singleClick {
             startActivity<JumpActivity>()
         }
+        tv_09.singleClick {
+            startActivity<MotionLayoutyActivity>()
+        }
     }
 }

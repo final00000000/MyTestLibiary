@@ -1,51 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".kotlin.KotlinActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_01"
-        style="@style/tv_style"
-        android:text="@string/DescribeWebView" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_02"
-        style="@style/tv_style"
-        android:text="@string/DescribeKeyBoard" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_01"
+            style="@style/tv_style"
+            android:text="@string/DescribeWebView" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_03"
-        style="@style/tv_style"
-        android:text="@string/DescribeRichText" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_02"
+            style="@style/tv_style"
+            android:text="@string/DescribeKeyBoard" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_04"
-        style="@style/tv_style"
-        android:text="@string/DescribeBottomDialog" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_03"
+            style="@style/tv_style"
+            android:text="@string/DescribeRichText" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_05"
-        style="@style/tv_style"
-        android:text="@string/DescribeTestGlide" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_04"
+            style="@style/tv_style"
+            android:text="@string/DescribeBottomDialog" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_06"
-        style="@style/tv_style"
-        android:text="@string/DescribeTestSelectImageOrVideo" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_05"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestGlide" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_06"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestSelectImageOrVideo" />
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_07"
-        style="@style/tv_style"
-        android:text="@string/DescribeTestTag" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_07"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestTag" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_08"
-        style="@style/tv_style"
-        android:text="@string/DescribeTestStartActivity" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_08"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestStartActivity" />
 
-</LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_09"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestMotionLayouty" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
