@@ -2,10 +2,11 @@ package com.zhang.mydemo
 
 import android.view.KeyEvent
 import android.view.View
+import com.elvishew.xlog.XLog
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.java.JavaActivity
 import com.zhang.mydemo.kotlin.KotlinActivity
-import com.zhang.utilslibiary.utils.AppManager
+import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -52,7 +53,7 @@ class MainActivity : BaseActivity() {
             toast("再按一次退出应用")
             mExitTime = System.currentTimeMillis()
         } else {
-            AppManager.removeAllActivity()
+            AppActivityManager.removeAllActivity()
         }
     }
 

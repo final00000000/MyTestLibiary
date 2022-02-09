@@ -16,10 +16,4 @@ interface IsBase {
      */
     fun isLayoutToolbar(): Boolean
 
-    /**
-     * 是否需要自动注册Eventbus
-     * 存在BUG 先注释掉了
-     */
-//    fun isEventbus(): Boolean
-
 }

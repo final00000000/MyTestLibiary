@@ -8,7 +8,8 @@ import java.util.*
  * @author geyifeng
  * @date 2019-04-23 13:46
  */
-object AppManager {
+object AppActivityManager {
+
     // Activity栈
     private val mActivities = Stack<Activity>()
 
@@ -55,7 +56,7 @@ object AppManager {
     fun finishActivity(activity: Activity?) {
         var activity = activity
         if (activity != null) {
-            AppManager.mActivities.remove(activity)
+            AppActivityManager.mActivities.remove(activity)
             activity.finish()
             activity = null
         }

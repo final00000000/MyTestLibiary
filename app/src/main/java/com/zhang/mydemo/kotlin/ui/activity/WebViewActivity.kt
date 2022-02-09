@@ -20,7 +20,6 @@ class WebViewActivity : BaseActivity() {
     }
 
     override fun initData() {
-
         // 防止链接跳到自带浏览器
         web.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
@@ -31,11 +30,10 @@ class WebViewActivity : BaseActivity() {
         /**
          * 9.0版本以上需要加  android:usesCleartextTraffic="true" 不加就是白屏.
          */
-        web.loadUrl("https://www.baidu.com/")
+        web.loadUrl(intent.getStringExtra("url")!!)
 
         web.settings.javaScriptEnabled = true // 开启Android和js交互
         //需要添加上面这个 因为会报这个错-> You need to enable javaScript to run this app.
-
     }
 
     override fun setListener() {

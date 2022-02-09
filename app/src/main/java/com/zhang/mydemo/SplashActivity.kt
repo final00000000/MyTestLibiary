@@ -2,34 +2,32 @@ package com.zhang.mydemo
 
 import android.os.Bundle
 import android.view.KeyEvent
-import androidx.appcompat.app.AppCompatActivity
-import com.zhang.utilslibiary.utils.AppManager
+import com.elvishew.xlog.XLog
+import com.zhang.mydemo.base.BaseActivity
 import org.jetbrains.anko.startActivity
 import java.util.*
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+    override fun getLayoutId(): Int = R.layout.activity_splash
 
-//        ImmersionBar
-//            .with(this)
-//            .hideBar(BarHide.FLAG_HIDE_BAR)
-//            .init()
-        initView()
-    }
+    override fun isLayoutToolbar(): Boolean = false
 
-
-    fun initView() {
+    override fun initView() {
         val task: TimerTask = object : TimerTask() {
             override fun run() {
                 startActivity<MainActivity>()
-                AppManager.addActivity(this@SplashActivity)
+                killMyself()
             }
         }
         val timer = Timer()
         timer.schedule(task, 2000)
+    }
+
+    override fun initData() {
+    }
+
+    override fun setListener() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
@@ -38,5 +36,42 @@ class SplashActivity : AppCompatActivity() {
         } else {
             return false
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onCreate"}")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onStart"}")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        startActivity<MainActivity>()
+        killMyself()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onRestart"}")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onResume"}")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onPause"}")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onStop"}")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onDestroy"}")
     }
 }

@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".base.App"
+        android:name=".base.MyDemoAppLication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -21,6 +21,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".kotlin.ui.activity.tab.Tab1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.tab.TabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.TabViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.GrammarActivity"
+            android:exported="false" />
         <activity
             android:name=".kotlin.ui.activity.MotionLayoutyActivity"
             android:exported="false" />

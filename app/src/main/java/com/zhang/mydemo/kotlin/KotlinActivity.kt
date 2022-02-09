@@ -28,7 +28,9 @@ class KotlinActivity : BaseActivity() {
 
     override fun setListener() {
         tv_01.singleClick {
-            startActivity<WebViewActivity>()
+            startActivity<WebViewActivity>(
+                "url" to "https://www.baidu.com/"
+            )
         }
         tv_02.singleClick {
             startActivity<KeyBoard>()
@@ -53,6 +55,12 @@ class KotlinActivity : BaseActivity() {
         }
         tv_09.singleClick {
             startActivity<MotionLayoutyActivity>()
+        }
+        tv_10.singleClick {
+            startActivity<GrammarActivity>()
+        }
+        tv_11.singleClick {
+            startActivity<TabViewPagerActivity>()
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_01"
         style="@style/tv_style"
         android:layout_weight="1"
@@ -16,7 +16,7 @@
         android:text="@string/Describe"
         android:textSize="28sp" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/kotlin"
         style="@style/tv_style"
         android:layout_weight="2"
@@ -24,7 +24,7 @@
         android:text="@string/Kotlin"
         android:textSize="40sp" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/java"
         style="@style/tv_style"
         android:layout_weight="2"
@@ -32,4 +32,4 @@
         android:text="@string/Java"
         android:textSize="40sp" />
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

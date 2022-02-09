@@ -1,15 +1,20 @@
 package com.zhang.mydemo.base
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.animation.ArgbEvaluatorCompat
 import com.gyf.immersionbar.ImmersionBar
 import com.zhang.mydemo.R
-import com.zhang.utilslibiary.utils.AppManager
+import com.zhang.utilslibiary.utils.AppActivityManager
 import kotlinx.android.synthetic.main.activity_base.*
-import org.greenrobot.eventbus.EventBus
+import android.content.ComponentName
+
+import android.app.ActivityManager.RunningTaskInfo
+
+import android.app.ActivityManager
+import android.content.Context
+import com.zhang.utilslibiary.utils.singleClick
+import kotlinx.android.synthetic.main.layout_title.*
 
 
 /**
@@ -29,11 +34,12 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppManager.addActivity(this)
+        AppActivityManager.addActivity(this)
 
         if (isLayoutToolbar()) {
             setContentView(R.layout.activity_base)
             baseContent.addView(LayoutInflater.from(this).inflate(getLayoutId(), null))
+            ivPageBack.singleClick { killMyself() }
         } else {
             setContentView(getLayoutId())
         }
@@ -46,6 +52,7 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
         initData()
         // 设置监听
         setListener()
+
     }
 
     protected abstract fun getLayoutId(): Int
@@ -57,7 +64,7 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
     protected abstract fun setListener()
 
     protected fun killMyself() {
-        AppManager.removeActivity(this)
+        AppActivityManager.removeActivity(this)
         finish()
     }
 
@@ -68,28 +75,6 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
         ImmersionBar.with(this)
             .statusBarDarkFont(true, 0.2f)
             .init()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        // 存在BUG 先注释掉了
-/*        if (isEventbus()) {
-            if (!EventBus.getDefault().isRegistered(this)) {
-                EventBus.getDefault().register(this)
-            }
-        } else {
-            if (EventBus.getDefault().isRegistered(this)) {
-                EventBus.getDefault().unregister(this)
-            }
-        }*/
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-      /*  if (EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().unregister(this)
-        }*/
-        AppManager.removeActivity(this)
     }
 
 

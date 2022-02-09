@@ -22,6 +22,11 @@
         //透明状态栏
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="windowActionBar">false</item>
+        //闪屏页图片
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
     </style>
 
 

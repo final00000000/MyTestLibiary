@@ -2,8 +2,8 @@ package com.zhang.mydemo.base
 
 import android.app.Application
 import com.elvishew.xlog.LogConfiguration
-import com.elvishew.xlog.LogLevel
 import com.elvishew.xlog.XLog
+
 
 /**
  * @Author : zhang
@@ -11,7 +11,7 @@ import com.elvishew.xlog.XLog
  * @Class Describe : 描述
  * @Project Name : MyDemo
  */
-class App : Application() {
+class MyDemoAppLication : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -21,6 +21,5 @@ class App : Application() {
 //            .enableBorder()     // 边框
             .build()
         XLog.init(config)
-
     }
 }

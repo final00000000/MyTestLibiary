@@ -56,6 +56,17 @@
             android:id="@+id/tv_09"
             style="@style/tv_style"
             android:text="@string/DescribeTestMotionLayouty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_10"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestKotlin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_11"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestViewPager2" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>

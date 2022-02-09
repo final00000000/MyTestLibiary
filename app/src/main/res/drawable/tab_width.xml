@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="@dimen/name_dp30"
+        android:height="@dimen/name_dp3"
+        android:gravity="center">
+        <shape>
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+</layer-list>

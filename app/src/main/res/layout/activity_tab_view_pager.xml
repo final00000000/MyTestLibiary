@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorEBEBEB"
+    android:id="@+id/rv_tp"
+    tools:listitem="@layout/item_tab_view_pager"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:context=".kotlin.ui.activity.TabViewPagerActivity">
+
+</androidx.recyclerview.widget.RecyclerView>
