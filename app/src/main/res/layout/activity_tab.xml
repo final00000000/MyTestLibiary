@@ -16,20 +16,24 @@
     app:tabBackground：设置背景
     app:tabMode：设置tablayout的排列模式，有两种scrollable和fixed；默认是fixed。fixed是固定的，适用于标签较少，scrollable是可滚动的，适用于标签较多的情况下
      -->
+    <!--    @drawable/select-->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_tab"
-        app:tabBackground="@color/white"
         android:layout_width="match_parent"
         android:layout_height="@dimen/name_dp50"
+        android:orientation="horizontal"
         android:paddingStart="@dimen/name_dp10"
         android:paddingEnd="@dimen/name_dp10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
+        app:tabBackground="@color/white"
         app:tabIndicator="@drawable/tab_width"
         app:tabIndicatorColor="@color/colorFFE054"
         app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
         app:tabMode="fixed"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        app:tabRippleColor="@color/ps_color_transparent"
         app:tabSelectedTextColor="@color/black"
         app:tabTextColor="@color/colorBBBBBB">
 

@@ -5,6 +5,7 @@ import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.kotlin.ui.adapter.TabViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_tab_view_pager.*
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.zhang.mydemo.kotlin.ui.activity.tab.Tab1Activity
 import com.zhang.mydemo.kotlin.ui.activity.tab.TabActivity
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.layout_title.*
@@ -26,12 +27,16 @@ class TabViewPagerActivity : BaseActivity() {
         rv_tp.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         rvTpAdapter.setOnItemClickListener { adapter, view, position ->
-            startActivity<TabActivity>()
+            when (position) {
+                0 -> startActivity<TabActivity>()
+                1 ->startActivity<Tab1Activity>()
+            }
         }
     }
 
     fun addData() {
         mData.add("原生Tab+ViewPager")
+        mData.add("MagicIndicator+ViewPager")
     }
 
     override fun initData() {

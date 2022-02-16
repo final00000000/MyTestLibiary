@@ -78,9 +78,11 @@
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/picker_sele.xml" value="0.25333333333333335" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/rich_text_shape.xml" value="0.25333333333333335" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/et_style.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_tag_indicator.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/picker_sele.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ps_image_placeholder.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/rich_text_shape.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/select.xml" value="0.1890625" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tab_width.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_base_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_date_utils.xml" value="0.4" />
@@ -100,8 +102,8 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_search.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_splash.xml" value="0.22552083333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_star_rating.xml" value="0.24114583333333334" />
-        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab.xml" value="0.4" />
-        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab1.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab.xml" value="0.264" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab1.xml" value="0.2" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab_view_pager.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_test_recycler_view.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_test_surface_view.xml" value="0.22916666666666666" />

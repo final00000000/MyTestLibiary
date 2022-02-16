@@ -15,6 +15,7 @@ object TabViewPagerInit {
         tl_tab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 vp.currentItem = tab!!.position
+
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
@@ -22,6 +23,7 @@ object TabViewPagerInit {
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
+
             }
         })
 
