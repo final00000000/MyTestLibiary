@@ -1,8 +1,10 @@
 package com.zhang.mydemo.base
 
 import android.app.Application
+import android.content.Context
 import com.elvishew.xlog.LogConfiguration
 import com.elvishew.xlog.XLog
+import com.tencent.mmkv.MMKV
 
 
 /**
@@ -13,6 +15,12 @@ import com.elvishew.xlog.XLog
  */
 class MyDemoAppLication : Application() {
 
+
+    fun getApp() : MyDemoAppLication{
+        return this
+    }
+
+
     override fun onCreate() {
         super.onCreate()
         // Xlog打印日志初始化 更多花样详情百度.
@@ -21,5 +29,6 @@ class MyDemoAppLication : Application() {
 //            .enableBorder()     // 边框
             .build()
         XLog.init(config)
+        MMKV.initialize(this)
     }
 }

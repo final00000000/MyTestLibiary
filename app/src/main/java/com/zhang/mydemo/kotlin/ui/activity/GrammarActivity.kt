@@ -1,5 +1,6 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.elvishew.xlog.XLog
@@ -25,6 +26,7 @@ class GrammarActivity : BaseActivity() {
     override fun initData() {
     }
 
+    @SuppressLint("SetTextI18n")
     override fun setListener() {
         ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "Kotlin语法糖"
@@ -87,6 +89,12 @@ class GrammarActivity : BaseActivity() {
         }
         map.singleClick {
             tv_show.text = "将map变成集合传给适配器  mutableList.map{} ${mutableList.map { it }}"
+        }
+        sumof.singleClick {
+            tv_show.text = "mutableListOf(1,2, 3, 4, 5) 集合进行求和  mutableList.sumOf { it }  \n  和: ${mutableList.sumOf { it }}"
+        }
+        average.singleClick {
+            tv_show.text = "mutableListOf(1,2, 3, 4, 5) 集合进行求平均值 mutableList.windowed(mutableList.size).map(List<Int>::average) \n 平均值: ${mutableList.windowed(mutableList.size).map(List<Int>::average)}"
         }
     }
 }

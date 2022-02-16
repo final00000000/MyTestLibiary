@@ -13,6 +13,7 @@ import android.app.ActivityManager.RunningTaskInfo
 
 import android.app.ActivityManager
 import android.content.Context
+import com.tencent.mmkv.MMKV
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.layout_title.*
 
@@ -31,6 +32,8 @@ abstract class BaseActivity : AppCompatActivity(), IsBase {
      * @return Boolean
      */
     override fun isLayoutToolbar(): Boolean = true
+    var defaultMMKV: MMKV = MMKV.defaultMMKV()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

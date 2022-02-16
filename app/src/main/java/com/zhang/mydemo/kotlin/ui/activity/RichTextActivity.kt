@@ -8,17 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
-import com.luck.picture.lib.PictureSelector
+import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.PictureConfig
-import com.luck.picture.lib.config.PictureMimeType
+import com.luck.picture.lib.config.SelectMimeType
+import com.luck.picture.lib.config.SelectModeConfig
 import com.luck.picture.lib.entity.LocalMedia
+import com.luck.pictureselector.GlideEngine
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.BaseActivity
-import com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor.ColorSelectDialog
 import com.zhang.mydemo.kotlin.ui.widgetkt.CommonPopupWindow
 import com.zhang.mydemo.kotlin.ui.widgetkt.KeyBoardUtils
+import com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor.ColorSelectDialog
 import com.zhang.mydemo.kotlin.ui.widgetkt.richeditor.RichUtils
-import com.zhang.utilslibiary.utils.GlideEngine
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_rich_text.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -325,7 +326,7 @@ class RichTextActivity : BaseActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        val selectList = (PictureSelector.obtainMultipleResult(data) as MutableList<LocalMedia>)
+        val selectList = (PictureSelector.obtainSelectorList(data) as MutableList<LocalMedia>)
         if (resultCode == RESULT_OK) {
             when (requestCode) {
                 // 照片
@@ -337,7 +338,7 @@ class RichTextActivity : BaseActivity() {
                     }
                 }
                 // 视频
-                PictureConfig.PREVIEW_VIDEO_CODE -> {
+                SelectMimeType.TYPE_VIDEO -> {
                     if (selectList.size > 0) {
                         // 请求接口 上传到服务器 拿回链接
                         rich_Editor.insertVideo(selectList[0].path, 320)
@@ -362,26 +363,26 @@ class RichTextActivity : BaseActivity() {
 
     fun getVideo() {
         PictureSelector.create(this@RichTextActivity)
-            .openGallery(PictureMimeType.ofVideo())
-            .queryMaxFileSize(20f)
-            .imageEngine(GlideEngine.createGlideEngine())
-            .selectionMode(PictureConfig.SINGLE)
+            .openGallery(SelectMimeType.ofVideo())
+//            .queryMaxFileSize(20f)
+            .setImageEngine(GlideEngine.createGlideEngine())
+            .setSelectionMode(SelectModeConfig.SINGLE)
             .isPreviewImage(true)
-            .imageSpanCount(3)
-            .isCamera(true)
-            .videoMaxSecond(180)
-            .forResult(PictureConfig.PREVIEW_VIDEO_CODE)
+//            .imageSpanCount(3)
+            .isDisplayCamera(true)
+            .setMaxVideoSelectNum(180)
+            .forResult(SelectMimeType.TYPE_VIDEO)
     }
 
 
     fun getPhoto() {
         PictureSelector.create(this@RichTextActivity)
-            .openGallery(PictureMimeType.ofImage())
-            .imageEngine(GlideEngine.createGlideEngine())
-            .selectionMode(PictureConfig.SINGLE)
+            .openGallery(SelectMimeType.ofImage())
+            .setImageEngine(GlideEngine.createGlideEngine())
+            .setSelectionMode(SelectModeConfig.SINGLE)
             .isPreviewImage(true)
-            .imageSpanCount(3)
-            .isCamera(true)
+//            .imageSpanCount(3)
+            .isDisplayCamera(true)
             .forResult(PictureConfig.CHOOSE_REQUEST)
     }
 

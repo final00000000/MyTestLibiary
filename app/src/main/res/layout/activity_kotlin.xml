@@ -67,6 +67,12 @@
             style="@style/tv_style"
             android:text="@string/DescribeTestViewPager2" />
 
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_12"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestMMKV" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>

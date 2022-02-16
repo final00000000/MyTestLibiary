@@ -32,7 +32,6 @@
         android:text="@string/DescribeRichTextDesc"
         android:textColor="@color/colorFFC107"
         android:textSize="20sp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <HorizontalScrollView
@@ -65,6 +64,7 @@
                 style="@style/rich_iv_style"
                 android:gravity="center"
                 android:text="@string/tv_1"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -72,6 +72,7 @@
                 style="@style/rich_iv_style"
                 android:gravity="center"
                 android:text="@string/tv_2"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -79,6 +80,7 @@
                 style="@style/rich_iv_style"
                 android:gravity="center"
                 android:text="@string/tv_3"
+                android:textColor="@color/black"
                 android:textSize="22sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -86,6 +88,7 @@
                 style="@style/rich_iv_style"
                 android:gravity="center"
                 android:text="@string/tv_3"
+                android:textColor="@color/black"
                 android:textSize="26sp" />
 
             <androidx.appcompat.widget.AppCompatImageView

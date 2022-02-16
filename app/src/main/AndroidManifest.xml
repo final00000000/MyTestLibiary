@@ -21,30 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".kotlin.ui.activity.tab.Tab1Activity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.tab.TabActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.TabViewPagerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.GrammarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.MotionLayoutyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.Jump2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".kotlin.ui.activity.JumpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".java.ui.activity.HorizontalProActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -76,6 +53,7 @@
                 android:resource="@xml/file_paths"
                 tools:replace="android:resource" />
         </provider> <!-- Android 7.0权限 -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -130,6 +108,31 @@
             android:name=".kotlin.ui.activity.TestTag"
             android:exported="false"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".kotlin.ui.activity.MMKVActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.tab.TabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.TabViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.GrammarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.MotionLayoutyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.Jump2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.JumpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.activity.HorizontalProActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

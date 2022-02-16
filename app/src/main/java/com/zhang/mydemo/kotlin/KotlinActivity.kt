@@ -62,5 +62,8 @@ class KotlinActivity : BaseActivity() {
         tv_11.singleClick {
             startActivity<TabViewPagerActivity>()
         }
+        tv_12.singleClick {
+            startActivity<MMKVActivity>()
+        }
     }
 }

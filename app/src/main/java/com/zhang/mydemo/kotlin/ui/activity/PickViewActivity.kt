@@ -1,8 +1,8 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
 import android.content.Intent
-import com.luck.picture.lib.PictureSelector
-import com.luck.picture.lib.config.PictureConfig
+import com.luck.picture.lib.basic.PictureSelector
+import com.luck.picture.lib.config.SelectMimeType.TYPE_IMAGE
 import com.luck.picture.lib.entity.LocalMedia
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.utilslibiary.utils.GlideUtils
@@ -50,10 +50,10 @@ class PickViewActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK) {
-            val selectList = PictureSelector.obtainMultipleResult(data) as ArrayList<LocalMedia>
+            val selectList = PictureSelector.obtainSelectorList(data) as ArrayList<LocalMedia>
             if (selectList.size > 0) {
                 when (requestCode) {
-                    PictureConfig.TYPE_IMAGE -> {
+                    TYPE_IMAGE -> {
                         GlideUtils.loadImage(this, selectList[0].path, image)
                     }
                 }

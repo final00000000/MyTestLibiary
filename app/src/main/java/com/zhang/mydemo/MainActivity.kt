@@ -3,6 +3,7 @@ package com.zhang.mydemo
 import android.view.KeyEvent
 import android.view.View
 import com.elvishew.xlog.XLog
+import com.tencent.mmkv.MMKV
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.java.JavaActivity
 import com.zhang.mydemo.kotlin.KotlinActivity
@@ -22,7 +23,6 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initData() {
-
     }
 
     override fun setListener() {

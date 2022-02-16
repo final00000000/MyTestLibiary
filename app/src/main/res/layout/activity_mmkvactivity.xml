@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.ui.activity.MMKVActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/name_dp10"
+        android:text="基本用法和SP(SharedPreferences)没有区别,性能比SP快"
+        android:textColor="@color/black"
+        android:textSize="@dimen/name_dp20" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_add"
+        style="@style/tv_style3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加数据" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_get"
+        style="@style/tv_style3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取数据" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remove"
+        style="@style/tv_style3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="移除数据" />
+</androidx.appcompat.widget.LinearLayoutCompat>
