@@ -98,6 +98,4 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
     //MMKV
     implementation 'com.tencent:mmkv:1.2.12'
-    // Tab
-    implementation 'com.github.angcyo.DslTablayout:TabLayout:3.0.8'
 }

@@ -13,4 +13,18 @@
         android:textColor="@color/black"
         android:textSize="@dimen/sp_16"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tag1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/name_dp10"
+        android:layout_marginTop="@dimen/name_dp20"
+        android:padding="@dimen/name_dp5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintTop_toBottomOf="@id/tv_tag" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
