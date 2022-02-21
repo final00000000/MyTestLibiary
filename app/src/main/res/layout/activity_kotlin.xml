@@ -73,6 +73,12 @@
             style="@style/tv_style"
             android:text="@string/DescribeTestMMKV" />
 
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_13"
+            style="@style/tv_style"
+            android:text="@string/DescribeTestVerification" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>

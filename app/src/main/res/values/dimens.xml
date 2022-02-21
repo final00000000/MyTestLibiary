@@ -162,6 +162,7 @@
     <dimen name="sp_28">28sp</dimen>
     <dimen name="sp_29">29sp</dimen>
     <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_48">48sp</dimen>
     <dimen name="recycler_trace_padding_left">53dp</dimen>
     <dimen name="recycler_trace_padding_right">13dp</dimen>
     <dimen name="recycler_trace_padding_bottom">8dp</dimen>

@@ -84,6 +84,8 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/rich_text_shape.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/select.xml" value="0.1890625" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tab_width.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tv_bg_shape1.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/verification_shape.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_base_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_date_utils.xml" value="0.4" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_grammar.xml" value="0.33432835820895523" />
@@ -110,6 +112,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_time_divider.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_timeline.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_underline_horizontal.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_verification.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_web_view.xml" value="0.23007246376811594" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/analog_item.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/dynamic_view_toast_custom.xml" value="0.24114583333333334" />
@@ -126,6 +129,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_test_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_test_rv_footer.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_test_rv_header.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_verification.xml" value="0.536" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_vertical.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/layout_title.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/order_location.xml" value="0.264" />

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/verification_shape"
+    android:gravity="center"
+    android:maxLength="1"
+    android:maxLines="1"
+    android:layout_marginStart="@dimen/name_dp15"
+    android:layout_marginTop="@dimen/name_dp5"
+    android:textColor="@color/color3E3E3F"
+    android:textSize="@dimen/sp_48"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="1" />

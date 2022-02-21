@@ -63,6 +63,7 @@
     <string name="DescribeTestKotlin">Kotlin语法练习</string>
     <string name="DescribeTestViewPager2">Tab+ViewPager</string>
     <string name="DescribeTestMMKV">MMKV</string>
+    <string name="DescribeTestVerification">正方形验证码</string>
     <string name="jump">跳转</string>
     <string name="jump1">传值跳转</string>
     <!-- TODO: Remove or change this placeholder text -->

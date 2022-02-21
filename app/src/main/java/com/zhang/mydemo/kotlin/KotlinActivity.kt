@@ -65,5 +65,8 @@ class KotlinActivity : BaseActivity() {
         tv_12.singleClick {
             startActivity<MMKVActivity>()
         }
+        tv_13.singleClick {
+            startActivity<VerificationActivity>()
+        }
     }
 }
