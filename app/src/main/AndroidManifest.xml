@@ -22,6 +22,9 @@
         android:theme="@style/Theme.MyDemo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".SayWhatActivity"
+            android:exported="false" />
+        <activity
             android:name=".kotlin.ui.activity.VerificationActivity"
             android:exported="false" />
         <activity
