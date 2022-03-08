@@ -4,6 +4,7 @@
     <string name="Describe">Hello World</string>
     <string name="Kotlin">Kotlin</string>
     <string name="Java">Java</string>
+    <string name="SayWhat">toDaySayWhat?\n今天Say什么</string>
     <string name="cancel">取消</string>
     <string name="confirm">确定</string>
     <string name="submit">提交</string>
@@ -68,4 +69,6 @@
     <string name="jump1">传值跳转</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
 </resources>

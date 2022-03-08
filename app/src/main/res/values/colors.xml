@@ -29,5 +29,6 @@
     <color name="grey">#b4b4b4</color>
     <color name="colorDefault">#ffffff</color>
     <color name="colorText">#9b9b9b</color>
+    <color name="yellow">#ffff00</color> <!-- 黄色 -->
 
 </resources>
