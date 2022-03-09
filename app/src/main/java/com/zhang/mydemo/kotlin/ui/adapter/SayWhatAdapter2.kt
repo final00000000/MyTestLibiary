@@ -1,7 +1,8 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.kotlin.ui.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
+import com.zhang.mydemo.R
 
 /**
  * @Author : zhang

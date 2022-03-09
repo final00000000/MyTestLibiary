@@ -79,6 +79,16 @@
             style="@style/tv_style"
             android:text="@string/DescribeTestVerification" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_14"
+            style="@style/tv_style"
+            android:text="@string/SayWhat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_15"
+            style="@style/tv_style"
+            android:text="@string/View" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>

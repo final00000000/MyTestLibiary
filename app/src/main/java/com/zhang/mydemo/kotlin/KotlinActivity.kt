@@ -1,6 +1,7 @@
 package com.zhang.mydemo.kotlin
 
 import com.zhang.mydemo.R
+import com.zhang.mydemo.kotlin.ui.activity.SayWhatActivity
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.kotlin.ui.activity.*
 import com.zhang.utilslibiary.utils.singleClick
@@ -67,6 +68,12 @@ class KotlinActivity : BaseActivity() {
         }
         tv_13.singleClick {
             startActivity<VerificationActivity>()
+        }
+        tv_14.singleClick {
+            startActivity<SayWhatActivity>()
+        }
+        tv_15.singleClick {
+            startActivity<ViewWorldActivity>()
         }
     }
 }

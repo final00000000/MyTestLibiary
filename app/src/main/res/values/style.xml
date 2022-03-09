@@ -73,4 +73,9 @@
         <attr name="autoStart" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="current_view">
+        <attr name="round" format="boolean" />
+<!--        <attr name="round_height" format="dimension" />-->
+<!--        <attr name="round_width" format="dimension" />-->
+    </declare-styleable>
 </resources>

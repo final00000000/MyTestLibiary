@@ -32,12 +32,4 @@
         android:text="@string/Java"
         android:textSize="40sp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sayWhat"
-        style="@style/tv_style"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:text="@string/SayWhat"
-        android:textSize="40sp" />
-
 </androidx.appcompat.widget.LinearLayoutCompat>

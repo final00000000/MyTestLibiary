@@ -1,9 +1,11 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.kotlin.ui.activity
 
 import android.os.CountDownTimer
 import androidx.core.view.isVisible
 import com.elvishew.xlog.XLog
-import com.luck.picture.lib.utils.ToastUtils
+import com.zhang.mydemo.R
+import com.zhang.mydemo.kotlin.ui.adapter.SayWhatAdapter1
+import com.zhang.mydemo.kotlin.ui.adapter.SayWhatAdapter2
 import com.zhang.mydemo.base.BaseActivity
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_say_what.*
@@ -20,7 +22,8 @@ class SayWhatActivity : BaseActivity() {
     var foodList1 = mutableListOf<String>()
     var foodList2 = mutableListOf<String>()
 
-    private var counter: CountDownTimer? = null
+    private var counter1: CountDownTimer? = null
+    private var counter2: CountDownTimer? = null
 
     @Volatile
     var mPosition1 = 0
@@ -43,12 +46,13 @@ class SayWhatActivity : BaseActivity() {
         adapter2.setNewInstance(foodList2)
 
         start.singleClick {
-            counter?.start()
+            counter1?.start()
+            counter2?.start()
             start.isEnabled = false
         }
 
         val rand = Random.nextLong(4000, 6000)
-        counter = object : CountDownTimer(rand, 150) {
+        counter1 = object : CountDownTimer(rand, 150) {
             override fun onTick(p0: Long) {
                 if (mPosition1 == 0) {
                     adapter1.notifyItemChanged(0, true)
@@ -62,7 +66,18 @@ class SayWhatActivity : BaseActivity() {
                 } else {
                     mPosition1++
                 }
+            }
 
+            override fun onFinish() {
+                start.isEnabled = true
+                XLog.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
+                val plate1 = adapter1.data[mPosition1 - 1]
+                tv.isVisible = true
+                tv.text = "主食:${plate1}"
+            }
+        }
+        counter2 = object : CountDownTimer(rand, 150) {
+            override fun onTick(p0: Long) {
                 if (mPosition2 == 0) {
                     adapter2.notifyItemChanged(0, true)
                     adapter2.notifyItemChanged(mPosition2 - 1, false)
@@ -79,11 +94,10 @@ class SayWhatActivity : BaseActivity() {
 
             override fun onFinish() {
                 start.isEnabled = true
-                XLog.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} ${mPosition2}")
-                val plate1 = adapter1.data[mPosition1 - 1]
+                XLog.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
                 val plate2 = adapter2.data[mPosition2 - 1]
                 tv.isVisible = true
-                tv.text = "主食:${plate1}  菜系:${plate2}"
+                tv.text = "菜系:${plate2}"
             }
         }
     }

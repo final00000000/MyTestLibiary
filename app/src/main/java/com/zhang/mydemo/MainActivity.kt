@@ -35,9 +35,6 @@ class MainActivity : BaseActivity() {
         java.singleClick {
             startActivity<JavaActivity>()
         }
-        sayWhat.singleClick {
-            startActivity<SayWhatActivity>()
-        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {

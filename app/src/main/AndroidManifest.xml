@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.zhang.mydemo">
+    package="com.zhang.mydemo" >
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 使用照相机权限 -->
@@ -20,9 +20,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDemo"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name=".SayWhatActivity"
+            android:name=".kotlin.ui.activity.ViewWorldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlin.ui.activity.SayWhatActivity"
             android:exported="false" />
         <activity
             android:name=".kotlin.ui.activity.VerificationActivity"
@@ -33,7 +36,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,7 +58,7 @@
             android:authorities="com.zhang.mydemo.file_provider"
             android:exported="false"
             android:grantUriPermissions="true"
-            tools:replace="android:authorities">
+            tools:replace="android:authorities" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"
