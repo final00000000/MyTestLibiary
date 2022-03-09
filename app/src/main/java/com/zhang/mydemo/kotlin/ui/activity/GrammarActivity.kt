@@ -1,24 +1,17 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.elvishew.xlog.XLog
-import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityGrammarBinding
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_grammar.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.textColor
 import org.jetbrains.anko.toast
-import kotlin.apply
 
-class GrammarActivity : BaseActivity() {
+class GrammarActivity : BaseActivity<ActivityGrammarBinding>() {
 
-    override fun getLayoutId(): Int = R.layout.activity_grammar
-
-    var mutableList = mutableListOf(1,2, 3, 4, 5)
+    var mutableList = mutableListOf(1, 2, 3, 4, 5)
 
     override fun initView() {
     }
@@ -67,15 +60,19 @@ class GrammarActivity : BaseActivity() {
                 "将集合转成String joinToString(里面填什么符号,就以什么符号分隔) ${mutableList.joinToString(",")}"
         }
         filter.singleClick {
-            tv_show.text = "过滤符合条件的值  ${mutableList.filter {
-                it == 1
-            }.joinToString()} \n mutableList.filter {it == 1}.joinToString()"
+            tv_show.text = "过滤符合条件的值  ${
+                mutableList.filter {
+                    it == 1
+                }.joinToString()
+            } \n mutableList.filter {it == 1}.joinToString()"
         }
 
         noFilter.singleClick {
-            tv_show.text = "过滤不符合条件的值   ${mutableList.filterNot { 
-                it == 1
-            }}   \n mutableList.filterNot {it == 1}.joinToString()"
+            tv_show.text = "过滤不符合条件的值   ${
+                mutableList.filterNot {
+                    it == 1
+                }
+            }   \n mutableList.filterNot {it == 1}.joinToString()"
         }
         tv_collections.singleClick {
             startActivity<WebViewActivity>(
@@ -91,10 +88,14 @@ class GrammarActivity : BaseActivity() {
             tv_show.text = "将map变成集合传给适配器  mutableList.map{} ${mutableList.map { it }}"
         }
         sumof.singleClick {
-            tv_show.text = "mutableListOf(1,2, 3, 4, 5) 集合进行求和  mutableList.sumOf { it }  \n  和: ${mutableList.sumOf { it }}"
+            tv_show.text =
+                "mutableListOf(1,2, 3, 4, 5) 集合进行求和  mutableList.sumOf { it }  \n  和: ${mutableList.sumOf { it }}"
         }
         average.singleClick {
-            tv_show.text = "mutableListOf(1,2, 3, 4, 5) 集合进行求平均值 mutableList.windowed(mutableList.size).map(List<Int>::average) \n 平均值: ${mutableList.windowed(mutableList.size).map(List<Int>::average)}"
+            tv_show.text =
+                "mutableListOf(1,2, 3, 4, 5) 集合进行求平均值 mutableList.windowed(mutableList.size).map(List<Int>::average) \n 平均值: ${
+                    mutableList.windowed(mutableList.size).map(List<Int>::average)
+                }"
         }
     }
 }

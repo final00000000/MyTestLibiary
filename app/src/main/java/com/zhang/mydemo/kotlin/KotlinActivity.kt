@@ -1,17 +1,14 @@
 package com.zhang.mydemo.kotlin
 
-import com.zhang.mydemo.R
-import com.zhang.mydemo.kotlin.ui.activity.SayWhatActivity
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityKotlinBinding
 import com.zhang.mydemo.kotlin.ui.activity.*
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.startActivity
 
-class KotlinActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_kotlin
+class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
 
     override fun initView() {
         ivPageBack.singleClick { killMyself() }

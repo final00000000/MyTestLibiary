@@ -3,18 +3,16 @@ package com.zhang.mydemo.kotlin.ui.activity
 import android.os.CountDownTimer
 import androidx.core.view.isVisible
 import com.elvishew.xlog.XLog
-import com.zhang.mydemo.R
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivitySayWhatBinding
 import com.zhang.mydemo.kotlin.ui.adapter.SayWhatAdapter1
 import com.zhang.mydemo.kotlin.ui.adapter.SayWhatAdapter2
-import com.zhang.mydemo.base.BaseActivity
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_say_what.*
 import kotlinx.android.synthetic.main.layout_title.*
 import kotlin.random.Random
 
-class SayWhatActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_say_what
+class SayWhatActivity : BaseActivity<ActivitySayWhatBinding>() {
 
     lateinit var adapter1: SayWhatAdapter1
     lateinit var adapter2: SayWhatAdapter2

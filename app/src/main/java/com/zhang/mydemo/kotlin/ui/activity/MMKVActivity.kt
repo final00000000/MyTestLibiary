@@ -1,17 +1,12 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.tencent.mmkv.MMKV
-import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityMmkvBinding
 import com.zhang.utilslibiary.utils.singleClick
-import kotlinx.android.synthetic.main.activity_mmkvactivity.*
+import kotlinx.android.synthetic.main.activity_mmkv.*
 import kotlinx.android.synthetic.main.layout_title.*
 
-class MMKVActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_mmkvactivity
+class MMKVActivity : BaseActivity<ActivityMmkvBinding>() {
 
 
     override fun initView() {

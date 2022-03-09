@@ -1,20 +1,17 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
-import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
-import com.zhang.mydemo.kotlin.ui.adapter.TabViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_tab_view_pager.*
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityTabViewPagerBinding
 import com.zhang.mydemo.kotlin.ui.activity.tab.Tab1Activity
 import com.zhang.mydemo.kotlin.ui.activity.tab.TabActivity
-import com.zhang.utilslibiary.utils.singleClick
+import com.zhang.mydemo.kotlin.ui.adapter.TabViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_tab_view_pager.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.startActivity
 
 
-class TabViewPagerActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_tab_view_pager
+class TabViewPagerActivity : BaseActivity<ActivityTabViewPagerBinding>() {
 
     lateinit var rvTpAdapter: TabViewPagerAdapter
     var mData = mutableListOf<String>()
@@ -29,7 +26,7 @@ class TabViewPagerActivity : BaseActivity() {
         rvTpAdapter.setOnItemClickListener { adapter, view, position ->
             when (position) {
                 0 -> startActivity<TabActivity>()
-                1 ->startActivity<Tab1Activity>()
+                1 -> startActivity<Tab1Activity>()
             }
         }
     }

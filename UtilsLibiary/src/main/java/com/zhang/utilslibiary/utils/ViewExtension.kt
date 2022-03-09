@@ -15,8 +15,6 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
-import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.signature.ObjectKey
 import java.util.*
 
 
@@ -127,10 +125,5 @@ fun EditText.showInputWindow(activity: Activity, isboolean: Boolean) {
             }
         }, 1000)
     }
-}
-
-fun getRequest(): RequestOptions {
-    return RequestOptions().signature(ObjectKey(System.currentTimeMillis()))
-        .fitCenter()//.diskCacheStrategy(DiskCacheStrategy.ALL).skipMemoryCache(true)
 }
 

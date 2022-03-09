@@ -1,8 +1,8 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
 import android.widget.Toast
-import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.TextTagBinding
 import com.zhang.mydemo.kotlin.ui.widgetkt.TagTextUtil
 import com.zhang.mydemo.kotlin.ui.widgetkt.tag.ClickableTextViewMentionLinkOnTouchListener
 import com.zhang.mydemo.kotlin.ui.widgetkt.tag.TimeLineUtility
@@ -17,8 +17,7 @@ import kotlinx.android.synthetic.main.text_tag.*
  * @Class Describe : 描述
  * @Project Name : MyDemo
  */
-class TestTag : BaseActivity() {
-    override fun getLayoutId(): Int = R.layout.text_tag
+class TestTag : BaseActivity<TextTagBinding>() {
 
     private val contentString = "@王安石 古人之观于天地、^#65&&山川#^、草木、虫鱼、鸟兽，往往有得，以其求思之深而无不在也。" +
             "夫夷以近，则游者众；险以远，则至者少。而世之奇伟、瑰怪，^$1&&非常之观$^，常在于险远，而人之所罕至焉，故非有志者不能至也。有志矣，不随以止也，然力不足者，^#2&&亦不能至也。有志与力，而又不随以怠，至于幽暗昏惑而无物以相之，亦不能至也。#^" +

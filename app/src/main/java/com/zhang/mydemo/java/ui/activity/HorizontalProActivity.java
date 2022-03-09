@@ -1,28 +1,26 @@
 package com.zhang.mydemo.java.ui.activity;
 
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.zhang.mydemo.R;
-import com.zhang.mydemo.base.BaseActivity;
+import com.example.baselibiary.base.BaseActivity;
+import com.zhang.mydemo.databinding.ActivityHorizontalProBinding;
 import com.zhang.mydemo.java.widget.HorizontalProgressViewModel;
 import com.zhang.mydemo.kotlin.ui.widgetkt.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HorizontalProActivity extends BaseActivity {
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_horizontal_pro;
-    }
+public class HorizontalProActivity extends BaseActivity<ActivityHorizontalProBinding> {
 
     @Override
     protected void initView() {
 
-        findViewById(R.id.ivPageBack).setOnClickListener(v->{killMyself();});
+        findViewById(R.id.ivPageBack).setOnClickListener(v -> {
+            killMyself();
+        });
         TextView title = findViewById(R.id.tvPageTitle);
         title.setText("横向物流轴");
 
@@ -32,6 +30,7 @@ public class HorizontalProActivity extends BaseActivity {
 
         model.setViewUp(this, recyclerView, getProgressList());
     }
+
     /**
      * 模拟节点数据
      * node1.nodeStatus: 0 已完成状态  1正在处理状态  -1待处理状态

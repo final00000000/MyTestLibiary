@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
+import com.example.baselibiary.base.BaseActivity
 import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.PictureConfig
 import com.luck.picture.lib.config.SelectMimeType
@@ -15,7 +16,7 @@ import com.luck.picture.lib.config.SelectModeConfig
 import com.luck.picture.lib.entity.LocalMedia
 import com.luck.pictureselector.GlideEngine
 import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityRichTextBinding
 import com.zhang.mydemo.kotlin.ui.widgetkt.CommonPopupWindow
 import com.zhang.mydemo.kotlin.ui.widgetkt.KeyBoardUtils
 import com.zhang.mydemo.kotlin.ui.widgetkt.pickercolor.ColorSelectDialog
@@ -26,7 +27,7 @@ import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 
-class RichTextActivity : BaseActivity() {
+class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
 
     //编辑图片的pop
     private var popupWindow: CommonPopupWindow? = null
@@ -39,9 +40,6 @@ class RichTextActivity : BaseActivity() {
 
     // 接收的颜色值
     private var lastColor = 0
-
-
-    override fun getLayoutId(): Int = R.layout.activity_rich_text
 
     override fun initView() {
         ivPageBack.singleClick { killMyself() }

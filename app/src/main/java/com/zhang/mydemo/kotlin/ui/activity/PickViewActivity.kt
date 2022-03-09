@@ -1,10 +1,11 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
 import android.content.Intent
+import com.example.baselibiary.base.BaseActivity
 import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.SelectMimeType.TYPE_IMAGE
 import com.luck.picture.lib.entity.LocalMedia
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityPickViewBinding
 import com.zhang.utilslibiary.utils.GlideUtils
 import com.zhang.utilslibiary.utils.PickerImageOrVideo
 import com.zhang.utilslibiary.utils.singleClick
@@ -12,9 +13,7 @@ import kotlinx.android.synthetic.main.activity_pick_view.*
 import kotlinx.android.synthetic.main.layout_title.*
 
 
-class PickViewActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = com.zhang.mydemo.R.layout.activity_pick_view
+class PickViewActivity : BaseActivity<ActivityPickViewBinding>() {
 
     override fun initData() {
         ivPageBack.singleClick { killMyself() }

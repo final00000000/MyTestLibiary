@@ -5,20 +5,16 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import com.zhang.mydemo.R;
-import com.zhang.mydemo.base.BaseActivity;
+import com.example.baselibiary.base.BaseActivity;
+import com.zhang.mydemo.databinding.ActivityDateUtilsBinding;
 import com.zhang.utilslibiary.utils.DateUtil;
 
-public class DateUtilsActivity extends BaseActivity {
+public class DateUtilsActivity extends BaseActivity<ActivityDateUtilsBinding> {
 
     private AppCompatTextView mJavaTv1;
     private AppCompatTextView mJavaTv2;
     private AppCompatTextView mJavaTv3;
     private AppCompatTextView mJavaTv4;
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_date_utils;
-    }
 
     @Override
     protected void initView() {
@@ -30,7 +26,9 @@ public class DateUtilsActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        findViewById(R.id.ivPageBack).setOnClickListener(v->{killMyself();});
+        findViewById(R.id.ivPageBack).setOnClickListener(v -> {
+            killMyself();
+        });
         TextView tvPageTitle = findViewById(R.id.tvPageTitle);
         tvPageTitle.setText("时间工具类");
     }

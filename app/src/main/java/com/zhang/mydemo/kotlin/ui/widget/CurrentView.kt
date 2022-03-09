@@ -1,4 +1,4 @@
-package com.zhang.mydemo.kotlin.ui
+package com.zhang.mydemo.kotlin.ui.widget
 
 import android.content.Context
 import android.util.AttributeSet
@@ -17,16 +17,16 @@ class CurrentView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-    var round: Boolean? = null
+//    var round: Boolean? = null
 //    var height by Delegates.notNull<Float>()
 //    var width by Delegates.notNull<Float>()
 
     init {
-        val oSA = context.obtainStyledAttributes(attrs, R.styleable.current_view)
-        round = oSA.getBoolean(R.styleable.current_view_round, false)
+//        val oSA = context.obtainStyledAttributes(attrs, R.styleable.current_view)
+//        round = oSA.getBoolean(R.styleable.current_view_round, false)
 //        height = oSA.getDimension(R.styleable.current_view_round_height, 0f)
 //        width = oSA.getDimension(R.styleable.current_view_round_width, 0f)
-        oSA.recycle()
+//        oSA.recycle()
     }
 
 }

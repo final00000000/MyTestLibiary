@@ -1,7 +1,6 @@
-package com.zhang.mydemo.base
+package com.example.baselibiary.base
 
 import android.app.Application
-import android.content.Context
 import com.elvishew.xlog.LogConfiguration
 import com.elvishew.xlog.XLog
 import com.tencent.mmkv.MMKV
@@ -15,8 +14,7 @@ import com.tencent.mmkv.MMKV
  */
 class MyDemoAppLication : Application() {
 
-
-    fun getApp() : MyDemoAppLication{
+    fun getApp(): MyDemoAppLication {
         return this
     }
 

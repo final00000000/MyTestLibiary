@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import com.example.baselibiary.base.BaseActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityPopupBinding
 import com.zhang.mydemo.kotlin.ui.widgetkt.SimpleRatingBar
 import com.zhang.utilslibiary.utils.singleClick
-import kotlinx.android.synthetic.main.activity_picker_date.*
+import kotlinx.android.synthetic.main.activity_popup.*
 import kotlinx.android.synthetic.main.item_picker.*
 import kotlinx.android.synthetic.main.layout_title.*
 import org.jetbrains.anko.find
@@ -21,8 +22,7 @@ import java.util.*
 import kotlin.math.ceil
 
 
-class PopUpActivity : BaseActivity() {
-    override fun getLayoutId(): Int = R.layout.activity_picker_date
+class PopUpActivity : BaseActivity<ActivityPopupBinding>() {
 
     override fun initView() {
         ivPageBack.singleClick { killMyself() }

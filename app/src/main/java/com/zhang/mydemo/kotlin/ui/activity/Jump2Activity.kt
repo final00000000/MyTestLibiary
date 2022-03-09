@@ -1,17 +1,14 @@
 package com.zhang.mydemo.kotlin.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityJump2Binding
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_jump2.*
 import kotlinx.android.synthetic.main.layout_title.*
+import kotlinx.android.synthetic.main.layout_title.ivPageBack as ivPageBack1
 
-class Jump2Activity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_jump2
+class Jump2Activity : BaseActivity<ActivityJump2Binding>() {
 
     override fun initView() {
         tv_show.text = intent.getStringExtra("data")
@@ -21,7 +18,7 @@ class Jump2Activity : BaseActivity() {
     }
 
     override fun setListener() {
-        ivPageBack.singleClick { killMyself() }
+        ivPageBack1.singleClick { killMyself() }
         tvPageTitle.text = "学习跳转"
         finish.singleClick {
             val itn = Intent()

@@ -1,8 +1,4 @@
-package com.zhang.mydemo.base
-
-import java.lang.annotation.ElementType
-import java.lang.annotation.ElementType.*
-import java.lang.annotation.RetentionPolicy
+package com.example.baselibiary.base
 
 /**
  * @Author : zhang

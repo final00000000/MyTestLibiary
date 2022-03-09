@@ -3,13 +3,12 @@ package com.zhang.mydemo
 import android.os.Bundle
 import android.view.KeyEvent
 import com.elvishew.xlog.XLog
-import com.zhang.mydemo.base.BaseActivity
+import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivitySplashBinding
 import org.jetbrains.anko.startActivity
 import java.util.*
 
-class SplashActivity : BaseActivity() {
-
-    override fun getLayoutId(): Int = R.layout.activity_splash
+class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun isLayoutToolbar(): Boolean = false
 

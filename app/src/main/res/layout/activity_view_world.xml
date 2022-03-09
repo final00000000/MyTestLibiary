@@ -7,7 +7,7 @@
     tools:context=".kotlin.ui.activity.ViewWorldActivity">
 
 
-    <com.zhang.mydemo.kotlin.ui.CurrentView
+    <com.zhang.mydemo.kotlin.ui.widget.CurrentView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"

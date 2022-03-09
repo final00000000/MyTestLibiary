@@ -11,14 +11,11 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.zhang.mydemo.R;
-import com.zhang.mydemo.base.BaseActivity;
+import com.example.baselibiary.base.BaseActivity;
+import com.zhang.mydemo.databinding.ActivityTestSurfaceViewBinding;
 
-public class TestSurfaceViewActivity extends BaseActivity implements View.OnClickListener {
+public class TestSurfaceViewActivity extends BaseActivity<ActivityTestSurfaceViewBinding> implements View.OnClickListener {
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_test_surface_view;
-    }
 
     private SurfaceView mSurfaceView;
     private MediaPlayer mMediaPlayer;

@@ -4,20 +4,15 @@ import android.content.Intent;
 import android.widget.TextView;
 
 import com.zhang.mydemo.R;
-import com.zhang.mydemo.base.BaseActivity;
+import com.example.baselibiary.base.BaseActivity;
+import com.zhang.mydemo.databinding.ActivityJavaBinding;
 import com.zhang.mydemo.java.timelinetest.TimeDividerActivity;
 import com.zhang.mydemo.java.ui.activity.DateUtilsActivity;
 import com.zhang.mydemo.java.ui.activity.HorizontalProActivity;
 import com.zhang.mydemo.java.ui.activity.JumpTextActivity;
 import com.zhang.mydemo.java.ui.activity.TestSurfaceViewActivity;
 
-public class JavaActivity extends BaseActivity {
-
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_java;
-    }
+public class JavaActivity extends BaseActivity<ActivityJavaBinding> {
 
     @Override
     protected void initData() {
