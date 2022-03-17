@@ -13,14 +13,12 @@
         style="@style/tv_style"
         android:layout_weight="1"
         android:gravity="center"
-        android:visibility="gone"
         android:text="@string/Describe"
         android:textSize="28sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/kotlin"
         style="@style/tv_style"
-        android:visibility="gone"
         android:layout_weight="2"
         android:gravity="center"
         android:text="@string/Kotlin"
@@ -32,12 +30,12 @@
         android:layout_weight="2"
         android:gravity="center"
         android:text="@string/Java"
-        android:visibility="gone"
         android:textSize="40sp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragment"
         app:navGraph="@navigation/main_graph"
+        android:visibility="gone"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
