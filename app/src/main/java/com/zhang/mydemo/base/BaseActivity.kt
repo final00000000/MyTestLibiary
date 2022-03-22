@@ -3,6 +3,9 @@ package com.zhang.mydemo.base
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.viewbinding.ViewBinding
 import com.gyf.immersionbar.ImmersionBar
 import com.tencent.mmkv.MMKV
@@ -20,7 +23,7 @@ import java.lang.reflect.ParameterizedType
  * @Class Describe : 描述
  * @Project Name : KotlinDemo
  */
-abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), IsBase {
+abstract class BaseActivity<VB : ViewBinding> : BaseVMActivity<ViewModel>(), IsBase {
 
     /**
      * 是否需要带toolbar的布局
@@ -32,11 +35,12 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), IsBase {
     var defaultMMKV: MMKV = MMKV.defaultMMKV()
 
     lateinit var viewBinding: VB
+    lateinit var VM: ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppActivityManager.addActivity(this)
-
+        VM = ViewModelProvider.get(ViewModel::class.java)
         viewBinding = getViewBindingForActivity(layoutInflater)
         if (isLayoutToolbar()) {
             setContentView(R.layout.activity_base)

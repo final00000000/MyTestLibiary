@@ -38,7 +38,7 @@ fun View.singleClick(isCheckLogin: Boolean = false, t: Int, listener: (View?) ->
 }
 
 fun TextView.setText(title: String, content: String) {
-    val style: SpannableStringBuilder = SpannableStringBuilder(title + content)
+    val style = SpannableStringBuilder(title + content)
     style.setSpan(
         ForegroundColorSpan(Color.parseColor("#222222")),
         0,
