@@ -9,6 +9,6 @@
     android:id="@+id/rv_tp"
     tools:listitem="@layout/item_tab_view_pager"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".kotlin.ui.activity.TabViewPagerActivity">
+    tools:context=".ui.activity.TabViewPagerActivity">
 
 </androidx.recyclerview.widget.RecyclerView>

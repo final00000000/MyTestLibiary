@@ -2,10 +2,8 @@ package com.zhang.mydemo
 
 import android.view.KeyEvent
 import android.view.View
-import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.databinding.ActivityMainBinding
-import com.zhang.mydemo.java.JavaActivity
-import com.zhang.mydemo.kotlin.KotlinActivity
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
@@ -28,9 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
         kotlin.singleClick {
             startActivity<KotlinActivity>()
-        }
-        java.singleClick {
-            startActivity<JavaActivity>()
         }
     }
 

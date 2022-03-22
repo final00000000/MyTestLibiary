@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".kotlin.ui.activity.SayWhatActivity">
+    tools:context=".ui.activity.SayWhatActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start"

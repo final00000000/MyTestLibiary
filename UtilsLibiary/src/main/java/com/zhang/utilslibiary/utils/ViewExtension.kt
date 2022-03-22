@@ -3,8 +3,10 @@
 package com.zhang.utilslibiary.utils
 
 import android.app.Activity
+import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.graphics.Color
+import android.net.ConnectivityManager
 import android.text.Editable
 import android.text.Spannable
 import android.text.SpannableStringBuilder
@@ -15,6 +17,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 
@@ -124,6 +127,48 @@ fun EditText.showInputWindow(activity: Activity, isboolean: Boolean) {
                 )
             }
         }, 1000)
+    }
+}
+
+/**
+ * 判断是否有网络连接
+ * @param context Context?
+ * @return Boolean
+ */
+fun isNetworkConnected(context: Context?): Boolean {
+    if (context != null) {
+        val mConnectivityManager = context
+            .getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val mNetworkInfo = mConnectivityManager.activeNetworkInfo
+        if (mNetworkInfo != null) {
+            return mNetworkInfo.isAvailable
+        }
+    }
+    return false
+}
+
+/**
+ * 显示软键盘
+ */
+fun showSoftInput(context: Context, view: View?) {
+    val inputMethodManager =
+        context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS)
+    view!!.requestFocus()
+}
+
+
+/**
+ * 关闭软键盘
+ */
+fun hideSoftInput(activity: Activity) {
+    val imm =
+        activity.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
+    if (imm != null && imm.isActive && activity.currentFocus != null) {
+        imm.hideSoftInputFromWindow(
+            activity.currentFocus!!.windowToken,
+            InputMethodManager.HIDE_NOT_ALWAYS
+        )
     }
 }
 

@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.zhang.mydemo.kotlin.ui.widgetkt.SimpleRatingBar
+        <com.zhang.mydemo.ui.widget.SimpleRatingBar
             android:id="@+id/startbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

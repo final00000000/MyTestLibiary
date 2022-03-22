@@ -1,165 +1,131 @@
-package com.zhang.mydemo.java.ui.activity;
+package com.zhang.mydemo.ui.activity
 
-import android.content.pm.ActivityInfo;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.net.Uri;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.content.pm.ActivityInfo
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.net.Uri
+import android.view.SurfaceHolder
+import android.view.View
+import android.widget.RelativeLayout
+import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityTestSurfaceViewBinding
+import kotlinx.android.synthetic.main.activity_test_surface_view.*
 
-import com.zhang.mydemo.R;
-import com.example.baselibiary.base.BaseActivity;
-import com.zhang.mydemo.databinding.ActivityTestSurfaceViewBinding;
+class TestSurfaceViewActivity : BaseActivity<ActivityTestSurfaceViewBinding>(),
+    View.OnClickListener {
 
-public class TestSurfaceViewActivity extends BaseActivity<ActivityTestSurfaceViewBinding> implements View.OnClickListener {
+    private var mMediaPlayer: MediaPlayer? = null
 
+    override fun initView() {}
 
-    private SurfaceView mSurfaceView;
-    private MediaPlayer mMediaPlayer;
-    private SurfaceHolder mHolder;
-    private Button mBtnPlay;
-    private RelativeLayout mParent;
-
-
-    @Override
-    protected void initView() {
-
-    }
-
-    @Override
-    protected void initData() {
-        mBtnPlay = findViewById(R.id.test_btn_play);
-        mSurfaceView = findViewById(R.id.test_surfaceView);
-        mParent = findViewById(R.id.test_parent_play);
-
-        mBtnPlay.setOnClickListener(this);
-
-        mMediaPlayer = new MediaPlayer();
-        mHolder = mSurfaceView.getHolder();
-        mHolder.setKeepScreenOn(true);
-
-        mHolder.addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(SurfaceHolder holder) {
+    override fun initData() {
+        mMediaPlayer = MediaPlayer()
+        test_surfaceView.holder.setKeepScreenOn(true)
+        test_surfaceView.holder.addCallback(object : SurfaceHolder.Callback {
+            override fun surfaceCreated(holder: SurfaceHolder) {
                 //开始播放
-                readyPlay();
+                readyPlay()
             }
 
-            @Override
-            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
+            override fun surfaceChanged(
+                holder: SurfaceHolder,
+                format: Int,
+                width: Int,
+                height: Int
+            ) {
             }
 
-            @Override
-            public void surfaceDestroyed(SurfaceHolder holder) {
-
-            }
-        });
-
-        mMediaPlayer.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
-            @Override
-            public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
-                changeVideoSize();
-            }
-        });
+            override fun surfaceDestroyed(holder: SurfaceHolder) {}
+        })
+        mMediaPlayer!!.setOnVideoSizeChangedListener { mp, width, height -> changeVideoSize() }
     }
 
-    @Override
-    protected void setListener() {
-
-    }
+    override fun setListener() {}
 
     //改变视频的尺寸自适应。
-    public void changeVideoSize() {
-        int videoWidth = mMediaPlayer.getVideoWidth();
-        int videoHeight = mMediaPlayer.getVideoHeight();
-
-        int surfaceWidth = mSurfaceView.getWidth();
-        int surfaceHeight = mSurfaceView.getHeight();
+    fun changeVideoSize() {
+        var videoWidth = mMediaPlayer!!.videoWidth
+        var videoHeight = mMediaPlayer!!.videoHeight
+        val surfaceWidth = test_surfaceView!!.width
+        val surfaceHeight = test_surfaceView!!.height
 
         //根据视频尺寸去计算->视频可以在sufaceView中放大的最大倍数。
-        float max;
-        if (getResources().getConfiguration().orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+        val max: Float
+        max = if (resources.configuration.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
             //竖屏模式下按视频宽度计算放大倍数值
-            max = Math.max((float) videoWidth / (float) surfaceWidth, (float) videoHeight / (float) surfaceHeight);
+            Math.max(
+                videoWidth.toFloat() / surfaceWidth.toFloat(),
+                videoHeight.toFloat() / surfaceHeight.toFloat()
+            )
         } else {
             //横屏模式下按视频高度计算放大倍数值
-            max = Math.max(((float) videoWidth / (float) surfaceHeight), (float) videoHeight / (float) surfaceWidth);
+            Math.max(
+                videoWidth.toFloat() / surfaceHeight.toFloat(),
+                videoHeight.toFloat() / surfaceWidth.toFloat()
+            )
         }
 
         //视频宽高分别/最大倍数值 计算出放大后的视频尺寸
-        videoWidth = (int) Math.ceil((float) videoWidth / max);
-        videoHeight = (int) Math.ceil((float) videoHeight / max);
+        videoWidth = Math.ceil((videoWidth.toFloat() / max).toDouble()).toInt()
+        videoHeight = Math.ceil((videoHeight.toFloat() / max).toDouble()).toInt()
 
         //无法直接设置视频尺寸，将计算出的视频尺寸设置到surfaceView 让视频自动填充。
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(videoWidth, videoHeight);
-        params.addRule(RelativeLayout.CENTER_VERTICAL, mParent.getId());
-        mSurfaceView.setLayoutParams(params);
+        val params = RelativeLayout.LayoutParams(videoWidth, videoHeight)
+        params.addRule(RelativeLayout.CENTER_VERTICAL, test_parent_play!!.id)
+        test_surfaceView!!.layoutParams = params
     }
 
     //准好播放了
-    public void readyPlay() {
-        String url = "http://res.cloudinary.com/liuyuesha/video/upload/v1475978853/广告_bl4dbp.mp4";
-        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    fun readyPlay() {
+        val url = "http://res.cloudinary.com/liuyuesha/video/upload/v1475978853/广告_bl4dbp.mp4"
+        mMediaPlayer!!.setAudioStreamType(AudioManager.STREAM_MUSIC)
         try {
-            mMediaPlayer.setDataSource(this, Uri.parse(url));
-            mMediaPlayer.setLooping(true);
+            mMediaPlayer!!.setDataSource(this, Uri.parse(url))
+            mMediaPlayer!!.isLooping = true
             // 把视频画面输出到SurfaceView
-            mMediaPlayer.setDisplay(mHolder);
+            mMediaPlayer!!.setDisplay(test_surfaceView.holder)
             // 通过异步的方式装载媒体资源
-            mMediaPlayer.prepareAsync();
-
-            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    //装载完毕回调
-                    play();
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
+            mMediaPlayer!!.prepareAsync()
+            mMediaPlayer!!.setOnPreparedListener { //装载完毕回调
+                play()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
     /**
      * 播放或者暂停
      */
-    private void play() {
+    private fun play() {
         if (mMediaPlayer != null) {
-            if (mMediaPlayer.isPlaying()) {
-                mMediaPlayer.pause();
-                mBtnPlay.setText("播放");
+            if (mMediaPlayer!!.isPlaying) {
+                mMediaPlayer!!.pause()
+                test_btn_play!!.text = "播放"
             } else {
-                mMediaPlayer.start();
-                mBtnPlay.setText("暂停");
+                mMediaPlayer!!.start()
+                test_btn_play!!.text = "暂停"
             }
         }
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.test_btn_play) {
-            play();
+    override fun onClick(v: View) {
+        if (v.id == R.id.test_btn_play) {
+            play()
         }
     }
 
-    @Override
-    protected void onDestroy() {
+    override fun onDestroy() {
         if (mMediaPlayer != null) {
-            if (mMediaPlayer.isPlaying()) {
-                mMediaPlayer.stop();
+            if (mMediaPlayer!!.isPlaying) {
+                mMediaPlayer!!.stop()
             }
-            mMediaPlayer.release();
-            mMediaPlayer = null;
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
         }
-        super.onDestroy();
+        super.onDestroy()
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
+    override fun onPointerCaptureChanged(hasCapture: Boolean) {}
 }

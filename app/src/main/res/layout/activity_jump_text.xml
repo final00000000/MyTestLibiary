@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".java.ui.jump.JumpTextActivity">
 
-    <com.zhang.mydemo.java.widget.MeiTextPathView
+    <com.zhang.mydemo.ui.widget.MeiTextPathView
         android:id="@+id/jump"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

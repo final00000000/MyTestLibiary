@@ -15,7 +15,7 @@
         android:textCursorDrawable="@drawable/et_style"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.zhang.mydemo.kotlin.ui.widgetkt.richeditor.RichEditor
+    <com.zhang.mydemo.ui.widget.richeditor.RichEditor
         android:id="@+id/rich_Editor"
         android:layout_width="match_parent"
         android:layout_height="0dp"

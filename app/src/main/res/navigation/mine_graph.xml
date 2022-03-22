@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/mine"
-        android:name="com.zhang.mydemo.kotlin.ui.fragment.TestFragment1"
+        android:name="com.zhang.mydemo.ui.fragment.TestFragment1"
         android:label="MineFragment"
         tools:layout="@layout/fragment_test1" />
 

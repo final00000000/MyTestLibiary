@@ -1,44 +1,39 @@
-package com.zhang.mydemo.java.ui.activity;
+package com.zhang.mydemo.ui.activity
 
-import android.widget.TextView;
+import android.annotation.SuppressLint
+import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityDateUtilsBinding
+import com.zhang.utilslibiary.utils.DateUtil.getCurrentMillis
+import com.zhang.utilslibiary.utils.DateUtil.getCurrentTimeYMD
+import com.zhang.utilslibiary.utils.DateUtil.getCurrentTimeYMDHMS
+import com.zhang.utilslibiary.utils.DateUtil.getStringDate
+import com.zhang.utilslibiary.utils.singleClick
+import kotlinx.android.synthetic.main.activity_date_utils.*
+import kotlinx.android.synthetic.main.layout_title.*
 
-import androidx.appcompat.widget.AppCompatTextView;
+@SuppressLint("SetTextI18n")
+class DateUtilsActivity : BaseActivity<ActivityDateUtilsBinding>() {
 
-import com.zhang.mydemo.R;
-import com.example.baselibiary.base.BaseActivity;
-import com.zhang.mydemo.databinding.ActivityDateUtilsBinding;
-import com.zhang.utilslibiary.utils.DateUtil;
-
-public class DateUtilsActivity extends BaseActivity<ActivityDateUtilsBinding> {
-
-    private AppCompatTextView mJavaTv1;
-    private AppCompatTextView mJavaTv2;
-    private AppCompatTextView mJavaTv3;
-    private AppCompatTextView mJavaTv4;
-
-    @Override
-    protected void initView() {
-        mJavaTv1 = findViewById(R.id.java_tv_1);
-        mJavaTv2 = findViewById(R.id.java_tv_2);
-        mJavaTv3 = findViewById(R.id.java_tv_3);
-        mJavaTv4 = findViewById(R.id.java_tv_4);
+    override fun initData() {
+        tvPageTitle.text = "时间工具类"
     }
 
-    @Override
-    protected void initData() {
-        findViewById(R.id.ivPageBack).setOnClickListener(v -> {
-            killMyself();
-        });
-        TextView tvPageTitle = findViewById(R.id.tvPageTitle);
-        tvPageTitle.setText("时间工具类");
+    override fun setListener() {
+        tv_1.singleClick {
+            tv_1!!.text = "当前时间戳：${getCurrentMillis()}"
+        }
+        tv_2.singleClick {
+            tv_2!!.text = "当前时间格式为(yy-MM-dd hh-mm-ss)：${getCurrentTimeYMDHMS()}"
+        }
+        tv_3.singleClick {
+            tv_3!!.text = "当前时间格式为(yy-MM-dd)：${getCurrentTimeYMD()}"
+        }
+        tv_4.singleClick {
+            tv_4!!.text = "获取现在时间：${getStringDate()}"
+        }
     }
 
-    @Override
-    protected void setListener() {
-        mJavaTv1.setOnClickListener(v -> mJavaTv1.setText("当前时间戳：" + DateUtil.INSTANCE.getCurrentMillis()));
-        mJavaTv2.setOnClickListener(v -> mJavaTv2.setText("当前时间格式为(yy-MM-dd hh-mm-ss)：" + DateUtil.INSTANCE.getCurrentTimeYMDHMS()));
-        mJavaTv3.setOnClickListener(v -> mJavaTv3.setText("当前时间格式为(yy-MM-dd)：" + DateUtil.INSTANCE.getCurrentTimeYMD()));
-        mJavaTv4.setOnClickListener(v -> mJavaTv4.setText("获取现在时间：" + DateUtil.INSTANCE.getStringDate()));
-    }
+    override fun initView() {
 
+    }
 }

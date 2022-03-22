@@ -8,28 +8,4 @@
     tools:context=".java.JavaActivity">
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/date_utils"
-        style="@style/tv_style"
-        android:text="@string/java_date_utils" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java_2"
-        style="@style/tv_style"
-        android:text="@string/PathText" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java_3"
-        style="@style/tv_style"
-        android:text="@string/TestSurfaceView" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java_4"
-        style="@style/tv_style"
-        android:text="@string/Testorlin" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java_5"
-        style="@style/tv_style"
-        android:text="@string/TestHorlin" />
 </androidx.appcompat.widget.LinearLayoutCompat>

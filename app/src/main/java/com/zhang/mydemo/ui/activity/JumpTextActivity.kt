@@ -1,30 +1,15 @@
-package com.zhang.mydemo.java.ui.activity;
+package com.zhang.mydemo.ui.activity
 
-import android.widget.TextView;
+import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.databinding.ActivityJumpTextBinding
+import kotlinx.android.synthetic.main.layout_title.*
 
-import com.zhang.mydemo.R;
-import com.example.baselibiary.base.BaseActivity;
-import com.zhang.mydemo.databinding.ActivityJumpTextBinding;
+class JumpTextActivity : BaseActivity<ActivityJumpTextBinding>() {
 
-public class JumpTextActivity extends BaseActivity<ActivityJumpTextBinding> {
-
-    @Override
-    protected void initView() {
-        findViewById(R.id.ivPageBack).setOnClickListener(v -> {
-            killMyself();
-        });
-        TextView tvPageTitle = findViewById(R.id.tvPageTitle);
-        tvPageTitle.setText("文字绘制轨迹");
-
+    override fun initView() {
+        tvPageTitle.text = "文字绘制轨迹"
     }
 
-    @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected void setListener() {
-
-    }
+    override fun initData() {}
+    override fun setListener() {}
 }

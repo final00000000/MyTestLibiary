@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".kotlin.ui.activity.PopUpActivity">
+    tools:context=".ui.activity.PopUpActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn"

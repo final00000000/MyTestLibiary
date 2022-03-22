@@ -24,14 +24,6 @@
         android:text="@string/Kotlin"
         android:textSize="40sp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/java"
-        style="@style/tv_style"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:text="@string/Java"
-        android:textSize="40sp" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragment"
         app:navGraph="@navigation/main_graph"

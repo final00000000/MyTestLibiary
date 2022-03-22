@@ -3,7 +3,7 @@ package com.zhang.mydemo
 import android.os.Bundle
 import android.view.KeyEvent
 import com.elvishew.xlog.XLog
-import com.example.baselibiary.base.BaseActivity
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.databinding.ActivitySplashBinding
 import org.jetbrains.anko.startActivity
 import java.util.*

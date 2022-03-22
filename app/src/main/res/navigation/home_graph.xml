@@ -5,7 +5,7 @@
     tools:ignore="MissingDefaultResource">
     <fragment
         android:id="@+id/home"
-        android:name="com.zhang.mydemo.kotlin.ui.fragment.MainFragment"
+        android:name="com.zhang.mydemo.ui.fragment.MainFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_main"/>
 </navigation>

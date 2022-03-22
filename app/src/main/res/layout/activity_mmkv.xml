@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".kotlin.ui.activity.MMKVActivity">
+    tools:context=".ui.activity.MMKVActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_show"

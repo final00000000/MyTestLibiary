@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/main"
-        android:name="com.zhang.mydemo.kotlin.ui.fragment.MainFragment"
+        android:name="com.zhang.mydemo.ui.fragment.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
 

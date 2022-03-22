@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+//    id 'apm-plugin'
 }
 
 android {
@@ -37,7 +38,7 @@ android {
             shrinkResources false
             signingConfig signingConfigs.debug
             ndk {
-                abiFilters "armeabi-v7a", "arm64-v8a", "x86"
+                abiFilters "armeabi-v7a", "arm64-v8a"
             }
         }
 
@@ -65,25 +66,34 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.core:core-ktx:1.7.0'
-    // 官方二次封装控件
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation project(path: ':BaseLibiary')
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation project(':UtilsLibiary')
 
-    implementation project(':BaseLibiary')
+    //apm性能组件
+//    implementation "com.volcengine:apm_insight:1.4.5.cn"
+    //apm稳定性组件
+//    implementation "com.volcengine:apm_insight_crash:1.4.3"
 
-    //base Adapter
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
-
-    // 约束布局
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    //Eventbus
-    implementation 'org.greenrobot:eventbus:3.3.1'
 }
+//ApmPlugin {
+//    // 是否进行插桩
+//    enable true
+//    // 是否在Debug包插桩，默认插桩
+//    enableInDebug true
+//    // DEBUG("DEBUG"), INFO("INFO"), WARN("WARN"), ERROR("ERROR");
+//    // INFO 级别Log会汇总所有被插桩处理的类供查看，路径 app/build/ByteX/ApmPlugin
+//    logLevel "DEBUG"
+//    // 监控App启动耗时，需要同时开启pageLoadSwitch
+//    startSwitch = true
+//    // 监控Activity的生命周期耗时
+//    pageLoadSwitch = true
+//    // 监控okhttp3的网络请求
+//    okHttp3Switch = true
+//    // 只对白名单下的包进行插桩。可以填写自己的包名。不配置则不会插桩，影响网络监控也启动监控等功能。
+//    whiteList = [
+//            "com"
+//    ]
+//    // 黑名单包下类不进行插桩，可以配置包名和类名。没有可以为空
+//    blackList = [
+//    ]
+//}

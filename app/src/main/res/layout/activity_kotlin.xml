@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kotlin.KotlinActivity">
+    tools:context=".KotlinActivity">
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -89,6 +89,26 @@
             android:id="@+id/tv_15"
             style="@style/tv_style"
             android:text="@string/View" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_16"
+            style="@style/tv_style"
+            android:text="@string/java_date_utils" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_17"
+            style="@style/tv_style"
+            android:text="@string/PathText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_18"
+            style="@style/tv_style"
+            android:text="@string/TestSurfaceView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_19"
+            style="@style/tv_style"
+            android:text="@string/TestHorlin" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>
