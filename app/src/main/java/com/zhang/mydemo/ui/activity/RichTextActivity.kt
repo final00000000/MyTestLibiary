@@ -1,14 +1,12 @@
-package com.zhang.mydemo.ui.activity;
+package com.zhang.mydemo.ui.activity
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
-import com.zhang.mydemo.base.BaseActivity
+import androidx.core.content.ContextCompat
 import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.PictureConfig
 import com.luck.picture.lib.config.SelectMimeType
@@ -16,12 +14,15 @@ import com.luck.picture.lib.config.SelectModeConfig
 import com.luck.picture.lib.entity.LocalMedia
 import com.luck.pictureselector.GlideEngine
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.databinding.ActivityRichTextBinding
 import com.zhang.mydemo.ui.widget.CommonPopupWindow
-import com.zhang.mydemo.ui.widget.KeyBoardUtils
 import com.zhang.mydemo.ui.widget.pickercolor.ColorSelectDialog
 import com.zhang.mydemo.ui.widget.richeditor.RichEditor
 import com.zhang.mydemo.ui.widget.richeditor.RichUtils
+import com.zhang.utilslibiary.utils.closeKeybord
+import com.zhang.utilslibiary.utils.hideSoftInput
+import com.zhang.utilslibiary.utils.openKeybord
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_rich_text.*
 import kotlinx.android.synthetic.main.layout_title.*
@@ -108,13 +109,13 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
         iv_image.singleClick {
             //选择图片
             getPhoto()
-            KeyBoardUtils.closeKeybord(et_title, this@RichTextActivity)
+            closeKeybord(et_title, this@RichTextActivity)
         }
 
         iv_video.singleClick {
             //选择视频
             getVideo()
-            KeyBoardUtils.closeKeybord(et_title, this@RichTextActivity)
+            closeKeybord(et_title, this@RichTextActivity)
         }
 
         iv_bold.singleClick {
@@ -257,10 +258,11 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
 
         // 点击键盘小按钮操作-
         iv_keyboard_down.singleClick {
-            val manager: InputMethodManager =
-                this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            if (manager != null)
-                manager.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS)
+            /* val manager: InputMethodManager =
+                 this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+             if (manager != null)
+                 manager.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS)*/
+            hideSoftInput(this)
         }
 
         //点击图片 操作-
@@ -277,7 +279,7 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
         //输入框显示字体的大小
         rich_Editor.setEditorFontSize(16)
         //输入框显示字体的颜色
-        rich_Editor.setEditorFontColor(resources.getColor(R.color.color3D3D3D))
+        rich_Editor.setEditorFontColor(ContextCompat.getColor(this, R.color.color3D3D3D))
         //输入框背景设置
         rich_Editor.setEditorBackgroundColor(Color.WHITE)
         //输入框文本padding
@@ -338,7 +340,7 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
                     if (selectList.size > 0) {
                         againEdit()
                         rich_Editor.insertImage(selectList[0].path, "RichText-ImageView")
-                        KeyBoardUtils.openKeybord(et_title, this@RichTextActivity)
+                        openKeybord(et_title, this@RichTextActivity)
                     }
                 }
                 // 视频
@@ -357,7 +359,7 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
     private fun againEdit() {
         //如果第一次点击例如加粗，没有焦点时，获取焦点并弹出软键盘
         rich_Editor.focusEditor()
-        KeyBoardUtils.openKeybord(et_title, this@RichTextActivity)
+        openKeybord(et_title, this@RichTextActivity)
         rich_Editor.postDelayed({
             if (rich_Editor != null) {
                 rich_Editor.scrollToBottom()
