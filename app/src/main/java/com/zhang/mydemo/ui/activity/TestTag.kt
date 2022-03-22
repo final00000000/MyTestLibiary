@@ -31,14 +31,20 @@ class TestTag : BaseActivity<TextTagBinding>() {
     }
 
     override fun initData() {
-        tv_tag.text = TagTextUtil().getTagContent(contentString, this, tv_tag) { section ->
-            Toast.makeText(
-                this@TestTag,
-                section!!.name + "   index ==  " + section.index,
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+        tv_tag.text = TagTextUtil().getTagContent(
+            contentString,
+            this@TestTag,
+            tv_tag,
+            object : TagTextUtil.ClickListener {
+                override fun click(section: TagTextUtil.Section?) {
+                    Toast.makeText(
+                        this@TestTag,
+                        section!!.name + "   index ==  " + section.index,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
 
+            })
         tv_tag1.text = TimeLineUtility.convertNormalStringToSpannableString(
             content,
             TimeLineUtility.TimeLineStatus.FEED

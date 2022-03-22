@@ -1,11 +1,8 @@
-package com.zhang.mydemo.ui.widget;
+package com.zhang.mydemo.ui.widget
 
-import android.content.Context;
-import android.graphics.Path;
-import android.util.AttributeSet;
-import android.view.View;
-
-import androidx.annotation.Nullable;
+import android.content.Context
+import android.util.AttributeSet
+import android.view.View
 
 /**
  * @Author : zhang
@@ -13,17 +10,13 @@ import androidx.annotation.Nullable;
  * @Class Describe : 描述
  * @Project Name : MyDemo
  */
-public class MyView  extends View {
-
-    public MyView(Context context) {
-        super(context,null);
-    }
-
-    public MyView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs,0);
-    }
-
-    public MyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+class MyView : View {
+    constructor(context: Context?) : super(context, null) {}
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs, 0) {}
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
     }
 }
