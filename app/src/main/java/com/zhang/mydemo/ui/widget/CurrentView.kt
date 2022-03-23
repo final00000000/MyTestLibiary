@@ -67,8 +67,4 @@ class CurrentView : View {
         firstView.recycle()
     }
 
-//    var round: Boolean? = null
-//    var height by Delegates.notNull<Float>()
-//    var width by Delegates.notNull<Float>()
-
 }

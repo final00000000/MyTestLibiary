@@ -115,6 +115,4 @@ dependencies {
     api 'com.jakewharton.timber:timber:5.0.1'
     //MMKV
     api 'com.tencent:mmkv:1.2.12'
-    //Toasty
-//    api 'com.github.GrenderG:Toasty:1.5.2'
 }

@@ -10,6 +10,7 @@ import com.zhang.mydemo.databinding.ActivityMainBinding
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
+import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
@@ -23,7 +24,7 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun setListener() {
         tv_01.singleClick {
-            toast("Hello World!")
+            Toasty.success(this, "Hello World!")
         }
         kotlin.singleClick {
             startActivity<KotlinActivity>()
@@ -54,9 +55,9 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
     override fun onNetworkStateChanged(netState: NetWorkState) {
         super.onNetworkStateChanged(netState)
         if (netState.isSuccess) {
-            ToastUtils.showToast(this, "我特么来网了")
+            Toasty.success(this, "我特么来网了")
         } else {
-            ToastUtils.showToast(this, "我特么网丢了")
+            Toasty.error(this, "我特么网丢了")
         }
     }
 

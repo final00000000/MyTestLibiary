@@ -36,7 +36,7 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
      */
     override fun isLayoutToolbar(): Boolean = true
 
-//    lateinit var mViewModel: VM
+    lateinit var mViewModel: VM
 
     lateinit var viewBinding: VB
 
@@ -57,7 +57,7 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
     }
 
     private fun init(savedInstanceState: Bundle?) {
-//        mViewModel = createViewModel()
+        mViewModel = createViewModel()
 
         //初始化设置沉浸式状态栏
         initImmerBar()
@@ -68,9 +68,9 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
         // 数据观察
         createObserver()
 
-        NetworkManager.instance.mNetworkStateCallback.observeSticky(this, {
+        NetworkManager.instance.mNetworkStateCallback.observeSticky(this) {
             onNetworkStateChanged(it)
-        })
+        }
     }
 
     /**
