@@ -2,10 +2,10 @@ package com.zhang.mydemo
 
 import android.os.Bundle
 import android.view.KeyEvent
-import com.elvishew.xlog.XLog
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivitySplashBinding
 import org.jetbrains.anko.startActivity
+import timber.log.Timber
 import java.util.*
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
@@ -20,7 +20,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
             }
         }
         val timer = Timer()
-        timer.schedule(task, 2000)
+        timer.schedule(task, 1000)
     }
 
     override fun initData() {
@@ -39,38 +39,38 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onCreate"}")
+        Timber.e("SplashActivity_42行_2022/3/23_17:04：${"onCreate"}")
     }
 
     override fun onStart() {
         super.onStart()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onStart"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onStart"}")
     }
 
     override fun onRestart() {
         super.onRestart()
         startActivity<MainActivity>()
         killMyself()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onRestart"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onRestart"}")
     }
 
     override fun onResume() {
         super.onResume()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onResume"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onResume"}")
     }
 
     override fun onPause() {
         super.onPause()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onPause"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onPause"}")
     }
 
     override fun onStop() {
         super.onStop()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onStop"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onStop"}")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        XLog.e("SplashActivity_49行_2022/2/8_12:01：${"onDestroy"}")
+        Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onDestroy"}")
     }
 }

@@ -1,7 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTabViewPagerBinding
 import com.zhang.mydemo.ui.activity.tab.Tab1Activity
 import com.zhang.mydemo.ui.activity.tab.TabActivity

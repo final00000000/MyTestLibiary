@@ -14,7 +14,7 @@ import com.luck.picture.lib.config.SelectModeConfig
 import com.luck.picture.lib.entity.LocalMedia
 import com.luck.pictureselector.GlideEngine
 import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityRichTextBinding
 import com.zhang.mydemo.ui.widget.CommonPopupWindow
 import com.zhang.mydemo.ui.widget.pickercolor.ColorSelectDialog
@@ -44,7 +44,6 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
     private var lastColor = 0
 
     override fun initView() {
-        ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "富文本"
 
         // 初始化编辑器

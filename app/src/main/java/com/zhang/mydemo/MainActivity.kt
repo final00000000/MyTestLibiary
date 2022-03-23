@@ -1,9 +1,13 @@
 package com.zhang.mydemo
 
+import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import com.zhang.mydemo.base.BaseActivity
+import com.luck.picture.lib.utils.ToastUtils
+import com.zhang.mydemo.base.activity.BaseNetWorkActivity
+import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
+import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
@@ -11,13 +15,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         baseTitle.visibility = View.GONE
-    }
-
-    override fun initData() {
     }
 
     override fun setListener() {
@@ -49,5 +50,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             AppActivityManager.removeAllActivity()
         }
     }
+
+    override fun onNetworkStateChanged(netState: NetWorkState) {
+        super.onNetworkStateChanged(netState)
+        if (netState.isSuccess) {
+            ToastUtils.showToast(this, "我特么来网了")
+        } else {
+            ToastUtils.showToast(this, "我特么网丢了")
+        }
+    }
+
+    override fun createObserver() {
+
+    }
+
 
 }

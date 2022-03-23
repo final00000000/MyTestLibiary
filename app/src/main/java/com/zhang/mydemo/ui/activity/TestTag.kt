@@ -1,12 +1,11 @@
 package com.zhang.mydemo.ui.activity
 
 import android.widget.Toast
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.TextTagBinding
 import com.zhang.mydemo.ui.widget.TagTextUtil
 import com.zhang.mydemo.ui.widget.tag.LinkClickable
 import com.zhang.mydemo.ui.widget.tag.TimeLineUtility
-import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.layout_title.*
 import kotlinx.android.synthetic.main.text_tag.*
 
@@ -27,7 +26,6 @@ class TestTag : BaseActivity<TextTagBinding>() {
 
     override fun initView() {
         tvPageTitle.text = "纯文本标签"
-        ivPageBack.singleClick { killMyself() }
     }
 
     override fun initData() {

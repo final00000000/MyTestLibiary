@@ -1,7 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.annotation.SuppressLint
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityDateUtilsBinding
 import com.zhang.utilslibiary.utils.DateUtil.getCurrentMillis
 import com.zhang.utilslibiary.utils.DateUtil.getCurrentTimeYMD

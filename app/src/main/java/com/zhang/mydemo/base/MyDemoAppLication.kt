@@ -1,9 +1,8 @@
 package com.zhang.mydemo.base
 
 import android.app.Application
-import com.elvishew.xlog.LogConfiguration
-import com.elvishew.xlog.XLog
 import com.tencent.mmkv.MMKV
+import timber.log.Timber
 
 
 /**
@@ -21,12 +20,12 @@ class MyDemoAppLication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        // Xlog打印日志初始化 更多花样详情百度.
-        val config = LogConfiguration.Builder()
+        // Timber打印日志初始化 更多花样详情百度.
+        /*val config = LogConfiguration.Builder()
             .enableThreadInfo() // 允许打印线程信息
 //            .enableBorder()     // 边框
             .build()
-        XLog.init(config)
+        Timber.init(config)*/
         MMKV.initialize(this)
     }
 

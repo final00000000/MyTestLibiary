@@ -80,13 +80,6 @@
         <item name="android:paddingEnd">20dp</item>
     </style>
 
-
-   <!-- <declare-styleable name="FirstView">
-        <attr name="firstHeight" format="dimension"/>
-        <attr name="firstWidth" format="dimension"/>
-        <attr name="round" format="boolean" />
-    </declare-styleable>-->
-
     <!-- 文字路径  -->
     <declare-styleable name="MeiTextPathView">
         <!-- 文本-->
@@ -110,4 +103,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <declare-styleable name="FirstView">
+        <!--    高度    -->
+        <attr name="firstHeight" format="dimension" />
+        <!--    宽度    -->
+        <attr name="firstWidth" format="dimension" />
+    </declare-styleable>
 </resources>

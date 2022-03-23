@@ -20,10 +20,10 @@ android {
         // 避免编译不必要的资源
         resConfigs "cn"
 
-        //运行环境，要上传Google Play必须兼容64位，这里仅兼容ARM架构
-        //对于ARM架构，32 位库位于armeabi-v7a 中。64 位等效项是arm64-v8a。
-        //对于x86体系结构，查找x86（用于 32 位）和 x86_64（用于 64 位）。
-        ndk { abiFilters "armeabi-v7a", "armeabi-v8a" }
+        //运行环境
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
     }
 
     buildTypes {
@@ -45,8 +45,11 @@ android {
         release {
             debuggable true
             jniDebuggable true
+            //  Zipalign优化，资源对齐
             zipAlignEnabled true
+            // 混淆
             minifyEnabled false
+            // 移除无用的resource文件 必须和minifyEnabled同时打开
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -61,6 +64,7 @@ android {
     }
 
     buildFeatures {
+        dataBinding = true
         viewBinding true
     }
 }

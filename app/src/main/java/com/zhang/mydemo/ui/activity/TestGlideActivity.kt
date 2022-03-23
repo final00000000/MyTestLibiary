@@ -1,7 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
-import com.zhang.mydemo.base.BaseActivity
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTestGlideBinding
 import com.zhang.utilslibiary.utils.GlideUtils
 import com.zhang.utilslibiary.utils.singleClick
@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.layout_title.*
 class TestGlideActivity : BaseActivity<ActivityTestGlideBinding>() {
 
     override fun initView() {
-        ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "测试Glide"
     }
 

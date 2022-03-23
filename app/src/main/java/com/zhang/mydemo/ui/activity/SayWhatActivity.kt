@@ -2,14 +2,14 @@ package com.zhang.mydemo.ui.activity
 
 import android.os.CountDownTimer
 import androidx.core.view.isVisible
-import com.elvishew.xlog.XLog
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivitySayWhatBinding
 import com.zhang.mydemo.ui.adapter.SayWhatAdapter1
 import com.zhang.mydemo.ui.adapter.SayWhatAdapter2
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_say_what.*
 import kotlinx.android.synthetic.main.layout_title.*
+import timber.log.Timber
 import kotlin.random.Random
 
 class SayWhatActivity : BaseActivity<ActivitySayWhatBinding>() {
@@ -68,7 +68,7 @@ class SayWhatActivity : BaseActivity<ActivitySayWhatBinding>() {
 
             override fun onFinish() {
                 start.isEnabled = true
-                XLog.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
+                Timber.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
                 val plate1 = adapter1.data[mPosition1 - 1]
                 tv.isVisible = true
                 tv.text = "主食:${plate1}"
@@ -92,7 +92,7 @@ class SayWhatActivity : BaseActivity<ActivitySayWhatBinding>() {
 
             override fun onFinish() {
                 start.isEnabled = true
-                XLog.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
+                Timber.e("SayWhatActivity_51行_2022/3/1_17:37：${mPosition1} $mPosition2")
                 val plate2 = adapter2.data[mPosition2 - 1]
                 tv.isVisible = true
                 tv.text = "菜系:${plate2}"

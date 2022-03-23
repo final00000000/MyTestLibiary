@@ -1,6 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityMmkvBinding
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_mmkv.*

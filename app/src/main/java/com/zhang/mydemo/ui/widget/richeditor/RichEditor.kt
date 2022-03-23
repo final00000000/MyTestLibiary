@@ -16,10 +16,10 @@ import android.view.Gravity
 import android.view.MotionEvent
 import android.view.animation.LinearInterpolator
 import android.webkit.*
-import com.zhang.mydemo.ui.widget.Utils.Companion.currentTime
-import com.zhang.mydemo.ui.widget.Utils.Companion.decodeResource
-import com.zhang.mydemo.ui.widget.Utils.Companion.toBase64
-import com.zhang.mydemo.ui.widget.Utils.Companion.toBitmap
+import com.zhang.mydemo.ui.widget.richeditor.Utils.Companion.currentTime
+import com.zhang.mydemo.ui.widget.richeditor.Utils.Companion.decodeResource
+import com.zhang.mydemo.ui.widget.richeditor.Utils.Companion.toBase64
+import com.zhang.mydemo.ui.widget.richeditor.Utils.Companion.toBitmap
 import java.io.UnsupportedEncodingException
 import java.net.URLEncoder
 import java.util.*

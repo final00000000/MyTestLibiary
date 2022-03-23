@@ -1,4 +1,4 @@
-package com.zhang.mydemo.base
+package com.zhang.mydemo.base.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.tencent.mmkv.MMKV
-import java.lang.reflect.ParameterizedType
+import com.zhang.utilslibiary.utils.getViewBindingForFragment
 
 /**
  * @Author : zhang
@@ -50,18 +50,5 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
             setListener()
             isLazyLoad = false
         }
-    }
-
-    @Suppress("UNCHECKED_CAST")
-    fun getViewBindingForFragment(layoutInflater: LayoutInflater, container: ViewGroup?): VB {
-        val type = javaClass.genericSuperclass as ParameterizedType
-        val aClass = type.actualTypeArguments[0] as Class<*>
-        val method = aClass.getDeclaredMethod(
-            "inflate",
-            LayoutInflater::class.java,
-            ViewGroup::class.java,
-            Boolean::class.java
-        )
-        return method.invoke(null, layoutInflater, container, false) as VB
     }
 }

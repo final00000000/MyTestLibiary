@@ -22,6 +22,9 @@
         android:theme="@style/MyDemoTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.BRVActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.ViewWorldActivity"
             android:exported="false" />
         <activity
@@ -53,9 +56,11 @@
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <!-- android:authorities="com.zhang.mydemo.file_provider" -->
+        <!-- android:name="androidx.core.content.FileProvider" -->
         <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.zhang.mydemo.file_provider"
+            android:name=".base.Ktx"
+            android:authorities="${applicationId}.KtxInstaller"
             android:exported="false"
             android:grantUriPermissions="true"
             tools:replace="android:authorities">
@@ -67,10 +72,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".java.JavaActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".KotlinActivity"
             android:exported="false"
@@ -111,10 +112,6 @@
             android:name=".ui.activity.TestSurfaceViewActivity"
             android:exported="false" />
         <activity
-            android:name=".java.timelinetest.TimeDividerActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".ui.activity.TestTag"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -125,19 +122,19 @@
         <activity
             android:name=".ui.activity.tab.TabActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.TabViewPagerActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.GrammarActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.MotionLayoutyActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.Jump2Activity"
             android:exported="false"
@@ -149,7 +146,7 @@
         <activity
             android:name=".ui.activity.HorizontalProActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

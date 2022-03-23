@@ -1,6 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityViewWorldBinding
 
 class ViewWorldActivity : BaseActivity<ActivityViewWorldBinding>() {

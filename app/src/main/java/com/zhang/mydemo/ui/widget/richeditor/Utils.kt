@@ -1,4 +1,4 @@
-package com.zhang.mydemo.ui.widget
+package com.zhang.mydemo.ui.widget.richeditor
 
 import android.content.Context
 import android.graphics.Bitmap

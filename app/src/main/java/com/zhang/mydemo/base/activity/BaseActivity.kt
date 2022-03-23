@@ -1,20 +1,16 @@
-package com.zhang.mydemo.base
+package com.zhang.mydemo.base.activity
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.viewbinding.ViewBinding
 import com.gyf.immersionbar.ImmersionBar
 import com.tencent.mmkv.MMKV
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.IsBase
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.layout_title.*
-import java.lang.reflect.ParameterizedType
 
 
 /**
@@ -23,7 +19,7 @@ import java.lang.reflect.ParameterizedType
  * @Class Describe : 描述
  * @Project Name : KotlinDemo
  */
-abstract class BaseActivity<VB : ViewBinding> : BaseVMActivity<ViewModel>(), IsBase {
+abstract class BaseActivity<VB : ViewBinding> : BaseVbActivity<VB>(), IsBase {
 
     /**
      * 是否需要带toolbar的布局
@@ -34,23 +30,19 @@ abstract class BaseActivity<VB : ViewBinding> : BaseVMActivity<ViewModel>(), IsB
 
     var defaultMMKV: MMKV = MMKV.defaultMMKV()
 
-    lateinit var viewBinding: VB
-    lateinit var VM: ViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppActivityManager.addActivity(this)
-        VM = ViewModelProvider.get(ViewModel::class.java)
-        viewBinding = getViewBindingForActivity(layoutInflater)
+
         if (isLayoutToolbar()) {
             setContentView(R.layout.activity_base)
-//            baseContent.addView(layoutInflater.inflate(getLayoutId(), null,false))
-            baseContent.addView(viewBinding.root)
+            baseContent.addView(initViewBinding())
+            /**
+             * toolbar返回键
+             */
             ivPageBack.singleClick { killMyself() }
-
         } else {
-//            setContentView(getLayoutId())
-            setContentView(viewBinding.root)
+            setContentView(initViewBinding())
         }
 
         //初始化设置沉浸式状态栏
@@ -63,15 +55,6 @@ abstract class BaseActivity<VB : ViewBinding> : BaseVMActivity<ViewModel>(), IsB
         setListener()
 
     }
-
-    private fun getViewBindingForActivity(layoutInflater: LayoutInflater): VB {
-        val type = javaClass.genericSuperclass as ParameterizedType
-        val aClass = type.actualTypeArguments[0] as Class<*>
-        val method = aClass.getDeclaredMethod("inflate", LayoutInflater::class.java)
-        return method.invoke(null, layoutInflater) as VB
-    }
-
-//    protected abstract fun getLayoutId(): Int
 
     protected abstract fun initView()
 

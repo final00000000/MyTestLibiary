@@ -1,7 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.annotation.SuppressLint
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityGrammarBinding
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_grammar.*

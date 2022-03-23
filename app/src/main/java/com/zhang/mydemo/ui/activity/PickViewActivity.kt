@@ -4,7 +4,7 @@ import android.content.Intent
 import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.SelectMimeType.TYPE_IMAGE
 import com.luck.picture.lib.entity.LocalMedia
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityPickViewBinding
 import com.zhang.utilslibiary.utils.*
 import kotlinx.android.synthetic.main.activity_pick_view.*

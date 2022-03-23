@@ -1,7 +1,7 @@
 package com.zhang.mydemo.ui.activity.tab
 
 import androidx.fragment.app.Fragment
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTabBinding
 import com.zhang.mydemo.ui.adapter.TabPagerAdapter
 import com.zhang.mydemo.ui.fragment.TestFragment1

@@ -8,7 +8,7 @@ import android.view.SurfaceHolder
 import android.view.View
 import android.widget.RelativeLayout
 import com.zhang.mydemo.R
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTestSurfaceViewBinding
 import kotlinx.android.synthetic.main.activity_test_surface_view.*
 

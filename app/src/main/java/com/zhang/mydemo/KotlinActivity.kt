@@ -1,9 +1,8 @@
 package com.zhang.mydemo
 
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
+import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityKotlinBinding
-import com.zhang.mydemo.ui.activity.HorizontalProActivity
-import com.zhang.mydemo.ui.activity.JumpTextActivity
 import com.zhang.mydemo.ui.activity.*
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_kotlin.*
@@ -18,12 +17,6 @@ class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
     }
 
     override fun initData() {
-/*  val networkConnected = IsNetwork.isNetworkConnected(this)
-        if (networkConnected) {
-            toast("有网络")
-        } else {
-            toast("没有网络")
-        }*/
     }
 
     override fun setListener() {
@@ -75,20 +68,19 @@ class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
             startActivity<ViewWorldActivity>()
         }
         tv_16.singleClick {
-            startActivity<DateUtilsActivity>(
-            )
+            startActivity<DateUtilsActivity>()
         }
         tv_17.singleClick {
-            startActivity<JumpTextActivity>(
-            )
+            startActivity<JumpTextActivity>()
         }
         tv_18.singleClick {
-            startActivity<TestSurfaceViewActivity>(
-            )
+            startActivity<TestSurfaceViewActivity>()
         }
         tv_19.singleClick {
-            startActivity<HorizontalProActivity>(
-            )
+            startActivity<HorizontalProActivity>()
+        }
+        tv_20.singleClick {
+            startActivity<BRVActivity>()
         }
     }
 }

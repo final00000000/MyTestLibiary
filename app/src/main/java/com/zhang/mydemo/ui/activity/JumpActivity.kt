@@ -2,7 +2,7 @@ package com.zhang.mydemo.ui.activity
 
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContracts
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityJumpBinding
 import com.zhang.utilslibiary.utils.singleClick
 import kotlinx.android.synthetic.main.activity_jump.*
@@ -24,7 +24,6 @@ class JumpActivity : BaseActivity<ActivityJumpBinding>() {
     }
 
     override fun setListener() {
-        ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "学习跳转"
 
         val intent = Intent(this, Jump2Activity::class.java)

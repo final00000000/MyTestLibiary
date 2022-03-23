@@ -2,7 +2,7 @@ package com.zhang.mydemo.ui.activity
 
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.zhang.mydemo.base.BaseActivity
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityWebViewBinding
 import kotlinx.android.synthetic.main.activity_web_view.*
 

@@ -1,6 +1,6 @@
 package com.zhang.mydemo.ui.fragment
 
-import com.zhang.mydemo.base.BaseFragment
+import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentMainBinding
 
 /**

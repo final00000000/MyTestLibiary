@@ -9,20 +9,7 @@
     <string name="submit">提交</string>
     <string name="close">关闭</string>
 
-    <!--  java-->
-    <string name="java_date_utils">时间工具类</string>
-    <string name="java_get_current_millis">获取当前时间戳</string>
-    <string name="java_get_current_alldate">获取当前时间</string>
-    <string name="java_get_dateToStamp">将时间转换为时间戳</string>
-    <string name="java_get_getNowDate">获取当前的时间</string>
-    <string name="starbar">星级评分</string>
-    <string name="PathText">文字路径的绘制</string>
-    <string name="TestSurfaceView">SurfaceView播放视频</string>
-    <string name="Testorlin">竖向物流时间轴</string>
-    <string name="TestHorlin">横向物流时间轴</string>
 
-
-    <!-- kotlin   -->
     <string name="DescribeWebView">WebView页面</string>
     <string name="DescribeRichText">富文本</string>
     <string name="DescribeRichTextDesc">可以滑动</string>
@@ -67,8 +54,19 @@
     <string name="jump">跳转</string>
     <string name="jump1">传值跳转</string>
     <string name="start">开始</string>
-    <string name="stop">停止</string>  
+    <string name="stop">停止</string>
     <string name="SayWhat">toDaySayWhat? \t\t 今天Say什么</string>
     <string name="View">View</string>
+    <string name="java_date_utils">时间工具类</string>
+    <string name="java_get_current_millis">获取当前时间戳</string>
+    <string name="java_get_current_alldate">获取当前时间</string>
+    <string name="java_get_dateToStamp">将时间转换为时间戳</string>
+    <string name="java_get_getNowDate">获取当前的时间</string>
+    <string name="starbar">星级评分</string>
+    <string name="PathText">文字路径的绘制</string>
+    <string name="TestSurfaceView">SurfaceView播放视频</string>
+    <string name="Testorlin">竖向物流时间轴</string>
+    <string name="TestHorlin">横向物流时间轴</string>
+    <string name="DescribeBrv">新适配器</string>
 
 </resources>

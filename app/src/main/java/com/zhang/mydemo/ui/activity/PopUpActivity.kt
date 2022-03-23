@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import com.zhang.mydemo.base.BaseActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.zhang.mydemo.R
+import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityPopupBinding
 import com.zhang.mydemo.ui.widget.SimpleRatingBar
 import com.zhang.utilslibiary.utils.singleClick
@@ -25,7 +25,6 @@ import kotlin.math.ceil
 class PopUpActivity : BaseActivity<ActivityPopupBinding>() {
 
     override fun initView() {
-        ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "底部弹窗功能"
 
     }
