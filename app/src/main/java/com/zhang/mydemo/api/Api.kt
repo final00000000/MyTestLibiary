@@ -7,4 +7,6 @@ package com.zhang.mydemo.api
  * @Project Name : MyDemo
  */
 object Api {
+
+    const val BASE_URL = "www.baidu.com/"
 }

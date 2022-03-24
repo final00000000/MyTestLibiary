@@ -3,9 +3,11 @@
 package com.zhang.utilslibiary.utils
 
 import android.app.Activity
+import android.app.Application
 import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
 import android.text.Editable
 import android.text.Spannable
@@ -18,7 +20,10 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import java.util.*
 
 
@@ -223,3 +228,20 @@ fun isShouldHideInput(v: View?, event: MotionEvent): Boolean {
     }
     return false
 }
+
+/**
+ * 获取颜色值
+ * @receiver Activity
+ * @param id Int
+ * @return Int
+ */
+fun Activity.getColorRes(@ColorRes id: Int): Int = ContextCompat.getColor(applicationContext, id)
+
+/**
+ * 获取资源图片
+ * @receiver Activity
+ * @param id Int
+ * @return Drawable?
+ */
+fun Activity.getDrawableRes(@DrawableRes id: Int): Drawable? =
+    ContextCompat.getDrawable(applicationContext, id)

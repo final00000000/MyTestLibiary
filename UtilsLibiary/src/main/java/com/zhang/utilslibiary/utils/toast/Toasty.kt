@@ -2,42 +2,22 @@ package com.zhang.utilslibiary.utils.toast
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Context.LAYOUT_INFLATER_SERVICE
 import android.content.res.Configuration
 import android.graphics.Typeface
-import com.zhang.utilslibiary.utils.toast.Toasty
-import android.widget.Toast
 import android.graphics.drawable.Drawable
-import com.zhang.utilslibiary.utils.toast.ToastyUtils
-import com.zhang.utilslibiary.R
-import android.view.LayoutInflater
-import android.widget.LinearLayout
-import android.widget.TextView
 import android.os.Build
 import android.util.TypedValue
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.*
+import com.zhang.utilslibiary.R
 
-/**
- * This file is part of Toasty.
- *
- *
- * Toasty is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- *
- * Toasty is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- *
- * You should have received a copy of the GNU General Public License
- * along with Toasty.  If not, see <http:></http:>//www.gnu.org/licenses/>.
- */
-@SuppressLint("InflateParams")
+@SuppressLint("InflateParams", "StaticFieldLeak")
 object Toasty {
     private val LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL)
     private var currentTypeface = LOADED_TOAST_TYPEFACE
@@ -52,60 +32,51 @@ object Toasty {
     private var lastToast: Toast? = null
     const val LENGTH_SHORT = Toast.LENGTH_SHORT
     const val LENGTH_LONG = Toast.LENGTH_LONG
-    @CheckResult
-    fun normal(context: Context, @StringRes message: Int): Toast {
-        return normal(context, context.getString(message), Toast.LENGTH_SHORT, null, false)
+    private var mContext: Context? = null
+
+    fun setContext(context: Context) {
+        mContext = context
     }
 
-    @CheckResult
-    fun normal(context: Context, message: CharSequence): Toast {
-        return normal(context, message, Toast.LENGTH_SHORT, null, false)
+    fun normal(@StringRes message: Int) {
+        normal(mContext!!.getString(message), Toast.LENGTH_SHORT, null, false).show()
     }
 
-    @CheckResult
-    fun normal(context: Context, @StringRes message: Int, icon: Drawable?): Toast {
-        return normal(context, context.getString(message), Toast.LENGTH_SHORT, icon, true)
+    fun normal(message: CharSequence) {
+        normal(message, Toast.LENGTH_SHORT, null, false).show()
     }
 
-    @CheckResult
-    fun normal(context: Context, message: CharSequence, icon: Drawable?): Toast {
-        return normal(context, message, Toast.LENGTH_SHORT, icon, true)
+    fun normal(@StringRes message: Int, icon: Drawable?) {
+        normal(mContext!!.getString(message), Toast.LENGTH_SHORT, icon, true).show()
     }
 
-    @CheckResult
-    fun normal(context: Context, @StringRes message: Int, duration: Int): Toast {
-        return normal(context, context.getString(message), duration, null, false)
+    fun normal(message: CharSequence, icon: Drawable?) {
+        normal(message, Toast.LENGTH_SHORT, icon, true).show()
     }
 
-    @CheckResult
-    fun normal(context: Context, message: CharSequence, duration: Int): Toast {
-        return normal(context, message, duration, null, false)
+    fun normal(@StringRes message: Int, duration: Int) {
+        normal(mContext!!.getString(message), duration, null, false).show()
     }
 
-    @CheckResult
-    fun normal(
-        context: Context, @StringRes message: Int, duration: Int,
-        icon: Drawable?
-    ): Toast {
-        return normal(context, context.getString(message), duration, icon, true)
+    fun normal(message: CharSequence, duration: Int) {
+        normal(message, duration, null, false).show()
     }
 
-    @CheckResult
-    fun normal(
-        context: Context, message: CharSequence, duration: Int,
-        icon: Drawable?
-    ): Toast {
-        return normal(context, message, duration, icon, true)
+    fun normal(@StringRes message: Int, duration: Int, icon: Drawable?) {
+        normal(mContext!!.getString(message), duration, icon, true).show()
+    }
+
+    fun normal(message: CharSequence, duration: Int, icon: Drawable?) {
+        normal(message, duration, icon, true).show()
     }
 
     @CheckResult
     fun normal(
-        context: Context, @StringRes message: Int, duration: Int,
+        @StringRes message: Int, duration: Int,
         icon: Drawable?, withIcon: Boolean
     ): Toast {
         return normalWithDarkThemeSupport(
-            context,
-            context.getString(message),
+            mContext!!.getString(message),
             icon,
             duration,
             withIcon
@@ -114,45 +85,44 @@ object Toasty {
 
     @CheckResult
     fun normal(
-        context: Context, message: CharSequence, duration: Int,
+        message: CharSequence, duration: Int,
         icon: Drawable?, withIcon: Boolean
     ): Toast {
-        return normalWithDarkThemeSupport(context, message, icon, duration, withIcon)
+        return normalWithDarkThemeSupport(message, icon, duration, withIcon)
     }
 
     @CheckResult
-    fun warning(context: Context, @StringRes message: Int): Toast {
-        return warning(context, context.getString(message), Toast.LENGTH_SHORT, true)
+    fun warning(@StringRes message: Int): Toast {
+        return warning(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun warning(context: Context, message: CharSequence): Toast {
-        return warning(context, message, Toast.LENGTH_SHORT, true)
+    fun warning(message: CharSequence): Toast {
+        return warning(message, Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun warning(context: Context, @StringRes message: Int, duration: Int): Toast {
-        return warning(context, context.getString(message), duration, true)
+    fun warning(@StringRes message: Int, duration: Int): Toast {
+        return warning(mContext!!.getString(message), duration, true)
     }
 
     @CheckResult
-    fun warning(context: Context, message: CharSequence, duration: Int): Toast {
-        return warning(context, message, duration, true)
+    fun warning(message: CharSequence, duration: Int): Toast {
+        return warning(message, duration, true)
     }
 
     @CheckResult
     fun warning(
-        context: Context,
+
         @StringRes message: Int,
         duration: Int,
         withIcon: Boolean
     ): Toast {
         return custom(
-            context,
-            context.getString(message),
-            ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_24dp),
-            ToastyUtils.getColor(context, R.color.warningColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            mContext!!.getString(message),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_error_outline_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.warningColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -160,13 +130,12 @@ object Toasty {
     }
 
     @CheckResult
-    fun warning(context: Context, message: CharSequence, duration: Int, withIcon: Boolean): Toast {
+    fun warning(message: CharSequence, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
             message,
-            ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_24dp),
-            ToastyUtils.getColor(context, R.color.warningColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_error_outline_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.warningColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -174,33 +143,32 @@ object Toasty {
     }
 
     @CheckResult
-    fun info(context: Context, @StringRes message: Int): Toast {
-        return info(context, context.getString(message), Toast.LENGTH_SHORT, true)
+    fun info(@StringRes message: Int): Toast {
+        return info(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun info(context: Context, message: CharSequence): Toast {
-        return info(context, message, Toast.LENGTH_SHORT, true)
+    fun info(message: CharSequence): Toast {
+        return info(message, Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun info(context: Context, @StringRes message: Int, duration: Int): Toast {
-        return info(context, context.getString(message), duration, true)
+    fun info(@StringRes message: Int, duration: Int): Toast {
+        return info(mContext!!.getString(message), duration, true)
     }
 
     @CheckResult
-    fun info(context: Context, message: CharSequence, duration: Int): Toast {
-        return info(context, message, duration, true)
+    fun info(message: CharSequence, duration: Int): Toast {
+        return info(message, duration, true)
     }
 
     @CheckResult
-    fun info(context: Context, @StringRes message: Int, duration: Int, withIcon: Boolean): Toast {
+    fun info(@StringRes message: Int, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
-            context.getString(message),
-            ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_24dp),
-            ToastyUtils.getColor(context, R.color.infoColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            mContext!!.getString(message),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_info_outline_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.infoColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -208,13 +176,12 @@ object Toasty {
     }
 
     @CheckResult
-    fun info(context: Context, message: CharSequence, duration: Int, withIcon: Boolean): Toast {
+    fun info(message: CharSequence, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
             message,
-            ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_24dp),
-            ToastyUtils.getColor(context, R.color.infoColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_info_outline_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.infoColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -222,38 +189,37 @@ object Toasty {
     }
 
     @CheckResult
-    fun success(context: Context, @StringRes message: Int): Toast {
-        return success(context, context.getString(message), Toast.LENGTH_SHORT, true)
+    fun success(@StringRes message: Int): Toast {
+        return success(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun success(context: Context, message: CharSequence): Toast {
-        return success(context, message, Toast.LENGTH_SHORT, true)
+    fun success(message: CharSequence): Toast {
+        return success(message, Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun success(context: Context, @StringRes message: Int, duration: Int): Toast {
-        return success(context, context.getString(message), duration, true)
+    fun success(@StringRes message: Int, duration: Int): Toast {
+        return success(mContext!!.getString(message), duration, true)
     }
 
     @CheckResult
-    fun success(context: Context, message: CharSequence, duration: Int): Toast {
-        return success(context, message, duration, true)
+    fun success(message: CharSequence, duration: Int): Toast {
+        return success(message, duration, true)
     }
 
     @CheckResult
     fun success(
-        context: Context,
+
         @StringRes message: Int,
         duration: Int,
         withIcon: Boolean
     ): Toast {
         return custom(
-            context,
-            context.getString(message),
-            ToastyUtils.getDrawable(context, R.drawable.ic_check_white_24dp),
-            ToastyUtils.getColor(context, R.color.successColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            mContext!!.getString(message),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_check_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.successColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -261,13 +227,12 @@ object Toasty {
     }
 
     @CheckResult
-    fun success(context: Context, message: CharSequence, duration: Int, withIcon: Boolean): Toast {
+    fun success(message: CharSequence, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
             message,
-            ToastyUtils.getDrawable(context, R.drawable.ic_check_white_24dp),
-            ToastyUtils.getColor(context, R.color.successColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_check_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.successColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -275,33 +240,32 @@ object Toasty {
     }
 
     @CheckResult
-    fun error(context: Context, @StringRes message: Int): Toast {
-        return error(context, context.getString(message), Toast.LENGTH_SHORT, true)
+    fun error(@StringRes message: Int): Toast {
+        return error(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun error(context: Context, message: CharSequence): Toast {
-        return error(context, message, Toast.LENGTH_SHORT, true)
+    fun error(message: CharSequence): Toast {
+        return error(message, Toast.LENGTH_SHORT, true)
     }
 
     @CheckResult
-    fun error(context: Context, @StringRes message: Int, duration: Int): Toast {
-        return error(context, context.getString(message), duration, true)
+    fun error(@StringRes message: Int, duration: Int): Toast {
+        return error(mContext!!.getString(message), duration, true)
     }
 
     @CheckResult
-    fun error(context: Context, message: CharSequence, duration: Int): Toast {
-        return error(context, message, duration, true)
+    fun error(message: CharSequence, duration: Int): Toast {
+        return error(message, duration, true)
     }
 
     @CheckResult
-    fun error(context: Context, @StringRes message: Int, duration: Int, withIcon: Boolean): Toast {
+    fun error(@StringRes message: Int, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
-            context.getString(message),
-            ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_24dp),
-            ToastyUtils.getColor(context, R.color.errorColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            mContext!!.getString(message),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_clear_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.errorColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -309,13 +273,12 @@ object Toasty {
     }
 
     @CheckResult
-    fun error(context: Context, message: CharSequence, duration: Int, withIcon: Boolean): Toast {
+    fun error(message: CharSequence, duration: Int, withIcon: Boolean): Toast {
         return custom(
-            context,
             message,
-            ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_24dp),
-            ToastyUtils.getColor(context, R.color.errorColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getDrawable(mContext!!, R.drawable.ic_clear_white_24dp),
+            ToastyUtils.getColor(mContext!!, R.color.errorColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             true
@@ -324,15 +287,14 @@ object Toasty {
 
     @CheckResult
     fun custom(
-        context: Context, @StringRes message: Int, icon: Drawable?,
+        @StringRes message: Int, icon: Drawable?,
         duration: Int, withIcon: Boolean
     ): Toast {
         return custom(
-            context,
-            context.getString(message),
+            mContext!!.getString(message),
             icon,
             -1,
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             false
@@ -341,27 +303,26 @@ object Toasty {
 
     @CheckResult
     fun custom(
-        context: Context, message: CharSequence, icon: Drawable?,
+        message: CharSequence, icon: Drawable?,
         duration: Int, withIcon: Boolean
     ): Toast {
         return custom(
-            context, message, icon, -1, ToastyUtils.getColor(context, R.color.defaultTextColor),
+            message, icon, -1, ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration, withIcon, false
         )
     }
 
     @CheckResult
     fun custom(
-        context: Context, @StringRes message: Int, @DrawableRes iconRes: Int,
+        @StringRes message: Int, @DrawableRes iconRes: Int,
         @ColorRes tintColorRes: Int, duration: Int,
         withIcon: Boolean, shouldTint: Boolean
     ): Toast {
         return custom(
-            context,
-            context.getString(message),
-            ToastyUtils.getDrawable(context, iconRes),
-            ToastyUtils.getColor(context, tintColorRes),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            mContext!!.getString(message),
+            ToastyUtils.getDrawable(mContext!!, iconRes),
+            ToastyUtils.getColor(mContext!!, tintColorRes),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             shouldTint
@@ -370,16 +331,15 @@ object Toasty {
 
     @CheckResult
     fun custom(
-        context: Context, message: CharSequence, @DrawableRes iconRes: Int,
+        message: CharSequence, @DrawableRes iconRes: Int,
         @ColorRes tintColorRes: Int, duration: Int,
         withIcon: Boolean, shouldTint: Boolean
     ): Toast {
         return custom(
-            context,
             message,
-            ToastyUtils.getDrawable(context, iconRes),
-            ToastyUtils.getColor(context, tintColorRes),
-            ToastyUtils.getColor(context, R.color.defaultTextColor),
+            ToastyUtils.getDrawable(mContext!!, iconRes),
+            ToastyUtils.getColor(mContext!!, tintColorRes),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
             duration,
             withIcon,
             shouldTint
@@ -388,47 +348,57 @@ object Toasty {
 
     @CheckResult
     fun custom(
-        context: Context, @StringRes message: Int, icon: Drawable?,
+        @StringRes message: Int, icon: Drawable?,
         @ColorRes tintColorRes: Int, duration: Int,
         withIcon: Boolean, shouldTint: Boolean
     ): Toast {
         return custom(
-            context, context.getString(message), icon, ToastyUtils.getColor(context, tintColorRes),
-            ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, shouldTint
+            mContext!!.getString(message),
+            icon,
+            ToastyUtils.getColor(mContext!!, tintColorRes),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
+            duration,
+            withIcon,
+            shouldTint
         )
     }
 
     @CheckResult
     fun custom(
-        context: Context, @StringRes message: Int, icon: Drawable?,
+        @StringRes message: Int, icon: Drawable?,
         @ColorRes tintColorRes: Int, @ColorRes textColorRes: Int, duration: Int,
         withIcon: Boolean, shouldTint: Boolean
     ): Toast {
         return custom(
-            context, context.getString(message), icon, ToastyUtils.getColor(context, tintColorRes),
-            ToastyUtils.getColor(context, textColorRes), duration, withIcon, shouldTint
+            mContext!!.getString(message),
+            icon,
+            ToastyUtils.getColor(mContext!!, tintColorRes),
+            ToastyUtils.getColor(mContext!!, textColorRes),
+            duration,
+            withIcon,
+            shouldTint
         )
     }
 
     @SuppressLint("ShowToast")
     @CheckResult
     fun custom(
-        context: Context, message: CharSequence, icon: Drawable?,
+        message: CharSequence, icon: Drawable?,
         @ColorInt tintColor: Int, @ColorInt textColor: Int, duration: Int,
         withIcon: Boolean, shouldTint: Boolean
     ): Toast {
-        val currentToast = Toast.makeText(context, "", duration)
+        val currentToast = Toast.makeText(mContext!!, "", duration)
         val toastLayout =
-            (context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater)
+            (mContext!!.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater)
                 .inflate(R.layout.toast_layout, null)
         val toastRoot = toastLayout.findViewById<LinearLayout>(R.id.toast_root)
         val toastIcon = toastLayout.findViewById<ImageView>(R.id.toast_icon)
         val toastTextView = toastLayout.findViewById<TextView>(R.id.toast_text)
         val drawableFrame: Drawable
         drawableFrame = if (shouldTint) ToastyUtils.tint9PatchDrawableFrame(
-            context,
+            mContext!!,
             tintColor
-        ) else ToastyUtils.getDrawable(context, R.drawable.toast_frame)!!
+        ) else ToastyUtils.getDrawable(mContext!!, R.drawable.toast_frame)!!
         ToastyUtils.setBackground(toastLayout, drawableFrame)
         if (withIcon) {
             requireNotNull(icon) { "Avoid passing 'icon' as null if 'withIcon' is set to true" }
@@ -461,41 +431,41 @@ object Toasty {
     }
 
     private fun normalWithDarkThemeSupport(
-        context: Context, message: CharSequence, icon: Drawable?,
+        message: CharSequence, icon: Drawable?,
         duration: Int, withIcon: Boolean
     ): Toast {
         return if (supportDarkTheme && Build.VERSION.SDK_INT >= 29) {
             val uiMode =
-                context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+                mContext!!.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
             if (uiMode == Configuration.UI_MODE_NIGHT_NO) {
-                withLightTheme(context, message, icon, duration, withIcon)
-            } else withDarkTheme(context, message, icon, duration, withIcon)
+                withLightTheme(message, icon, duration, withIcon)
+            } else withDarkTheme(message, icon, duration, withIcon)
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-                withLightTheme(context, message, icon, duration, withIcon)
+                withLightTheme(message, icon, duration, withIcon)
             } else {
-                withDarkTheme(context, message, icon, duration, withIcon)
+                withDarkTheme(message, icon, duration, withIcon)
             }
         }
     }
 
     private fun withLightTheme(
-        context: Context, message: CharSequence, icon: Drawable?,
+        message: CharSequence, icon: Drawable?,
         duration: Int, withIcon: Boolean
     ): Toast {
         return custom(
-            context, message, icon, ToastyUtils.getColor(context, R.color.defaultTextColor),
-            ToastyUtils.getColor(context, R.color.normalColor), duration, withIcon, true
+            message, icon, ToastyUtils.getColor(mContext!!, R.color.defaultTextColor),
+            ToastyUtils.getColor(mContext!!, R.color.normalColor), duration, withIcon, true
         )
     }
 
     private fun withDarkTheme(
-        context: Context, message: CharSequence, icon: Drawable?,
+        message: CharSequence, icon: Drawable?,
         duration: Int, withIcon: Boolean
     ): Toast {
         return custom(
-            context, message, icon, ToastyUtils.getColor(context, R.color.normalColor),
-            ToastyUtils.getColor(context, R.color.defaultTextColor), duration, withIcon, true
+            message, icon, ToastyUtils.getColor(mContext!!, R.color.normalColor),
+            ToastyUtils.getColor(mContext!!, R.color.defaultTextColor), duration, withIcon, true
         )
     }
 
@@ -509,6 +479,7 @@ object Toasty {
         private var yOffset = Toasty.yOffset
         private var supportDarkTheme = true
         private var isRTL = false
+
         @CheckResult
         fun setToastTypeface(typeface: Typeface): Config {
             this.typeface = typeface

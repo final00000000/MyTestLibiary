@@ -18,8 +18,4 @@ class AppViewModel : BaseViewModel() {
     override fun getData() {
 
     }
-
-    override fun createNestWork() {
-
-    }
 }

@@ -13,6 +13,4 @@ import kotlinx.coroutines.launch
  */
 abstract class BaseViewModel : ViewModel() {
     abstract fun getData()
-
-    abstract fun createNestWork()
 }

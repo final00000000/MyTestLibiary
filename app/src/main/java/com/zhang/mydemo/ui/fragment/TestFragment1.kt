@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.zhang.mydemo.R
+import com.zhang.utilslibiary.utils.getColorRes
 
 class TestFragment1 : Fragment() {
 

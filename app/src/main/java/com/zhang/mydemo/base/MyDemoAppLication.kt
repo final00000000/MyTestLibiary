@@ -1,7 +1,9 @@
 package com.zhang.mydemo.base
 
 import android.app.Application
+import android.content.Context
 import com.tencent.mmkv.MMKV
+import com.zhang.utilslibiary.utils.toast.Toasty
 import timber.log.Timber
 
 
@@ -17,15 +19,14 @@ class MyDemoAppLication : Application() {
         return this
     }
 
+    fun getContext(): Context {
+        return getApp().applicationContext
+    }
+
 
     override fun onCreate() {
         super.onCreate()
-        // Timber打印日志初始化 更多花样详情百度.
-        /*val config = LogConfiguration.Builder()
-            .enableThreadInfo() // 允许打印线程信息
-//            .enableBorder()     // 边框
-            .build()
-        Timber.init(config)*/
+        Toasty.setContext(getContext())
         MMKV.initialize(this)
     }
 

@@ -3,18 +3,19 @@ package com.zhang.mydemo
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import com.luck.picture.lib.utils.ToastUtils
 import com.zhang.mydemo.base.activity.BaseNetWorkActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
+import com.zhang.utilslibiary.utils.getColorRes
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import timber.log.Timber
 
 class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
@@ -24,7 +25,7 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun setListener() {
         tv_01.singleClick {
-            Toasty.success(this, "Hello World!")
+            Toasty.success("Hello World!").show()
         }
         kotlin.singleClick {
             startActivity<KotlinActivity>()
@@ -55,14 +56,16 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
     override fun onNetworkStateChanged(netState: NetWorkState) {
         super.onNetworkStateChanged(netState)
         if (netState.isSuccess) {
-            Toasty.success(this, "我特么来网了")
+            Toasty.success("我特么来网了").show()
         } else {
-            Toasty.error(this, "我特么网丢了")
+            Toasty.error("我特么网丢了").show()
         }
     }
 
     override fun createObserver() {
-
+        mViewModel.mList.observe(this) {
+            Timber.e("MainActivity_65行_2022/3/24_16:32：${it}")
+        }
     }
 
 
