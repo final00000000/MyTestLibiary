@@ -1,8 +1,11 @@
 package com.zhang.mydemo
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import androidx.core.app.ShareCompat
 import com.zhang.mydemo.base.activity.BaseNetWorkActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
@@ -25,11 +28,23 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun setListener() {
         tv_01.singleClick {
-            Toasty.success("Hello World!").show()
+            Toasty.success(R.string.Describe).show()
+            share()
         }
         kotlin.singleClick {
             startActivity<KotlinActivity>()
         }
+    }
+
+    @SuppressLint("StringFormatInvalid")
+    private fun share() {
+        val intent = ShareCompat.IntentBuilder(this)
+            .setType("text/plain")
+            .setChooserTitle(getString(R.string.DescribeWebView))
+//            .setText(getString(R.string.DescribeRichText))
+            .intent
+
+        startActivity(Intent.createChooser(intent, ""))
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {

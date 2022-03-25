@@ -31,7 +31,7 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
      */
     override fun isLayoutToolbar(): Boolean = true
 
-    var defaultMMKV: MMKV = MMKV.defaultMMKV()
+    var mDefaultMMKV: MMKV = MMKV.defaultMMKV()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

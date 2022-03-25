@@ -27,6 +27,8 @@ inline fun <reified VM : ViewModel> AppCompatActivity.viewModelOf(
 
 /**
  * 获取ViewModel
+ * 只能在方法中用
+ * 要不然需要改
  */
 /*
 fun createViewModel(appCompatActivity: AppCompatActivity) {

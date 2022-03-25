@@ -68,5 +68,8 @@
     <string name="Testorlin">竖向物流时间轴</string>
     <string name="TestHorlin">横向物流时间轴</string>
     <string name="DescribeBrv">新适配器</string>
+    <string name="home_title">首页</string>
+    <string name="home_mine">我的</string>
+    <string name="home_discover">发现</string>
 
 </resources>

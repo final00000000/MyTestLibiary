@@ -27,7 +27,6 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        createViewModel()
         mViewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
