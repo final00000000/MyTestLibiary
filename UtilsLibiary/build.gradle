@@ -138,4 +138,5 @@ dependencies {
 
     //MMKV
     api 'com.tencent:mmkv:1.2.12'
+
 }

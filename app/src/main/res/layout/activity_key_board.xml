@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:focusable="true"
-        android:textCursorDrawable="@drawable/et_style"
         android:focusableInTouchMode="true"
         android:hint="@string/DescribeKeyBoardET"
+        android:textColor="@color/color3E3E3F"
+        android:textCursorDrawable="@drawable/et_style"
         app:layout_constraintTop_toTopOf="parent" />
 
 

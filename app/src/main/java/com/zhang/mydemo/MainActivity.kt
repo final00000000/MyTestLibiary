@@ -11,7 +11,6 @@ import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
-import com.zhang.utilslibiary.utils.getColorRes
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_base.*
@@ -28,7 +27,7 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun setListener() {
         tv_01.singleClick {
-            Toasty.success(R.string.Describe).show()
+            Toasty.success(R.string.Describe)
             share()
         }
         kotlin.singleClick {
@@ -61,7 +60,6 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
     private fun exit() {
         if (System.currentTimeMillis() - mExitTime > 2000) {
             toast("再按一次退出应用")
-
             mExitTime = System.currentTimeMillis()
         } else {
             AppActivityManager.removeAllActivity()
@@ -71,9 +69,9 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
     override fun onNetworkStateChanged(netState: NetWorkState) {
         super.onNetworkStateChanged(netState)
         if (netState.isSuccess) {
-            Toasty.success("我特么来网了").show()
+            Toasty.success("我特么来网了")
         } else {
-            Toasty.error("我特么网丢了").show()
+            Toasty.error("我特么网丢了")
         }
     }
 

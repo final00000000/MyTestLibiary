@@ -91,29 +91,24 @@ object Toasty {
         return normalWithDarkThemeSupport(message, icon, duration, withIcon)
     }
 
-    @CheckResult
-    fun warning(@StringRes message: Int): Toast {
-        return warning(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
+    fun warning(@StringRes message: Int) {
+        warning(mContext!!.getString(message), Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun warning(message: CharSequence): Toast {
-        return warning(message, Toast.LENGTH_SHORT, true)
+    fun warning(message: CharSequence) {
+        warning(message, Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun warning(@StringRes message: Int, duration: Int): Toast {
-        return warning(mContext!!.getString(message), duration, true)
+    fun warning(@StringRes message: Int, duration: Int) {
+        warning(mContext!!.getString(message), duration, true).show()
     }
 
-    @CheckResult
-    fun warning(message: CharSequence, duration: Int): Toast {
-        return warning(message, duration, true)
+    fun warning(message: CharSequence, duration: Int) {
+        warning(message, duration, true).show()
     }
 
     @CheckResult
     fun warning(
-
         @StringRes message: Int,
         duration: Int,
         withIcon: Boolean
@@ -142,24 +137,20 @@ object Toasty {
         )
     }
 
-    @CheckResult
-    fun info(@StringRes message: Int): Toast {
-        return info(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
+    fun info(@StringRes message: Int) {
+        info(mContext!!.getString(message), Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun info(message: CharSequence): Toast {
-        return info(message, Toast.LENGTH_SHORT, true)
+    fun info(message: CharSequence) {
+        info(message, Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun info(@StringRes message: Int, duration: Int): Toast {
-        return info(mContext!!.getString(message), duration, true)
+    fun info(@StringRes message: Int, duration: Int) {
+        info(mContext!!.getString(message), duration, true).show()
     }
 
-    @CheckResult
-    fun info(message: CharSequence, duration: Int): Toast {
-        return info(message, duration, true)
+    fun info(message: CharSequence, duration: Int) {
+        info(message, duration, true).show()
     }
 
     @CheckResult
@@ -188,29 +179,24 @@ object Toasty {
         )
     }
 
-    @CheckResult
-    fun success(@StringRes message: Int): Toast {
-        return success(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
+    fun success(@StringRes message: Int) {
+        success(mContext!!.getString(message), Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun success(message: CharSequence): Toast {
-        return success(message, Toast.LENGTH_SHORT, true)
+    fun success(message: CharSequence) {
+        success(message, Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun success(@StringRes message: Int, duration: Int): Toast {
-        return success(mContext!!.getString(message), duration, true)
+    fun success(@StringRes message: Int, duration: Int) {
+        success(mContext!!.getString(message), duration, true).show()
     }
 
-    @CheckResult
-    fun success(message: CharSequence, duration: Int): Toast {
-        return success(message, duration, true)
+    fun success(message: CharSequence, duration: Int) {
+        success(message, duration, true).show()
     }
 
     @CheckResult
     fun success(
-
         @StringRes message: Int,
         duration: Int,
         withIcon: Boolean
@@ -239,24 +225,20 @@ object Toasty {
         )
     }
 
-    @CheckResult
-    fun error(@StringRes message: Int): Toast {
-        return error(mContext!!.getString(message), Toast.LENGTH_SHORT, true)
+    fun error(@StringRes message: Int) {
+        error(mContext!!.getString(message), Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun error(message: CharSequence): Toast {
-        return error(message, Toast.LENGTH_SHORT, true)
+    fun error(message: CharSequence) {
+        error(message, Toast.LENGTH_SHORT, true).show()
     }
 
-    @CheckResult
-    fun error(@StringRes message: Int, duration: Int): Toast {
-        return error(mContext!!.getString(message), duration, true)
+    fun error(@StringRes message: Int, duration: Int) {
+        error(mContext!!.getString(message), duration, true).show()
     }
 
-    @CheckResult
-    fun error(message: CharSequence, duration: Int): Toast {
-        return error(message, duration, true)
+    fun error(message: CharSequence, duration: Int) {
+        error(message, duration, true).show()
     }
 
     @CheckResult
