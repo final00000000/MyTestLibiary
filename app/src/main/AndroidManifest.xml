@@ -22,6 +22,9 @@
         android:theme="@style/MyDemoTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.ExpandTextViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.BRVActivity"
             android:exported="false" />
         <activity

@@ -95,6 +95,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_dicovery_cp.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_discovery_selected.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_expand.xml" value="0.25333333333333335" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_home_normal.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_home_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_mine_normal.xml" value="0.25729166666666664" />
@@ -113,6 +114,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_base_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_brvactivity.xml" value="0.11727456940222898" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_date_utils.xml" value="0.4" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_expand.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_grammar.xml" value="0.33432835820895523" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_hor_line.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_horizontal_pro.xml" value="0.18489583333333334" />
@@ -126,9 +128,10 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_motion_layouty.xml" value="0.2265625" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_pick_view.xml" value="0.2" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_picker_date.xml" value="0.24114583333333334" />
-        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_rich_text.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_rich_text.xml" value="0.6" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_say_what.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_search.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_shrink.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_splash.xml" value="0.22552083333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_star_rating.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab.xml" value="0.264" />
@@ -151,6 +154,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test2.xml" value="0.12083333333333333" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test3.xml" value="0.12083333333333333" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test4.xml" value="0.136" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_expand_collapse.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_horizontal.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_picker.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_rv_search.xml" value="0.24114583333333334" />
@@ -158,6 +162,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_say_what_layout.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_score.xml" value="0.11727456940222898" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_search_popup.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_shrink.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_tab_view_pager.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_test_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_test_rv_footer.xml" value="0.24114583333333334" />

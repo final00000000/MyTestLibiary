@@ -24,6 +24,8 @@ class CurrentView : View {
     var firstHeight = 0
     var firstWidth = 0
 
+    var firstColor = mutableListOf("")
+
     constructor(context: Context?) : super(context)
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {

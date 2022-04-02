@@ -109,4 +109,91 @@
         <!--    宽度    -->
         <attr name="firstWidth" format="dimension" />
     </declare-styleable>
+
+    <!--ExpandableTextView-->
+    <declare-styleable name="ExpandTextView">
+        <!--最大收缩展示的行数，默认8行-->
+        <attr name="etv_maxCollapsedLines" format="integer" />
+        <!--动画持续的间隔，默认300ms-->
+        <attr name="etv_animDuration" format="integer" />
+        <!--动画开始时的透明度，默认0.7f-->
+        <attr name="etv_animAlphaStart" format="float" />
+        <!--伸展箭头的资源-->
+        <attr name="etv_expandDrawable" format="reference" />
+        <!--收缩箭头的资源-->
+        <attr name="etv_collapseDrawable" format="reference" />
+    </declare-styleable>
+
+    <!--    <declare-styleable name="ExpandableTextView">
+            &lt;!&ndash;保留的行数&ndash;&gt;
+            <attr name="ep_max_line" format="integer" />
+            &lt;!&ndash;是否需要展开&ndash;&gt;
+            <attr name="ep_need_expand" format="boolean" />
+            &lt;!&ndash;是否需要收起 这个是建立在开启展开的基础上的&ndash;&gt;
+            <attr name="ep_need_contract" format="boolean" />
+            &lt;!&ndash;是否需要@用户 &ndash;&gt;
+            <attr name="ep_need_mention" format="boolean" />
+            &lt;!&ndash;是否需要对链接进行处理 &ndash;&gt;
+            <attr name="ep_need_link" format="boolean" />
+            &lt;!&ndash;是否需要动画&ndash;&gt;
+            <attr name="ep_need_animation" format="boolean" />
+            &lt;!&ndash;是否需要永远将展开或者收回放置在最后边&ndash;&gt;
+            <attr name="ep_need_always_showright" format="boolean" />
+            &lt;!&ndash;是否需要将连接转换成网页链接显示 默认为true&ndash;&gt;
+            <attr name="ep_need_convert_url" format="boolean" />
+            &lt;!&ndash;是否需要自定义规则&ndash;&gt;
+            <attr name="ep_need_self" format="boolean" />
+            &lt;!&ndash;收起的文案&ndash;&gt;
+            <attr name="ep_contract_text" format="string" />
+            &lt;!&ndash;展开的文案&ndash;&gt;
+            <attr name="ep_expand_text" format="string" />
+            &lt;!&ndash;展开的文字的颜色&ndash;&gt;
+            <attr name="ep_expand_color" format="color" />
+            &lt;!&ndash;收起的文字的颜色&ndash;&gt;
+            <attr name="ep_contract_color" format="color" />
+            &lt;!&ndash;在收回和展开前面添加的内容的字体颜色&ndash;&gt;
+            <attr name="ep_end_color" format="color" />
+            &lt;!&ndash;链接的文字的颜色&ndash;&gt;
+            <attr name="ep_link_color" format="color" />
+            &lt;!&ndash;@用户的文字的颜色&ndash;&gt;
+            <attr name="ep_mention_color" format="color" />
+            &lt;!&ndash;自定义规则的文字的颜色&ndash;&gt;
+            <attr name="ep_self_color" format="color" />
+            &lt;!&ndash;链接的图标&ndash;&gt;
+            <attr name="ep_link_res" format="reference" />
+        </declare-styleable>-->
+    <!--收起展开textview-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <!--      动画时间  -->
+        <attr name="animDuration" format="integer" />
+        <!--        展开图片-->
+        <attr name="expandDrawable" format="reference" />
+        <!--        收起图片-->
+        <attr name="collapseDrawable" format="reference" />
+        <!--       内容颜色-->
+        <attr name="contentTextColor" format="color" />
+        <!--      收起展开颜色-->
+        <attr name="collapseExpandTextColor" format="color" />
+        <!--        内容字体大小-->
+        <attr name="contentTextSize" format="dimension" />
+        <!--        收起展字体大小-->
+        <attr name="collapseExpandTextSize" format="dimension" />
+        <!--         收起文字-->
+        <attr name="textCollapse" format="string" />
+        <!--        展开文字-->
+        <attr name="textExpand" format="string" />
+
+        <!--            收起展开位置，默认左边-->
+        <attr name="collapseExpandGrarity">
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+        </attr>
+
+        <!--        收起展开图标位置，默认在右边-->
+        <attr name="drawableGrarity">
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+        </attr>
+    </declare-styleable>
 </resources>

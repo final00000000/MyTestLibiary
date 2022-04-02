@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--ExpandableTextView-->
+    <item name="expandable_text" type="id" />
+    <item name="expand_collapse" type="id" />
+</resources>

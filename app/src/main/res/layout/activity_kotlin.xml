@@ -115,5 +115,10 @@
             style="@style/tv_style"
             android:text="@string/DescribeBrv" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_21"
+            style="@style/tv_style"
+            android:text="@string/DescribeText" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

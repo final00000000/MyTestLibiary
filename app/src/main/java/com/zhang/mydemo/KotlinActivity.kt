@@ -82,5 +82,8 @@ class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
         tv_20.singleClick {
             startActivity<BRVActivity>()
         }
+        tv_21.singleClick {
+            startActivity<ExpandTextViewActivity>()
+        }
     }
 }
