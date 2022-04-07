@@ -1063,3 +1063,28 @@ fun getMetaData(context: Context, i: Int, key: String): String {
         return ""
     }
 }
+
+/**
+ * 返回加上万 亿的字符串
+ *
+ * @param longNum
+ * @return
+ */
+fun formatBigNum(longNum: Long): String {
+    val mY = 100000000 //亿
+
+    val mW = 10000 //万
+
+    val result: String = when {
+        longNum >= mY -> {
+            (longNum / mY).toString() + "." + longNum % mY / (mY / 10) + "亿"
+        }
+        longNum >= mW -> {
+            (longNum / mW).toString() + "." + longNum % mW / (mW / 10) + "万"
+        }
+        else -> {
+            longNum.toString()
+        }
+    }
+    return result
+}

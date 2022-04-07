@@ -3,6 +3,7 @@ package com.zhang.mydemo.ui.activity
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityKeyBoardBinding
 import com.zhang.utilslibiary.utils.*
+import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_key_board.*
 import kotlinx.android.synthetic.main.layout_title.*
 
@@ -39,6 +40,7 @@ class KeyBoard : BaseActivity<ActivityKeyBoardBinding>() {
             } else {
                 hideSoftInput(this@KeyBoard)
                 compileTV.text = "编辑"
+                Toasty.normal(formatBigNum(if(et.text.toString().isNotEmpty())et.text.toString().toLong() else 1))
             }
         }
 
