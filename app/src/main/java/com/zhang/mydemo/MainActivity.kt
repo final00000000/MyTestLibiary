@@ -9,6 +9,7 @@ import androidx.core.app.ShareCompat
 import com.zhang.mydemo.base.activity.BaseNetWorkActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
+import com.zhang.mydemo.ui.adapter.NavigationAdapter
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.singleClick
@@ -21,8 +22,24 @@ import timber.log.Timber
 
 class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
 
+    lateinit var navigationAdapter: NavigationAdapter
+
+    var mList = mutableListOf<Pair<String, Int>>()
     override fun initView(savedInstanceState: Bundle?) {
         baseTitle.visibility = View.GONE
+        addData()
+        navigationAdapter = NavigationAdapter()
+        navigationRV.adapter = navigationAdapter
+        navigationAdapter.setOnItemClickListener { adapter, view, position ->
+
+            navigationAdapter.mPosition = position
+            navigationAdapter.notifyItemChanged(position)
+        }
+        navigationAdapter.setNewInstance(mutableListOf("1","2","3","4"))
+    }
+
+    fun addData() {
+//        mList.addAll(Pair < "首页", R.drawable.ic_home_normal >)
     }
 
     override fun setListener() {

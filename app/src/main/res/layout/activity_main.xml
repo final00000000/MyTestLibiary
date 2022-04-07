@@ -24,21 +24,13 @@
         android:text="@string/Kotlin"
         android:textSize="40sp" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/navigationRV"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/name_dp55"
-        android:background="@color/colorF2F2F2"
-        app:itemTextColor="@color/home_color_selected"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bnv_navigation_menu" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/main_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/main_graph" />
+        android:layout_height="@dimen/name_dp50"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:itemCount="4" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
