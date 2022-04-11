@@ -2,6 +2,7 @@ package com.zhang.mydemo.ui.activity
 
 import android.content.Intent
 import android.graphics.Color
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,7 +44,7 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
     // 接收的颜色值
     private var lastColor = 0
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         tvPageTitle.text = "富文本"
 
         // 初始化编辑器

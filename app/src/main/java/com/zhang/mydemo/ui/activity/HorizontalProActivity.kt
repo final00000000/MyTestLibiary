@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityHorizontalProBinding
 import com.zhang.mydemo.ui.adapter.HorizontalProgressListAdapter
@@ -9,14 +10,6 @@ import kotlinx.android.synthetic.main.layout_title.*
 import java.util.*
 
 class HorizontalProActivity : BaseActivity<ActivityHorizontalProBinding>() {
-
-    override fun initView() {
-        tvPageTitle.text = "横向物流轴"
-        recyclerView.adapter =
-            HorizontalProgressListAdapter(
-                progressList
-            )
-    }
 
     /**
      * 模拟节点数据
@@ -51,5 +44,15 @@ class HorizontalProActivity : BaseActivity<ActivityHorizontalProBinding>() {
         }
 
     override fun initData() {}
+
     override fun setListener() {}
+
+    override fun initView(savedInstanceState: Bundle?) {
+        tvPageTitle.text = "横向物流轴"
+        recyclerView.adapter =
+            HorizontalProgressListAdapter(
+                progressList
+            )
+
+    }
 }

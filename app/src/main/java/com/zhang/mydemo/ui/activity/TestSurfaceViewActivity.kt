@@ -4,6 +4,7 @@ import android.content.pm.ActivityInfo
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.net.Uri
+import android.os.Bundle
 import android.view.SurfaceHolder
 import android.view.View
 import android.widget.RelativeLayout
@@ -16,8 +17,6 @@ class TestSurfaceViewActivity : BaseActivity<ActivityTestSurfaceViewBinding>(),
     View.OnClickListener {
 
     private var mMediaPlayer: MediaPlayer? = null
-
-    override fun initView() {}
 
     override fun initData() {
         mMediaPlayer = MediaPlayer()
@@ -128,4 +127,8 @@ class TestSurfaceViewActivity : BaseActivity<ActivityTestSurfaceViewBinding>(),
     }
 
     override fun onPointerCaptureChanged(hasCapture: Boolean) {}
+
+    override fun initView(savedInstanceState: Bundle?) {
+
+    }
 }

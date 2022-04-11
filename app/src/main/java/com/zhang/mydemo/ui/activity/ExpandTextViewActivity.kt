@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityExpandBinding
 import com.zhang.mydemo.ui.adapter.ExpandAdapter
@@ -7,10 +8,6 @@ import kotlinx.android.synthetic.main.activity_expand.*
 import kotlinx.android.synthetic.main.layout_title.*
 
 class ExpandTextViewActivity : BaseActivity<ActivityExpandBinding>() {
-
-    override fun initView() {
-        tvPageTitle.text = "收缩和展开"
-    }
 
     override fun initData() {
         rvExpand.adapter = ExpandAdapter(
@@ -22,5 +19,9 @@ class ExpandTextViewActivity : BaseActivity<ActivityExpandBinding>() {
     }
 
     override fun setListener() {
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+        tvPageTitle.text = "收缩和展开"
     }
 }

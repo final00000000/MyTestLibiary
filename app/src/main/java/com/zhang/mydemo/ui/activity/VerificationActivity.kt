@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityVerificationBinding
 import com.zhang.mydemo.ui.adapter.VerificationAdapter
@@ -9,7 +10,7 @@ class VerificationActivity : BaseActivity<ActivityVerificationBinding>() {
 
     lateinit var vAdapter: VerificationAdapter
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         vAdapter = VerificationAdapter(mutableListOf())
         rvVerification.adapter = vAdapter
         vAdapter.setNewInstance(mutableListOf("", "", "", ""))

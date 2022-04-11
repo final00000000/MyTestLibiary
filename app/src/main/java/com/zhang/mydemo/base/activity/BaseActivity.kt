@@ -48,7 +48,7 @@ abstract class BaseActivity<VB : ViewBinding> : BaseVbActivity<VB>(), IsBase {
         //初始化设置沉浸式状态栏
         initImmerBar()
         //初始化控件
-        initView()
+        initView(savedInstanceState)
         //数据的操作
         initData()
         // 设置监听
@@ -56,7 +56,7 @@ abstract class BaseActivity<VB : ViewBinding> : BaseVbActivity<VB>(), IsBase {
 
     }
 
-    protected abstract fun initView()
+    protected abstract fun initView(savedInstanceState: Bundle?)
 
     protected abstract fun initData()
 

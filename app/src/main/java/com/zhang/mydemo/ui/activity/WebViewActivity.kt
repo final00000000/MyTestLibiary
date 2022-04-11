@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.zhang.mydemo.base.activity.BaseActivity
@@ -13,7 +14,7 @@ class WebViewActivity : BaseActivity<ActivityWebViewBinding>() {
         return false
     }
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
 
     }
 

@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import android.widget.Toast
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.TextTagBinding
@@ -24,7 +25,7 @@ class TestTag : BaseActivity<TextTagBinding>() {
 
     private val content = "#我的越野世界# #这是个标签#"
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         tvPageTitle.text = "纯文本标签"
     }
 

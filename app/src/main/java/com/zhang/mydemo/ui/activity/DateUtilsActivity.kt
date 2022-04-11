@@ -1,6 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.annotation.SuppressLint
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityDateUtilsBinding
 import com.zhang.utilslibiary.utils.DateUtil.getCurrentMillis
@@ -33,7 +34,7 @@ class DateUtilsActivity : BaseActivity<ActivityDateUtilsBinding>() {
         }
     }
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
 
     }
 }

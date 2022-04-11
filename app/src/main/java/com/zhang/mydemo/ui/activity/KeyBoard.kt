@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityKeyBoardBinding
 import com.zhang.utilslibiary.utils.*
@@ -10,7 +11,7 @@ import kotlinx.android.synthetic.main.layout_title.*
 
 class KeyBoard : BaseActivity<ActivityKeyBoardBinding>() {
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         ivPageBack.singleClick { killMyself() }
         tvPageTitle.text = "软键盘"
     }

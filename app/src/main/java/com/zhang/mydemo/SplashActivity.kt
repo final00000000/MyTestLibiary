@@ -12,17 +12,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun isLayoutToolbar(): Boolean = false
 
-    override fun initView() {
-        val task: TimerTask = object : TimerTask() {
-            override fun run() {
-                startActivity<MainActivity>()
-                killMyself()
-            }
-        }
-        val timer = Timer()
-        timer.schedule(task, 1000)
-    }
-
     override fun initData() {
     }
 
@@ -72,5 +61,17 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     override fun onDestroy() {
         super.onDestroy()
         Timber.e("SplashActivity_49行_2022/2/8_12:01：${"onDestroy"}")
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+        val task: TimerTask = object : TimerTask() {
+            override fun run() {
+                startActivity<MainActivity>()
+                killMyself()
+            }
+        }
+        val timer = Timer()
+        timer.schedule(task, 1000)
+
     }
 }

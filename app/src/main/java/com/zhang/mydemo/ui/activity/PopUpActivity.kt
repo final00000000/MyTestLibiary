@@ -1,6 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.graphics.Color
+import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +25,7 @@ import kotlin.math.ceil
 
 class PopUpActivity : BaseActivity<ActivityPopupBinding>() {
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         tvPageTitle.text = "底部弹窗功能"
 
     }

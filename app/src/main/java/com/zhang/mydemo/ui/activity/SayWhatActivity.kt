@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.core.view.isVisible
 import com.zhang.mydemo.base.activity.BaseActivity
@@ -29,7 +30,7 @@ class SayWhatActivity : BaseActivity<ActivitySayWhatBinding>() {
     @Volatile
     var mPosition2 = 0
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         tvPageTitle.text = ""
     }
 

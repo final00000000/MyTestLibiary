@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTestGlideBinding
@@ -10,7 +11,7 @@ import kotlinx.android.synthetic.main.layout_title.*
 
 class TestGlideActivity : BaseActivity<ActivityTestGlideBinding>() {
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         tvPageTitle.text = "测试Glide"
     }
 

@@ -1,6 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.content.Intent
+import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityJumpBinding
@@ -17,7 +18,7 @@ class JumpActivity : BaseActivity<ActivityJumpBinding>() {
             }
         }
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
     }
 
     override fun initData() {

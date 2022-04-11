@@ -1,6 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.content.Intent
+import android.os.Bundle
 import com.luck.picture.lib.basic.PictureSelector
 import com.luck.picture.lib.config.SelectMimeType.TYPE_IMAGE
 import com.luck.picture.lib.entity.LocalMedia
@@ -19,7 +20,7 @@ class PickViewActivity : BaseActivity<ActivityPickViewBinding>() {
 
     }
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
 
     }
 

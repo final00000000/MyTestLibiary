@@ -1,6 +1,7 @@
 package com.zhang.mydemo.ui.activity
 
 import android.annotation.SuppressLint
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityGrammarBinding
 import com.zhang.utilslibiary.utils.singleClick
@@ -13,7 +14,7 @@ class GrammarActivity : BaseActivity<ActivityGrammarBinding>() {
 
     var mutableList = mutableListOf(1, 2, 3, 4, 5)
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
     }
 
     override fun initData() {

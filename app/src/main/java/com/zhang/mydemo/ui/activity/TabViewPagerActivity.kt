@@ -1,5 +1,6 @@
 package com.zhang.mydemo.ui.activity
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTabViewPagerBinding
@@ -27,12 +28,6 @@ class TabViewPagerActivity : BaseActivity<ActivityTabViewPagerBinding>() {
         TestFragment4.newInstance(4)
     )
 
-    override fun initView() {
-        //添加Android自带的分割线
-//        rv_tp.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-
-    }
-
     override fun initData() {
     }
 
@@ -41,5 +36,11 @@ class TabViewPagerActivity : BaseActivity<ActivityTabViewPagerBinding>() {
         tabPageAdapter = TabPagerAdapter(this@TabViewPagerActivity, fmList)
         vp.adapter = tabPageAdapter
         TabViewPagerInit.TPinit(tl_tab, vp, 0)
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+        //添加Android自带的分割线
+//        rv_tp.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+
     }
 }

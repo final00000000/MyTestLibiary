@@ -1,5 +1,6 @@
 package com.zhang.mydemo
 
+import android.os.Bundle
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityKotlinBinding
@@ -11,10 +12,6 @@ import org.jetbrains.anko.startActivity
 
 class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
 
-    override fun initView() {
-        ivPageBack.singleClick { killMyself() }
-        tvPageTitle.text = "Kotlin"
-    }
 
     override fun initData() {
     }
@@ -85,5 +82,11 @@ class KotlinActivity : BaseActivity<ActivityKotlinBinding>() {
         tv_21.singleClick {
             startActivity<ExpandTextViewActivity>()
         }
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+
+        ivPageBack.singleClick { killMyself() }
+        tvPageTitle.text = "Kotlin"
     }
 }

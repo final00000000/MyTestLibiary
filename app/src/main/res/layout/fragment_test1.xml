@@ -5,13 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.TestFragment1">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_show"
+    <com.zhang.utilslibiary.utils.NestedViewPager
+        android:id="@+id/mVp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textColor="@color/red"
-        android:text="1"
-        android:textSize="@dimen/sp_20" />
+        android:layout_height="match_parent" />
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_20" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
