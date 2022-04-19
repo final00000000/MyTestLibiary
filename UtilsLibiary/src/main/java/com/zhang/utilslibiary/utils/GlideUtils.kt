@@ -3,6 +3,7 @@ package com.zhang.utilslibiary.utils
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
+import androidx.annotation.DrawableRes
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
@@ -73,7 +74,7 @@ object GlideUtils {
      * @param error Any
      * @param view ImageView
      */
-    fun loadImageError(context: Context, url: String, error: Any, view: ImageView) {
+    fun loadImageError(context: Context, url: String, error: Drawable, view: ImageView) {
         Glide.with(context)
             .load(url)
             .error(error)
@@ -102,7 +103,7 @@ object GlideUtils {
     fun loadImageGif(context: Context, url: String, error: Any, view: ImageView) {
         Glide.with(context)
             .asGif()
-            .error(error)
+//            .error(error)
             .load(url)
             .into(view)
     }

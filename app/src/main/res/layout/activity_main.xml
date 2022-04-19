@@ -24,13 +24,11 @@
         android:text="@string/Kotlin"
         android:textSize="40sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/navigationRV"
+    <!--<com.zhang.mydemo.ui.widget.tablayout.AnimatedTabLayout
+        android:id="@+id/tabl"
         android:layout_width="match_parent"
         android:layout_height="@dimen/name_dp50"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="4"
-        tools:itemCount="4" />
+        android:layout_centerVertical="true"
+        app:atl_tabs="@xml/home_tabl" />-->
 
 </androidx.appcompat.widget.LinearLayoutCompat>

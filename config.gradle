@@ -1,0 +1,146 @@
+ext {
+    myProject = [
+            kotlin_version: "1.6.20"
+    ]
+    As = [
+            compileSdkVersion: 31,
+            applicationId    : "com.zhang.mydemo",
+            minSdkVersion    : 21,
+            targetSdkVersion : 31,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    // 依赖版本
+    Vs = [
+            Constraint             : "2.1.3",
+            Junit                  : "4.13.2",
+            JunitExt               : "1.1.3",
+            Appcompat              : "1.4.1",
+            Material               : "1.5.0",
+            AndroidXActivity       : "1.4.0",
+            AndroidXFragment       : "1.4.1",
+            Core                   : "1.7.0",
+            Legacy                 : "1.0.0",
+            Espresso               : "3.4.0",
+            Swiperefreshlayout     : "1.1.0",
+
+            Immersionbar           : "3.2.2",
+            ImmersionbarComponents : "3.0.0",
+            ImmersionbarKtx        : "3.2.2",
+
+            Glide                  : "4.8.0",
+            Transformations        : "4.3.0",
+            Coil                   : "2.0.0-rc03",
+            Pictureselector        : "v3.0.9",
+
+            Anko                   : "0.10.8",
+            KotlinCollection       : "1.2.0",
+            Lifecycle              : "2.5.0-alpha03",
+            LifecycleExtension     : "2.2.0",
+            LiveData               : "2.5.0-alpha03",
+            UnpeekLiveData         : "7.2.0-beta1",
+            ViewModel              : "2.5.0-alpha03",
+            Navigation             : "2.4.1",
+            Retrofit               : "2.9.0",
+            Room                   : "2.4.1",
+            KotlinCoroutinesCore   : "1.6.1",
+            KotlinCoroutinesAndroid: "1.6.1",
+            Eventbus               : "3.3.1",
+            PickerView             : "4.1.9",
+    ]
+
+    //dependencies 引入
+    Dp = [
+            // ===================官方框架  https://developer.android.com/reference/androidx/packages ==============//
+
+            // ConstraintLayout布局
+            ConstraintLayout       : "androidx.constraintlayout:constraintlayout:${Vs.Constraint}",
+            // 测试
+            Junit                  : "junit:junit:$Vs.Junit",
+            JunitExt               : "androidx.test.ext:junit:${Vs.JunitExt}",
+            Appcompat              : "androidx.appcompat:appcompat:${Vs.Appcompat}",
+            Material               : "com.google.android.material:material:${Vs.Material}",
+            AndroidXActivity       : "androidx.activity:activity-ktx:${Vs.AndroidXActivity}",
+            AndroidXFragment       : "androidx.fragment:fragment-ktx:${Vs.AndroidXFragment}",
+            Core                   : "androidx.core:core-ktx:${Vs.Core}",
+            Legacy                 : "androidx.legacy:legacy-support-v4:${Vs.Legacy}",
+            Espresso               : "androidx.test.espresso:espresso-core:${Vs.Espresso}",
+            Swiperefreshlayout     : "androidx.swiperefreshlayout:swiperefreshlayout:${Vs.Swiperefreshlayout}",
+            // room
+            Room                   : "androidx.room:room-runtime:${Vs.Room}",
+            RoomKtx                : "androidx.room:room-ktx:${Vs.Room}",
+            RoomCompiler           : "androidx.room:room-compiler:${Vs.Room}",
+            // navigation 导航
+            Navigation             : "androidx.navigation:navigation-fragment-ktx:${Vs.Navigation}",
+            NavigationUi           : "androidx.navigation:navigation-ui-ktx:${Vs.Navigation}",
+
+
+            // ===============================================依赖框架==================================//
+
+            // 沉浸式                 //https://github.com/gyf-dev/ImmersionBar
+            Immersionbar           : "com.geyifeng.immersionbar:immersionbar:${Vs.Immersionbar}",
+            // ImmersionbarComponents: "com.gyf.immersionbar:immersionbar-components:${Vs.ImmersionbarComponents}", 3.0.0以上版本已废弃
+            ImmersionbarKtx        : "com.geyifeng.immersionbar:immersionbar-ktx:${Vs.ImmersionbarKtx}",
+
+            //Glide图片加载           https://github.com/bumptech/glide
+            Glide                  : "com.github.bumptech.glide:glide:${Vs.Glide}",
+            GlideCompiler          : "com.github.bumptech.glide:compiler:${Vs.Glide}",
+            // 高斯模糊              https://github.com/wasabeef/glide-transformations
+            Transformations        : "jp.wasabeef:glide-transformations:${Vs.Transformations}",
+            //Coil                   https://github.com/coil-kt/coil
+            Coil                   : "io.coil-kt:coil:${Vs.Coil}",
+            // Coil 加载Gif 单独库    https://coil-kt.github.io/coil/gifs/
+            CoilGif                : "io.coil-kt:coil-gif:${Vs.Coil}",
+
+            // 图片选择器             https://github.com/LuckSiege/PictureSelector
+            pictureselector        : "io.github.lucksiege:pictureselector:${Vs.Pictureselector}",
+            // retrofit 网络请求框架  https://github.com/square/retrofit
+            Retrofit               : "com.squareup.retrofit2:retrofit:${Vs.Retrofit}",
+            //  gson解析数据
+            RetrofitGson           : "com.squareup.retrofit2:converter-gson:${Vs.Retrofit}",
+            //     //rx life cycle -- rx lifecycle android rxlifecycle框架 管理生命周期
+            Rxlifecycle            : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            RxlifecycleAndroid     : "com.trello.rxlifecycle2:rxlifecycle-android:2.2.2",
+            RetrofitScalars        : "com.squareup.retrofit2:converter-scalars:2.9.0",
+            // retrofit添加Rxjava支持
+            RetrofitRxJava         : "com.squareup.retrofit2:adapter-rxjava2:2.9.0",
+            Okhttp                 : "com.squareup.okhttp3:okhttp:5.0.0-alpha.2",
+            RxAndroid              : "io.reactivex.rxjava2:rxandroid:2.1.1",
+
+            //  eventbus             https://github.com/greenrobot/EventBus
+            Eventbus               : "org.greenrobot:eventbus:${Vs.Eventbus}",
+            // 时间选择框架            https://github.com/Bigkoo/Android-PickerView
+            PickerView             : "com.contrarywind:Android-PickerView:${Vs.PickerView}",
+            // 日志打印框架            https://github.com/naman14/Timber
+            Timber                 : "com.jakewharton.timber:timber:5.0.1",
+            // 权限申请框架            https://github.com/guolindev/PermissionX
+            Permissionx            : "com.guolindev.permissionx:permissionx:1.6.1",
+            // MMkv 代替sp            https://github.com/Tencent/MMKV
+            Mmkv                   : "com.tencent:mmkv:1.2.13",
+            // base adapter          https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+            BaseRecyclerViewAdapter: "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+
+
+            // ===============================================Kotlin体系==================================//
+
+            KotlinStdlib           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            // 已不维护               https://github.com/Kotlin/anko
+            Anko                   : "org.jetbrains.anko:anko:${Vs.Anko}",
+            //Kotlin collection 类
+            KotlinCollection       : "androidx.collection:collection-ktx:${Vs.KotlinCollection}",
+            //Lifecycle
+            Lifecycle              : "androidx.lifecycle:lifecycle-runtime-ktx:${Vs.Lifecycle}",
+            LifecycleExtension     : "androidx.lifecycle:lifecycle-extensions:${Vs.LifecycleExtension}",
+            // live Data
+            LiveData               : "androidx.lifecycle:lifecycle-livedata-ktx:${Vs.LiveData}",
+            // liveData 防止数据倒灌   https://github.com/KunMinX/UnPeek-LiveData
+            UnpeekLiveData         : "com.kunminx.arch:unpeek-livedata:${Vs.UnpeekLiveData}",
+            // view model
+            ViewModel              : "androidx.lifecycle:lifecycle-viewmodel-ktx:${Vs.ViewModel}",
+            // kotlin 协程            https://github.com/Kotlin/kotlinx.coroutines
+            KotlinCoroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vs.KotlinCoroutinesCore}",
+            // 协程 Android
+            KotlinCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vs.KotlinCoroutinesAndroid}",
+    ]
+}

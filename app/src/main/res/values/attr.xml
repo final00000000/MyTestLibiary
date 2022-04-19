@@ -47,5 +47,8 @@
         <attr name="pSpacing" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="AnimatedTabLayout">
+        <attr name="atl_tabs" format="reference" />
+    </declare-styleable>
 
 </resources>

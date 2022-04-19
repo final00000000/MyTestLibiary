@@ -31,12 +31,12 @@ class TestGlideActivity : BaseActivity<ActivityTestGlideBinding>() {
             GlideUtils.loadImage(this, "", R.drawable.ic_pl, iv_bg2)
         }
         tv3.singleClick {
-            GlideUtils.loadImageError(
+            /*GlideUtils.loadImageError(
                 this,
                 "",
                 "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
                 iv_bg3
-            )
+            )*/
         }
         tv4.singleClick {
             GlideUtils.loadImageGif(

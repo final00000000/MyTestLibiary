@@ -248,7 +248,7 @@ class RichTextActivity : BaseActivity<ActivityRichTextBinding>() {
                     object : ColorSelectDialog.OnColorSelectListener {
                         override fun onSelectFinish(color: Int) {
                             lastColor = color
-                            rich_Editor.setTextColor(lastColor)
+                            rich_Editor.setEditorFontColor(lastColor)
                         }
                     }
             }
