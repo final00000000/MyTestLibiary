@@ -10,7 +10,6 @@ import com.zhang.mydemo.ui.fragment.TestFragment2
 import com.zhang.mydemo.ui.fragment.TestFragment3
 import com.zhang.mydemo.ui.fragment.TestFragment4
 import com.zhang.utilslibiary.utils.TabViewPagerInit
-import kotlinx.android.synthetic.main.activity_tab_view_pager.*
 import kotlinx.android.synthetic.main.activity_tab_view_pager.tl_tab
 import kotlinx.android.synthetic.main.activity_tab_view_pager.vp
 import kotlinx.android.synthetic.main.layout_title.*

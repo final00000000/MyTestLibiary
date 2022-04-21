@@ -55,11 +55,11 @@ dependencies {
 //    api Dp.ImmersionbarComponents
     api Dp.ImmersionbarKtx
     api Dp.Glide
-    annotationProcessor Dp.GlideCompiler
+    api Dp.GlideCompiler
     api Dp.Transformations
     api Dp.Coil
     api Dp.CoilGif
-    api Dp.pictureselector
+    api Dp.Pictureselector
 
     api Dp.KotlinStdlib
     api Dp.Anko
@@ -91,5 +91,5 @@ dependencies {
     api Dp.Permissionx
     api Dp.Timber
     api Dp.Mmkv
-
+    api Dp.BGASwipeBackLayout
 }

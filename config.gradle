@@ -29,10 +29,9 @@ ext {
             ImmersionbarComponents : "3.0.0",
             ImmersionbarKtx        : "3.2.2",
 
-            Glide                  : "4.8.0",
+            Glide                  : '4.13.1',
             Transformations        : "4.3.0",
             Coil                   : "2.0.0-rc03",
-            Pictureselector        : "v3.0.9",
 
             Anko                   : "0.10.8",
             KotlinCollection       : "1.2.0",
@@ -94,7 +93,7 @@ ext {
             CoilGif                : "io.coil-kt:coil-gif:${Vs.Coil}",
 
             // 图片选择器             https://github.com/LuckSiege/PictureSelector
-            pictureselector        : "io.github.lucksiege:pictureselector:${Vs.Pictureselector}",
+            Pictureselector        : "io.github.lucksiege:pictureselector:v3.0.9",
             // retrofit 网络请求框架  https://github.com/square/retrofit
             Retrofit               : "com.squareup.retrofit2:retrofit:${Vs.Retrofit}",
             //  gson解析数据
@@ -105,7 +104,7 @@ ext {
             RetrofitScalars        : "com.squareup.retrofit2:converter-scalars:2.9.0",
             // retrofit添加Rxjava支持
             RetrofitRxJava         : "com.squareup.retrofit2:adapter-rxjava2:2.9.0",
-            Okhttp                 : "com.squareup.okhttp3:okhttp:5.0.0-alpha.2",
+            Okhttp                 : "com.squareup.okhttp3:okhttp:5.0.0-alpha.6",
             RxAndroid              : "io.reactivex.rxjava2:rxandroid:2.1.1",
 
             //  eventbus             https://github.com/greenrobot/EventBus
@@ -115,12 +114,13 @@ ext {
             // 日志打印框架            https://github.com/naman14/Timber
             Timber                 : "com.jakewharton.timber:timber:5.0.1",
             // 权限申请框架            https://github.com/guolindev/PermissionX
-            Permissionx            : "com.guolindev.permissionx:permissionx:1.6.1",
+            Permissionx            : "com.guolindev.permissionx:permissionx:1.6.2",
             // MMkv 代替sp            https://github.com/Tencent/MMKV
             Mmkv                   : "com.tencent:mmkv:1.2.13",
             // base adapter          https://github.com/CymChad/BaseRecyclerViewAdapterHelper
             BaseRecyclerViewAdapter: "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
 
+            BGASwipeBackLayout     : 'com.github.bingoogolapple:BGASwipeBackLayout-Android:2.0.2',
 
             // ===============================================Kotlin体系==================================//
 
