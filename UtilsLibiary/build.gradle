@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'com.alipay.apollo.baseline.config'
 }
 
 android {
@@ -38,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
     // Android X
     api Dp.Core
     api Dp.Appcompat
@@ -46,6 +48,13 @@ dependencies {
     api Dp.AndroidXActivity
     api Dp.AndroidXFragment
     api Dp.Legacy
+    implementation 'com.mpaas.android:push'
+    implementation 'com.mpaas.android:push-hms2'
+    implementation 'com.mpaas.android:push-hms5'
+    implementation 'com.mpaas.android:push-mi'
+    implementation 'com.mpaas.android:push-oppo'
+    implementation 'com.mpaas.android:push-vivo'
+    implementation 'com.mpaas.android:scan'
 
     testImplementation Dp.Junit
     androidTestImplementation Dp.JunitExt

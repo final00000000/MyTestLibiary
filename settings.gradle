@@ -4,9 +4,15 @@ dependencyResolutionManagement {
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
-        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven {
+            allowInsecureProtocol = true
+            url "https://jitpack.io" }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://dl.bintray.com/umsdk/release' }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://dl.bintray.com/kotlin/kotlin-eap' }
         maven {
             allowInsecureProtocol = true
             url 'http://maven.aliyun.com/nexus/content/repositories/releases/'

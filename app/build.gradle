@@ -25,6 +25,22 @@ android {
         }
     }
 
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file('../demo.jks')
+            storePassword '123456'
+            keyAlias 'demo.jks'
+            keyPassword '123456'
+        }
+
+        release {
+            storeFile file('../demo.jks')
+            storePassword '123456'
+            keyAlias 'demo.jks'
+            keyPassword '123456'
+        }
+    }
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
