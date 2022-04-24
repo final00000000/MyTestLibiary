@@ -1,0 +1,57 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+// 通用配置
+android {
+
+    // 编译源码版本
+    compileSdk As.compileSdkVersion
+
+    defaultConfig {
+
+        // 最低安装版本
+        minSdk As.minSdkVersion
+
+        // 目标适配版本
+        targetSdk compileSdk
+
+        versionCode As.VersionCode
+
+        versionName As.versionName
+
+        // 仅保留中文语种的资源 避免编译不必要的资源
+        resConfigs "cn"
+    }
+
+    // 支持 Java JDK 8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+
+    // 设置存放 so 文件的目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // 代码警告配置
+    lintOptions {
+        // 禁用文本硬编码警告
+        disable 'HardcodedText'
+        // 禁用图片描述警告
+        disable 'ContentDescription'
+    }
+}

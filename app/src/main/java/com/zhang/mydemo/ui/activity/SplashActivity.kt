@@ -1,7 +1,8 @@
-package com.zhang.mydemo
+package com.zhang.mydemo.ui.activity
 
 import android.os.Bundle
 import android.view.KeyEvent
+import com.zhang.mydemo.MainActivity
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivitySplashBinding
 import org.jetbrains.anko.startActivity

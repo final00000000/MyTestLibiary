@@ -1,46 +1,27 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-}
+apply plugin: 'com.android.application'
+apply from: '../common.gradle'
 
 android {
-    compileSdk As.compileSdkVersion
 
+    // 资源目录存放指引：https://developer.android.google.cn/guide/topics/resources/providing-resources
     defaultConfig {
+
+        // 无痛修改包名：https://www.jianshu.com/p/17327e191d2e
         applicationId As.applicationId
-        minSdk As.minSdkVersion
-        targetSdk compileSdk
-        versionCode As.VersionCode
-        versionName As.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        // 避免编译不必要的资源
-        resConfigs "cn"
-
-        //运行环境
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
-        }
     }
 
     //签名
     signingConfigs {
-        debug {
-            storeFile file('../demo.jks')
-            storePassword '123456'
-            keyAlias 'demo.jks'
-            keyPassword '123456'
-        }
-
-        release {
-            storeFile file('../demo.jks')
-            storePassword '123456'
-            keyAlias 'demo.jks'
-            keyPassword '123456'
+        config {
+            storeFile file(StoreFile)
+            storePassword StorePassword
+            keyAlias KeyAlias
+            keyPassword KeyPassword
         }
     }
+
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -67,8 +48,13 @@ android {
             // 移除无用的resource文件 必须和minifyEnabled同时打开
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //运行环境
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
         }
     }
+
     //定义输出文件名
     applicationVariants.all { variant ->
         variant.outputs.all {
@@ -84,24 +70,13 @@ android {
             outputFileName = newName
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 
-    buildFeatures {
-        dataBinding = true
-        viewBinding true
-    }
 }
+
 static def releaseTime() {
     return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':UtilsLibiary')
 }

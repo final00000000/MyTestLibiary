@@ -1,4 +1,4 @@
-package com.zhang.mydemo;
+package com.zhang.mydemo.ui.widget;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -19,6 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+
+import com.zhang.mydemo.R;
+import com.zhang.mydemo.utils.DisplayUtils;
 
 /**
  * des:可伸展textview
@@ -145,10 +148,10 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
             textExpand = getContext().getString(R.string.social_expend);
         }*/
         contentTextColor = typedArray.getColor(R.styleable.ExpandableTextView_contentTextColor, ContextCompat.getColor(getContext(), R.color.color333333));
-        contentTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_contentTextSize, UIUtil.sp2px(getContext(), 14));
+        contentTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_contentTextSize, DisplayUtils.INSTANCE.sp2px(getContext(), 14));
 
         collapseExpandTextColor = typedArray.getColor(R.styleable.ExpandableTextView_collapseExpandTextColor, ContextCompat.getColor(getContext(), R.color.colorFA7C20));
-        collapseExpandTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_collapseExpandTextSize, UIUtil.sp2px(getContext(), 14));
+        collapseExpandTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_collapseExpandTextSize, DisplayUtils.INSTANCE.sp2px(getContext(), 14));
 
         grarity = typedArray.getInt(R.styleable.ExpandableTextView_collapseExpandGrarity, Gravity.LEFT);
         drawableGrarity = typedArray.getInt(R.styleable.ExpandableTextView_drawableGrarity, Gravity.RIGHT);

@@ -2,7 +2,7 @@ package com.zhang.mydemo.ui.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.zhang.mydemo.ExpandableTextView
+import com.zhang.mydemo.ui.widget.ExpandableTextView
 import com.zhang.mydemo.R
 import timber.log.Timber
 

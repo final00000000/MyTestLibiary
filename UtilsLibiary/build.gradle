@@ -1,20 +1,10 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-    id 'com.alipay.apollo.baseline.config'
-}
+apply plugin: 'com.android.library'
+//apply plugin: 'com.alipay.apollo.baseline.config'
+apply from: '../common.gradle'
 
 android {
-    compileSdk As.compileSdkVersion
 
     defaultConfig {
-        minSdk As.minSdkVersion
-        targetSdk As.targetSdkVersion
-        versionCode As.versionCode
-        versionName As.versionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -25,21 +15,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-    buildFeatures {
-        dataBinding = true
-        viewBinding true
-    }
+
 }
 
 dependencies {
-    implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     // Android X
     api Dp.Core
     api Dp.Appcompat
@@ -48,13 +29,15 @@ dependencies {
     api Dp.AndroidXActivity
     api Dp.AndroidXFragment
     api Dp.Legacy
-    implementation 'com.mpaas.android:push'
-    implementation 'com.mpaas.android:push-hms2'
-    implementation 'com.mpaas.android:push-hms5'
-    implementation 'com.mpaas.android:push-mi'
-    implementation 'com.mpaas.android:push-oppo'
-    implementation 'com.mpaas.android:push-vivo'
-    implementation 'com.mpaas.android:scan'
+
+//    api platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
+//    api 'com.mpaas.android:push'
+//    api 'com.mpaas.android:push-hms2'
+//    api 'com.mpaas.android:push-hms5'
+//    api 'com.mpaas.android:push-mi'
+//    api 'com.mpaas.android:push-oppo'
+//    api 'com.mpaas.android:push-vivo'
+//    api 'com.mpaas.android:scan'
 
     testImplementation Dp.Junit
     androidTestImplementation Dp.JunitExt

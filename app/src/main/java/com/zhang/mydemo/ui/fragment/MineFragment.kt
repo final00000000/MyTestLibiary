@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.zhang.mydemo.R
 
-class TestFragment2 : Fragment() {
+class MineFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,14 +19,13 @@ class TestFragment2 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_test2, container, false)
+        return inflater.inflate(R.layout.fragment_mine, container, false)
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: Int) = TestFragment2().apply {
+        fun newInstance() = MineFragment().apply {
             arguments = Bundle().apply {
-                putInt("param1", param1)
             }
         }
     }

@@ -162,6 +162,16 @@
     <dimen name="sp_28">28sp</dimen>
     <dimen name="sp_29">29sp</dimen>
     <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_31">31sp</dimen>
+    <dimen name="sp_32">32sp</dimen>
+    <dimen name="sp_33">33sp</dimen>
+    <dimen name="sp_34">34sp</dimen>
+    <dimen name="sp_35">35sp</dimen>
+    <dimen name="sp_36">36sp</dimen>
+    <dimen name="sp_37">37sp</dimen>
+    <dimen name="sp_38">38sp</dimen>
+    <dimen name="sp_39">39sp</dimen>
+    <dimen name="sp_40">40sp</dimen>
     <dimen name="sp_48">48sp</dimen>
     <dimen name="recycler_trace_padding_left">53dp</dimen>
     <dimen name="recycler_trace_padding_right">13dp</dimen>

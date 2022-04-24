@@ -103,6 +103,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_mine_normal.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_mine_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_tag_indicator.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/main_discovery_off_ic.xml" value="0.125" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/picker_sele.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ps_image_placeholder.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/rich_text_shape.xml" value="0.25729166666666664" />
@@ -150,8 +151,10 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/analog_item.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/dynamic_view_toast_custom.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_child_test1.xml" value="0.1" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_discovery.xml" value="0.19375" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_home.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_main.xml" value="0.13632246376811594" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_message.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_mine.xml" value="0.225" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test1.xml" value="0.176" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test2.xml" value="0.12083333333333333" />
@@ -175,6 +178,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_verification.xml" value="0.536" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/item_vertical.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/layout_title.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/main_navigation_item.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/newapp_pop_picture.xml" value="0.15" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/order_location.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/order_text.xml" value="0.1" />

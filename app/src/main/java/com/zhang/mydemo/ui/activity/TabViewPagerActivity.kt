@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityTabViewPagerBinding
 import com.zhang.mydemo.ui.adapter.TabPagerAdapter
-import com.zhang.mydemo.ui.fragment.TestFragment1
-import com.zhang.mydemo.ui.fragment.TestFragment2
-import com.zhang.mydemo.ui.fragment.TestFragment3
-import com.zhang.mydemo.ui.fragment.TestFragment4
+import com.zhang.mydemo.ui.fragment.DiscoveryFragment
+import com.zhang.mydemo.ui.fragment.HomeFragment
+import com.zhang.mydemo.ui.fragment.MessageFragment
+import com.zhang.mydemo.ui.fragment.MineFragment
 import com.zhang.utilslibiary.utils.TabViewPagerInit
 import kotlinx.android.synthetic.main.activity_tab_view_pager.tl_tab
 import kotlinx.android.synthetic.main.activity_tab_view_pager.vp
@@ -21,10 +21,10 @@ class TabViewPagerActivity : BaseActivity<ActivityTabViewPagerBinding>() {
 
     // Fragment
     var fmList: MutableList<Fragment> = mutableListOf(
-        TestFragment1.newInstance(1),
-        TestFragment2.newInstance(2),
-        TestFragment3.newInstance(3),
-        TestFragment4.newInstance(4)
+        HomeFragment.newInstance(),
+        DiscoveryFragment.newInstance(),
+        MessageFragment.newInstance(),
+        MineFragment.newInstance()
     )
 
     override fun initData() {

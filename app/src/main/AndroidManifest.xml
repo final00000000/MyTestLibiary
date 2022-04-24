@@ -12,9 +12,10 @@
 
     <application
         android:name=".base.MyDemoAppLication"
-        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:allowBackup="true"
+        tools:replace="android:allowBackup"
         android:preserveLegacyExternalStorage="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -38,10 +39,7 @@
             android:name=".ui.activity.VerificationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.tab.Tab1Activity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -62,6 +60,7 @@
             android:value="portrait|landscape" /> <!-- 适配小米（xiaomi）刘海屏 -->
         <!-- android:authorities="com.zhang.mydemo.file_provider" -->
         <!-- android:name="androidx.core.content.FileProvider" -->
+        <!-- Android 7.0权限 -->
         <provider
             android:name=".base.Ktx"
             android:authorities="${applicationId}.KtxInstaller"
@@ -72,7 +71,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"
                 tools:replace="android:resource" />
-        </provider> <!-- Android 7.0权限 -->
+        </provider>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -121,10 +120,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.MMKVActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.tab.TabActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

@@ -4,48 +4,69 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View
 import androidx.core.app.ShareCompat
+import com.zhang.mydemo.adapter.NavigationAdapter
+import com.zhang.mydemo.adapter.ViewPager2Adapter
 import com.zhang.mydemo.base.activity.BaseNetWorkActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
+import com.zhang.mydemo.ui.fragment.DiscoveryFragment
+import com.zhang.mydemo.ui.fragment.HomeFragment
+import com.zhang.mydemo.ui.fragment.MessageFragment
+import com.zhang.mydemo.ui.fragment.MineFragment
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.getDrawableRes
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
-import kotlinx.android.synthetic.main.activity_base.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import timber.log.Timber
 
-class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
+class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
+    NavigationAdapter.OnNavigationListener {
 
+    override fun isLayoutToolbar(): Boolean = false
+
+    var fragmentList = mutableListOf(
+        HomeFragment.newInstance(),
+        DiscoveryFragment.newInstance(),
+        MessageFragment.newInstance(),
+        MineFragment.newInstance()
+    )
+
+    lateinit var adapter: NavigationAdapter
 
     override fun initView(savedInstanceState: Bundle?) {
-        baseTitle.visibility = View.GONE
+
+        adapter = NavigationAdapter(this).apply {
+            addItem(NavigationAdapter.MenuItem("首页", getDrawableRes(R.drawable.main_home_selector)))
+            addItem(
+                NavigationAdapter.MenuItem(
+                    "发现",
+                    getDrawableRes(R.drawable.main_discovery_selector)
+                )
+            )
+            addItem(
+                NavigationAdapter.MenuItem(
+                    "消息",
+                    getDrawableRes(R.drawable.main_message_selector)
+                )
+            )
+            addItem(NavigationAdapter.MenuItem("我的", getDrawableRes(R.drawable.main_mine_selector)))
+            setOnNavigationListener(this@MainActivity)
+            mainNavigationRv.adapter = this
+        }
+
+        val viewPager2Adapter = ViewPager2Adapter(this, fragmentList)
+        mainViewPager.isUserInputEnabled = false
+        mainViewPager.adapter = viewPager2Adapter
     }
+
 
     override fun setListener() {
-        tv_01.singleClick {
-            Toasty.success(R.string.Describe)
-            share()
-        }
-        kotlin.singleClick {
-            startActivity<KotlinActivity>()
-        }
-    }
 
-    @SuppressLint("StringFormatInvalid")
-    private fun share() {
-        val intent = ShareCompat.IntentBuilder(this)
-            .setType("text/plain")
-            .setChooserTitle(getString(R.string.DescribeWebView))
-//            .setText(getString(R.string.DescribeRichText))
-            .intent
-
-        startActivity(Intent.createChooser(intent, ""))
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
@@ -80,6 +101,16 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>() {
     override fun createObserver() {
         mViewModel.mList.observe(this) {
             Timber.e("MainActivity_65行_2022/3/24_16:32：${it}")
+        }
+    }
+
+    override fun onNavigationItemSelected(position: Int): Boolean {
+        return when (position) {
+            0, 1, 2, 3 -> {
+                mainViewPager.currentItem = position
+                true
+            }
+            else -> false
         }
     }
 

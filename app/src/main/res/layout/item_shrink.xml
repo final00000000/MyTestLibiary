@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/name_dp10">
 
-    <com.zhang.mydemo.ExpandableTextView
+    <com.zhang.mydemo.ui.widget.ExpandableTextView
         android:id="@+id/expand_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

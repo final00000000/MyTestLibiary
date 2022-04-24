@@ -43,4 +43,5 @@
     <color name="colorPurple">#778CF0</color>
     <color name="atl_icon_from_color">#818181</color>
     <color name="atl_icon_to_color">#FFFFFF</color>
+    <color name="colorA4A4A4">#A4A4A4</color>
 </resources>
