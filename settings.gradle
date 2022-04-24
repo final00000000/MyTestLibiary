@@ -1,4 +1,4 @@
-dependencyResolutionManagement {
+/*dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -25,8 +25,18 @@ dependencyResolutionManagement {
             allowInsecureProtocol = true
             url "https://s01.oss.sonatype.org/content/groups/public"
         }
+
+        maven {
+            allowInsecureProtocol = true
+            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            name 'alipay'
+            credentials {
+                username 'mvn_read_ws'
+                password 'mrk8929'
+            }
+        }
     }
-}
+}*/
 rootProject.name = "MyDemo"
 include ':app'
 include ':UtilsLibiary'

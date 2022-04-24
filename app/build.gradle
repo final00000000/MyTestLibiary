@@ -67,24 +67,23 @@ android {
             // 移除无用的resource文件 必须和minifyEnabled同时打开
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            //定义输出文件名
-            applicationVariants.all { variant ->
-                variant.outputs.all {
-                    def appName = "demo"
-                    def time = releaseTime()
-                    def buildType = variant.buildType.name
-                    def newName
-                    if (buildType == 'debug') {
-                        newName = "${appName}_${defaultConfig.versionCode}_dbg.apk"
-                    } else {
-                        newName = "${appName}${defaultConfig.versionName}_${time}_prd.apk"
-                    }
-                    outputFileName = newName
-                }
-            }
         }
     }
-
+    //定义输出文件名
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def appName = "demo"
+            def time = releaseTime()
+            def buildType = variant.buildType.name
+            def newName
+            if (buildType == 'debug') {
+                newName = "${appName}_${defaultConfig.versionCode}_dbg.apk"
+            } else {
+                newName = "${appName}${defaultConfig.versionName}_${time}_prd.apk"
+            }
+            outputFileName = newName
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
