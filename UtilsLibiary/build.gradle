@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.alipay.apollo.baseline.config'
+apply plugin: 'com.alipay.apollo.baseline.config'
 apply from: '../common.gradle'
 
 android {
@@ -30,14 +30,14 @@ dependencies {
     api Dp.AndroidXFragment
     api Dp.Legacy
 
-//    api platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
-//    api 'com.mpaas.android:push'
-//    api 'com.mpaas.android:push-hms2'
-//    api 'com.mpaas.android:push-hms5'
-//    api 'com.mpaas.android:push-mi'
-//    api 'com.mpaas.android:push-oppo'
-//    api 'com.mpaas.android:push-vivo'
-//    api 'com.mpaas.android:scan'
+    api platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
+    api 'com.mpaas.android:push'
+    api 'com.mpaas.android:push-hms2'
+    api 'com.mpaas.android:push-hms5'
+    api 'com.mpaas.android:push-mi'
+    api 'com.mpaas.android:push-oppo'
+    api 'com.mpaas.android:push-vivo'
+    api 'com.mpaas.android:scan'
 
     testImplementation Dp.Junit
     androidTestImplementation Dp.JunitExt

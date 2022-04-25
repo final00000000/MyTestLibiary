@@ -91,6 +91,10 @@
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/rich_text_shape.xml" value="0.25333333333333335" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/layout/toast_layout.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/bg_black_yellow_34.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/checkbox_checked_ic.xml" value="0.132" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/checkbox_disable_ic.xml" value="0.1" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/checkbox_selector.xml" value="0.132" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/compound_normal_ic.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/et_style.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_discover_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_mine_selected.xml" value="0.25729166666666664" />
@@ -108,14 +112,18 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ps_image_placeholder.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/rich_text_shape.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/select.xml" value="0.1890625" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/selector_scan_from_gallery.xml" value="0.132" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/selector_torch.xml" value="0.132" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/shape_bg_yellow_4dp.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tab_width.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/transparent_selector.xml" value="0.132" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tv_bg_shape.xml" value="0.18645833333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/tv_bg_shape1.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/verification_shape.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_base.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_base_rv.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_brvactivity.xml" value="0.11727456940222898" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_custom_scan.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_date_utils.xml" value="0.4" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_expand.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_grammar.xml" value="0.33432835820895523" />
@@ -184,7 +192,11 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/order_text.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/popup_bottomsheet.xml" value="0.4" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/search_layout.xml" value="0.1" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/select_dialog.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/select_item.xml" value="0.11727456940222898" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/text_tag.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/ui_dialog.xml" value="0.2341485507246377" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/view_scan.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/menu/bnv_navigation_menu.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/xml/home_tabl.xml" value="0.1068840579710145" />

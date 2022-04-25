@@ -9,6 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F44336</color>
     <color name="green">#0AF814</color>
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+    <!-- 分割线的颜色 -->
+    <color name="common_line_color">#ECECEC</color>
+    <color name="black5">#0D000000</color>
+    <!-- 对话框取消按钮的文本颜色 -->
+    <color name="common_cancel_text_color">#F44336</color>
+    <!-- 对话框确认按钮的文本颜色 -->
+    <color name="common_confirm_text_color">#007AFF</color>
+    <color name="black80">#CC000000</color>
+    <color name="common_accent_color">#5A8DDF</color>
     <color name="color005BAB">#005BAB</color>
     <color name="color00BCD4">#00BCD4</color>
     <color name="colorFFC107">#FFC107</color>
