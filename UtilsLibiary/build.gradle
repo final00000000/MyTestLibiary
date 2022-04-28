@@ -84,4 +84,5 @@ dependencies {
     api Dp.Timber
     api Dp.Mmkv
     api Dp.BGASwipeBackLayout
+    api Dp.BRV
 }

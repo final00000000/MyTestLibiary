@@ -46,7 +46,6 @@
     <string name="DescribePopUp">弹出</string>
     <string name="DescribeTestTag">纯文本话题测试</string>
     <string name="DescribeTestStartActivity">替换StartActivityForResult过时方法</string>
-    <string name="DescribeTestMotionLayouty">MotionLayout动画</string>
     <string name="DescribeTestKotlin">Kotlin语法练习</string>
     <string name="DescribeTestViewPager2">Tab+ViewPager</string>
     <string name="DescribeTestMMKV">MMKV</string>
@@ -55,7 +54,7 @@
     <string name="jump1">传值跳转</string>
     <string name="start">开始</string>
     <string name="stop">停止</string>
-    <string name="SayWhat">toDaySayWhat? \t\t 今天Say什么</string>
+    <string name="SayWhat">toDaySayWhat? </string>
     <string name="View">View</string>
     <string name="java_date_utils">时间工具类</string>
     <string name="java_get_current_millis">获取当前时间戳</string>
@@ -67,7 +66,6 @@
     <string name="TestSurfaceView">SurfaceView播放视频</string>
     <string name="Testorlin">竖向物流时间轴</string>
     <string name="TestHorlin">横向物流时间轴</string>
-    <string name="DescribeBrv">新适配器</string>
     <string name="DescribeText">文本展开和收回</string>
     <string name="home_title">首页</string>
     <string name="home_mine">我的</string>

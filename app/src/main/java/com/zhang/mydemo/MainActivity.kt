@@ -39,7 +39,10 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
     lateinit var adapter: NavigationAdapter
 
     override fun initView(savedInstanceState: Bundle?) {
+        initIndicator()
+    }
 
+    private fun initIndicator() {
         adapter = NavigationAdapter(this).apply {
             addItem(NavigationAdapter.MenuItem("首页", getDrawableRes(R.drawable.main_home_selector)))
             addItem(
@@ -63,7 +66,6 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
         mainViewPager.isUserInputEnabled = false
         mainViewPager.adapter = viewPager2Adapter
     }
-
 
     override fun setListener() {
 
