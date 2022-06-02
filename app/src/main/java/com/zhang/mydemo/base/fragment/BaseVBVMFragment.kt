@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.zhang.mydemo.base.IsBase
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.base.manager.NetworkManager
 import com.zhang.utilslibiary.utils.getViewBindingForActivity
@@ -21,14 +20,7 @@ import java.lang.reflect.ParameterizedType
  * @Class Describe : 描述
  * @Project Name : MyDemo
  */
-abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment(), IsBase {
-
-    /**
-     * 是否需要带toolbar的布局
-     * 如果不需要自带的toolbar 就在对应的activity重写该方法
-     * @return Boolean
-     */
-    override fun isLayoutToolbar(): Boolean = true
+abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
 
     lateinit var mViewModel: VM
 
@@ -39,8 +31,8 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment(), 
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return initViewBinding()
         init(savedInstanceState)
+        return initViewBinding()
     }
 
     private fun init(savedInstanceState: Bundle?) {
@@ -72,7 +64,7 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment(), 
     open fun onNetworkStateChanged(netState: NetWorkState) {}
 
 
-    fun initViewBinding(): View {
+    private fun initViewBinding(): View {
         viewBinding = getViewBindingForActivity(layoutInflater)
         return viewBinding.root
     }
@@ -89,9 +81,8 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment(), 
             val tClass = actualTypeArguments[1]
             return ViewModelProvider(
                 this,
-                ViewModelProvider.AndroidViewModelFactory.getInstance(activity!!.application)
-            )
-                .get(tClass as Class<VM>)
+                ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
+            )[tClass as Class<VM>]
         }
         return null
     }

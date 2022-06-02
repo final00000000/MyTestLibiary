@@ -3,6 +3,7 @@ package com.zhang.mydemo.base
 import android.app.Application
 import android.content.Context
 import com.tencent.mmkv.MMKV
+import com.zhang.mydemo.BuildConfig
 import com.zhang.utilslibiary.utils.toast.Toasty
 import timber.log.Timber
 
@@ -28,6 +29,9 @@ class MyDemoAppLication : Application() {
         super.onCreate()
         Toasty.setContext(getContext())
         MMKV.initialize(this)
+        if(BuildConfig.DEBUG){
+        Timber.plant(Timber.DebugTree())
+        }
     }
 
 }

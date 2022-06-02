@@ -1,10 +1,8 @@
 package com.zhang.mydemo.ui.fragment
 
-import R
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import com.alipay.android.phone.scancode.export.ScanCallback
 import com.alipay.android.phone.scancode.export.ScanRequest
 import com.alipay.android.phone.scancode.export.adapter.MPScan
@@ -12,19 +10,19 @@ import com.alipay.android.phone.scancode.export.adapter.MPScanCallbackAdapter
 import com.alipay.android.phone.scancode.export.adapter.MPScanResult
 import com.alipay.android.phone.scancode.export.adapter.MPScanStarter
 import com.zhang.mydemo.BaseDialog
-import com.zhang.mydemo.CustomScanActivity
 import com.zhang.mydemo.ScanHelper
 import com.zhang.mydemo.SelectDialog
-import com.zhang.mydemo.base.fragment.BaseFragment
+import com.zhang.mydemo.base.fragment.BaseNetWorkFragment
 import com.zhang.mydemo.databinding.FragmentMineBinding
 import com.zhang.mydemo.ui.activity.WebViewActivity
+import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.fragment_mine.*
 import org.jetbrains.anko.support.v4.runOnUiThread
 import org.jetbrains.anko.support.v4.startActivity
 
-class MineFragment : BaseFragment<FragmentMineBinding>() {
+class MineFragment : BaseNetWorkFragment<FragmentMineBinding, MainViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +36,6 @@ class MineFragment : BaseFragment<FragmentMineBinding>() {
             arguments = Bundle().apply {
             }
         }
-    }
-
-    override fun initView() {
     }
 
     override fun setListener() {
@@ -130,7 +125,11 @@ class MineFragment : BaseFragment<FragmentMineBinding>() {
         })
     }
 
-    override fun initData() {
+    override fun initView(savedInstanceState: Bundle?) {
+        TODO("Not yet implemented")
+    }
 
+    override fun createObserver() {
+        TODO("Not yet implemented")
     }
 }

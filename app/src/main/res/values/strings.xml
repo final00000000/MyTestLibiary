@@ -67,6 +67,8 @@
     <string name="Testorlin">竖向物流时间轴</string>
     <string name="TestHorlin">横向物流时间轴</string>
     <string name="DescribeText">文本展开和收回</string>
+    <string name="LifeCycleText">LifeCycle</string>
+    <string name="SaveImageText">保存图片到相册\n兼容Android 12</string>
     <string name="home_title">首页</string>
     <string name="home_mine">我的</string>
     <string name="home_discover">发现</string>

@@ -1,15 +1,13 @@
 package com.zhang.mydemo
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
-import androidx.core.app.ShareCompat
 import com.zhang.mydemo.adapter.NavigationAdapter
 import com.zhang.mydemo.adapter.ViewPager2Adapter
 import com.zhang.mydemo.base.activity.BaseNetWorkActivity
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.databinding.ActivityMainBinding
+import com.zhang.mydemo.model.bean.UserInfo
 import com.zhang.mydemo.ui.fragment.DiscoveryFragment
 import com.zhang.mydemo.ui.fragment.HomeFragment
 import com.zhang.mydemo.ui.fragment.MessageFragment
@@ -17,12 +15,11 @@ import com.zhang.mydemo.ui.fragment.MineFragment
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.getDrawableRes
-import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import timber.log.Timber
+import java.util.*
 
 class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
     NavigationAdapter.OnNavigationListener {
@@ -43,6 +40,7 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
     }
 
     private fun initIndicator() {
+
         adapter = NavigationAdapter(this).apply {
             addItem(NavigationAdapter.MenuItem("首页", getDrawableRes(R.drawable.main_home_selector)))
             addItem(
@@ -51,6 +49,7 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
                     getDrawableRes(R.drawable.main_discovery_selector)
                 )
             )
+
             addItem(
                 NavigationAdapter.MenuItem(
                     "消息",

@@ -34,6 +34,7 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
     var mDefaultMMKV: MMKV = MMKV.defaultMMKV()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppActivityManager.addActivity(this)
         super.onCreate(savedInstanceState)
         if (isLayoutToolbar()) {
             setContentView(R.layout.activity_base)
@@ -45,7 +46,6 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
         } else {
             setContentView(initViewBinding())
         }
-        AppActivityManager.addActivity(this)
         init(savedInstanceState)
     }
 
@@ -59,7 +59,7 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
     private fun init(savedInstanceState: Bundle?) {
 
         //初始化设置沉浸式状态栏
-        initImmerBar()
+        initImmersionBar()
         //初始化控件
         initView(savedInstanceState)
         // 设置监听
@@ -82,13 +82,13 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
     /**
      * 初始化设置沉浸式状态栏
      */
-    fun initImmerBar() {
+    private fun initImmersionBar() {
         ImmersionBar.with(this)
             .statusBarDarkFont(true, 0.2f)
             .init()
     }
 
-    protected fun killMyself() {
+    private fun killMyself() {
         AppActivityManager.removeActivity(this)
         finish()
     }

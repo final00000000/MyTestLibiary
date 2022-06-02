@@ -5,7 +5,14 @@
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 使用照相机权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!--读取外部存储-->
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WiFi状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -24,19 +31,19 @@
         tools:replace="android:allowBackup"
         tools:targetApi="r">
         <activity
-            android:name=".ui.activity.ExpandTextViewActivity"
+            android:name=".ui.activity.SaveImageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.BRVActivity"
+            android:name=".ui.activity.LifeCycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ExpandTextViewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.ViewWorldActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.SayWhatActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.VerificationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.SplashActivity"
@@ -128,10 +135,6 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.MotionLayoutyActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".ui.activity.Jump2Activity"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -143,7 +146,6 @@
             android:name=".ui.activity.HorizontalProActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".CustomScanActivity"
             android:exported="false"

@@ -104,5 +104,15 @@
             style="@style/tv_style"
             android:text="@string/DescribeText" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_22"
+            style="@style/tv_style"
+            android:text="@string/LifeCycleText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_23"
+            style="@style/tv_style1"
+            android:text="@string/SaveImageText" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

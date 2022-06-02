@@ -88,5 +88,11 @@ class DiscoveryFragment : BaseFragment<FragmentDiscoveryBinding>() {
         tv_21.singleClick {
             startActivity<ExpandTextViewActivity>()
         }
+        tv_22.singleClick {
+            startActivity<LifeCycleActivity>()
+        }
+        tv_23.singleClick {
+            startActivity<SaveImageActivity>()
+        }
     }
 }
