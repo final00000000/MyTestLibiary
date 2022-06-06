@@ -10,8 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_100tb"/>
+        android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"

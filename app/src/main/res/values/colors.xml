@@ -55,4 +55,6 @@
     <color name="atl_icon_from_color">#818181</color>
     <color name="atl_icon_to_color">#FFFFFF</color>
     <color name="colorA4A4A4">#A4A4A4</color>
+
+    <color name="color00DDB6">#00DDB6</color>
 </resources>

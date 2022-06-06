@@ -50,6 +50,7 @@
     <string name="DescribeTestViewPager2">Tab+ViewPager</string>
     <string name="DescribeTestMMKV">MMKV</string>
     <string name="DescribeTestVerification">正方形验证码</string>
+    <string name="DescribeTestRecyclerviewDraggable">RecyclerView拖拽排序</string>
     <string name="jump">跳转</string>
     <string name="jump1">传值跳转</string>
     <string name="start">开始</string>

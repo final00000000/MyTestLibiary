@@ -3,6 +3,7 @@ package com.zhang.mydemo.ui.fragment
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import com.alipay.android.phone.scancode.export.ScanCallback
 import com.alipay.android.phone.scancode.export.ScanRequest
 import com.alipay.android.phone.scancode.export.adapter.MPScan
@@ -126,10 +127,8 @@ class MineFragment : BaseNetWorkFragment<FragmentMineBinding, MainViewModel>() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
     }
 
     override fun createObserver() {
-        TODO("Not yet implemented")
     }
 }

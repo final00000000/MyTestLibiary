@@ -8,18 +8,14 @@ import androidx.core.app.ShareCompat
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
+import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.jetbrains.anko.support.v4.startActivity
 import timber.log.Timber
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
 
     companion object {
         @JvmStatic
@@ -43,8 +39,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             share()
             for (i in 0..10 step 3) {
                 Timber.e("数字==>${i}")
-                Log.e("TAG", "setListener: ${i}" )
+                Timber.e("setListener: $i")
             }
+        }
+        tv_02.singleClick {
+            startActivity<RecyclerViewDraggableActivity>()
         }
     }
 

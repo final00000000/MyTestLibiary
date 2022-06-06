@@ -57,7 +57,6 @@ abstract class BaseNetWorkActivity<VB : ViewBinding, VM : ViewModel> : BaseVBVMA
     protected abstract fun createObserver()
 
     private fun init(savedInstanceState: Bundle?) {
-
         //初始化设置沉浸式状态栏
         initImmersionBar()
         //初始化控件

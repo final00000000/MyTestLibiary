@@ -5,14 +5,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 使用照相机权限 -->
-
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" /> <!-- 外存储读权限，构建语法需要用到此权限 -->
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28" /> <!--读取外部存储-->
-
+        android:maxSdkVersion="28" /> <!-- 读取外部存储 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WiFi状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -30,6 +28,9 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup"
         tools:targetApi="r">
+        <activity
+            android:name=".ui.activity.RecyclerViewDraggableActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activity.SaveImageActivity"
             android:exported="false" />

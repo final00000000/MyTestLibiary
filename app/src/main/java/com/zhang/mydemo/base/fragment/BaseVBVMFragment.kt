@@ -31,12 +31,16 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        init(savedInstanceState)
         return initViewBinding()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init(savedInstanceState)
+    }
+
     private fun init(savedInstanceState: Bundle?) {
-        createViewModel()
+        mViewModel = createViewModel()!!
 
         //初始化控件
         initView(savedInstanceState)
@@ -66,6 +70,7 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
 
     private fun initViewBinding(): View {
         viewBinding = getViewBindingForActivity(layoutInflater)
+
         return viewBinding.root
     }
 

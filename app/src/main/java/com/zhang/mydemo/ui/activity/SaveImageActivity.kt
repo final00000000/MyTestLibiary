@@ -37,9 +37,7 @@ class SaveImageActivity : BaseActivity<ActivitySaveImageBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
         // 判断权限
         val isHave = checkPermissions(this, permissionsREAD, REQUEST_CODE_LAUNCH)
-        if (isHave) {
             showView()
-        }
     }
 
     /**

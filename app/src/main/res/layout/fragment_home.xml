@@ -13,4 +13,10 @@
         android:gravity="center"
         android:text="@string/Describe"
         android:textSize="@dimen/sp_28" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_02"
+        style="@style/tv_style2"
+        android:gravity="center"
+        android:text="@string/DescribeTestRecyclerviewDraggable" />
 </androidx.appcompat.widget.LinearLayoutCompat>
