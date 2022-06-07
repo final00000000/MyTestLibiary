@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logoIV"
+        android:layout_width="@dimen/name_dp50"
+        android:layout_height="@dimen/name_dp50"
+        android:layout_marginTop="@dimen/name_dp50"
+        android:src="@drawable/ic_align_left_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/phoneET"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/name_dp50"
+        android:layout_marginStart="@dimen/name_dp30"
+        android:layout_marginTop="@dimen/name_dp100"
+        android:layout_marginEnd="@dimen/name_dp30"
+        android:hint="请输入手机号"
+        android:paddingStart="@dimen/name_dp50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/phoneTV"
+        android:layout_width="@dimen/name_dp30"
+        android:layout_height="@dimen/name_dp30"
+        android:text="+86"
+        android:layout_marginStart="@dimen/name_dp5"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/phoneET"
+        app:layout_constraintStart_toStartOf="@id/phoneET"
+        app:layout_constraintTop_toTopOf="@id/phoneET" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordET"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/name_dp50"
+        android:layout_marginStart="@dimen/name_dp30"
+        android:layout_marginTop="@dimen/name_dp10"
+        android:minLines="6"
+        android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
+        android:maxLines="20"
+        android:layout_marginEnd="@dimen/name_dp30"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneET" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/verificationET"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/name_dp50"
+        android:layout_marginStart="@dimen/name_dp30"
+        android:layout_marginTop="@dimen/name_dp10"
+        android:layout_marginEnd="@dimen/name_dp30"
+        android:hint="请输入验证码"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneET" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sendVerification"
+        android:layout_width="@dimen/name_dp70"
+        android:layout_height="@dimen/name_dp30"
+        android:layout_marginBottom="@dimen/name_dp10"
+        android:gravity="center"
+        android:text="发送验证码"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/verificationET"
+        app:layout_constraintEnd_toEndOf="@id/verificationET"
+        app:layout_constraintTop_toTopOf="@id/verificationET"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/verificationGroup"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="sendVerification,verificationET"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_dp65"
+        android:padding="@dimen/name_dp5"
+        android:text="@string/register"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintStart_toStartOf="@id/phoneET"
+        app:layout_constraintTop_toBottomOf="@id/phoneET" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLoginType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_dp65"
+        android:padding="@dimen/name_dp5"
+        android:text="@string/VerificationLogin"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintEnd_toEndOf="@id/phoneET"
+        app:layout_constraintTop_toBottomOf="@id/phoneET" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLogin"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/name_dp50"
+        android:layout_marginTop="@dimen/name_dp30"
+        android:background="@drawable/login_selector"
+        android:gravity="center"
+        android:text="登录"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="@id/phoneET"
+        app:layout_constraintStart_toStartOf="@id/phoneET"
+        app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_login"
+        android:layout_width="@dimen/name_dp30"
+        android:layout_height="@dimen/name_dp20"
+        android:layout_marginTop="@dimen/name_dp15"
+        app:layout_constraintStart_toStartOf="@id/phoneET"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin" />
+
+    <!--    android:src="@drawable/ic_checkbox_noselect"-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/checkBox_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/name_dp10"
+        android:layout_marginTop="@dimen/name_dp15"
+        android:text="登录代表您已同意《用户协议》和《隐私政策》"
+        android:textColor="@color/red"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@id/tvLogin"
+        app:layout_constraintStart_toEndOf="@id/checkBox_login"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

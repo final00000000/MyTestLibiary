@@ -51,6 +51,7 @@
     <string name="DescribeTestMMKV">MMKV</string>
     <string name="DescribeTestVerification">正方形验证码</string>
     <string name="DescribeTestRecyclerviewDraggable">RecyclerView拖拽排序</string>
+    <string name="DescribeTestLogin">登录页面</string>
     <string name="jump">跳转</string>
     <string name="jump1">传值跳转</string>
     <string name="start">开始</string>
@@ -82,4 +83,7 @@
     <string name="select_max_hint">最多只能选择 %d 项</string>
     <string name="custom_title">自定义UI</string>
     <string name="scan_tip">放入框内，自动扫描</string>
+    <string name="register"><u>注册</u></string>
+    <string name="passwordLogin"><u>密码登录</u></string>
+    <string name="VerificationLogin"><u>验证码登录</u></string>
 </resources>

@@ -6,4 +6,7 @@
     <color name="successColor">#388E3C</color>
     <color name="warningColor">#FFA900</color>
     <color name="normalColor">#353A3E</color>
+
+    <color name="color3E3E3F">#3E3E3F</color>
+    <color name="colorBBBBBB">#BBBBBB</color>
 </resources>

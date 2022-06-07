@@ -3,7 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/drawable/bg_white_8dp.xml" value="0.19" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/drawable/drag_seek_progress.xml" value="0.19" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/drawable/drag_seek_progress_fail.xml" value="0.19" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/drawable/drag_seek_progress_success.xml" value="0.19" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/drawable/ic_black_close.xml" value="0.19" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/layout/drag_view.xml" value="0.25" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/UtilsLibiary/src/main/res/layout/verification_dialog.xml" value="0.151268115942029" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/drawable/login_selector.xml" value="0.177" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/activity_key_board.xml" value="0.3494791666666667" />
         <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/activity_life_cycle.xml" value="0.3494791666666667" />
+        <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/activity_recycler_view_draggable.xml" value="0.19010416666666666" />
         <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/activity_save_image.xml" value="0.3494791666666667" />
         <entry key="..\:/Study/runProject/mine/MyTestLibiary/app/src/main/res/layout/fragment_discovery.xml" value="0.3494791666666667" />

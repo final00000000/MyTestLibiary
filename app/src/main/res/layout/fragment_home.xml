@@ -16,7 +16,13 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_02"
-        style="@style/tv_style2"
+        style="@style/tv_style"
         android:gravity="center"
         android:text="@string/DescribeTestRecyclerviewDraggable" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_03"
+        style="@style/tv_style"
+        android:gravity="center"
+        android:text="@string/DescribeTestLogin" />
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -45,6 +45,13 @@ class KeyBoard : BaseActivity<ActivityKeyBoardBinding>() {
             }
         }
 
+        et.addTextChangedListener(object : MyTextWatcher(){
+            override fun onMyTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(s!!.length==4)
+                Toasty.normal("4") else Toasty.normal("false")
+            }
+
+        })
     }
 
     override fun setListener() {

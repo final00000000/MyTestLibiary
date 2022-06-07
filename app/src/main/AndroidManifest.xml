@@ -29,6 +29,9 @@
         tools:replace="android:allowBackup"
         tools:targetApi="r">
         <activity
+            android:name=".ui.activity.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.RecyclerViewDraggableActivity"
             android:exported="false" />
         <activity

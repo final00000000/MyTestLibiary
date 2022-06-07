@@ -8,6 +8,7 @@ import androidx.core.app.ShareCompat
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
+import com.zhang.mydemo.ui.activity.LoginActivity
 import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
@@ -45,6 +46,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         tv_02.singleClick {
             startActivity<RecyclerViewDraggableActivity>()
         }
+        tv_03.singleClick { startActivity<LoginActivity>() }
     }
 
     @SuppressLint("StringFormatInvalid")
