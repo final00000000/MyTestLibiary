@@ -20,17 +20,19 @@ class DateUtilsActivity : BaseActivity<ActivityDateUtilsBinding>() {
     }
 
     override fun setListener() {
-        tv_1.singleClick {
-            tv_1!!.text = "当前时间戳：${getCurrentMillis()}"
-        }
-        tv_2.singleClick {
-            tv_2!!.text = "当前时间格式为(yy-MM-dd hh-mm-ss)：${getCurrentTimeYMDHMS()}"
-        }
-        tv_3.singleClick {
-            tv_3!!.text = "当前时间格式为(yy-MM-dd)：${getCurrentTimeYMD()}"
-        }
-        tv_4.singleClick {
-            tv_4!!.text = "获取现在时间：${getStringDate()}"
+        mViewBinding.apply {
+            tv1.singleClick {
+                tv1.text = "当前时间戳：${getCurrentMillis()}"
+            }
+            tv2.singleClick {
+                tv2.text = "当前时间格式为(yy-MM-dd hh-mm-ss)：${getCurrentTimeYMDHMS()}"
+            }
+            tv3.singleClick {
+                tv3.text = "当前时间格式为(yy-MM-dd)：${getCurrentTimeYMD()}"
+            }
+            tv4.singleClick {
+                tv4.text = "获取现在时间：${getStringDate()}"
+            }
         }
     }
 
