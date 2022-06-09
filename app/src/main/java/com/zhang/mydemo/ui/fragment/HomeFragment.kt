@@ -35,18 +35,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun setListener() {
-        tv_01.singleClick {
-            Toasty.success(R.string.Describe)
-            share()
-            for (i in 0..10 step 3) {
-                Timber.e("数字==>${i}")
-                Timber.e("setListener: $i")
+        mViewBinding.apply {
+            tv01.singleClick {
+                Toasty.success(R.string.Describe)
+                share()
+                for (i in 0..10 step 3) {
+                    Timber.e("数字==>${i}")
+                    Timber.e("setListener: $i")
+                }
+            }
+            tv02.singleClick {
+                startActivity<RecyclerViewDraggableActivity>()
+            }
+            tv03.singleClick {
+                startActivity<LoginActivity>()
             }
         }
-        tv_02.singleClick {
-            startActivity<RecyclerViewDraggableActivity>()
-        }
-        tv_03.singleClick { startActivity<LoginActivity>() }
     }
 
     @SuppressLint("StringFormatInvalid")

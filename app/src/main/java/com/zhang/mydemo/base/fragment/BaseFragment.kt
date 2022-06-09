@@ -19,7 +19,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     var defaultMMKV: MMKV = MMKV.defaultMMKV()
 
-    lateinit var viewBinding: VB
+    lateinit var mViewBinding: VB
 
     private var isLazyLoad = true
 
@@ -28,8 +28,8 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = getViewBindingForFragment(layoutInflater, container)
-        return viewBinding.root
+        mViewBinding = getViewBindingForFragment(layoutInflater, container)
+        return mViewBinding.root
     }
 
     protected abstract fun initView()

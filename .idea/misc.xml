@@ -103,14 +103,20 @@
         <entry key="..\:/project/demo/MyDemo/PublicLibiary/src/main/res/drawable/tv_bg_shape2.xml" value="0.1078125" />
         <entry key="..\:/project/demo/MyDemo/PublicLibiary/src/main/res/layout/activity_base.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/PublicLibiary/src/main/res/layout/layout_title.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/bg_white_8dp.xml" value="0.1345" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/cancel_solid_stroke_005bab_shape.xml" value="0.25333333333333335" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/drag_seek_progress.xml" value="0.1345" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/drag_seek_progress_success.xml" value="0.1345" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/ic_black_close.xml" value="0.1345" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/ic_check_white_24dp.xml" value="0.115" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/ic_clear_white_24dp.xml" value="0.115" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/ic_error_outline_white_24dp.xml" value="0.1385" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/ic_info_outline_white_24dp.xml" value="0.115" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/picker_sele.xml" value="0.25333333333333335" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/drawable/rich_text_shape.xml" value="0.25333333333333335" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/layout/drag_view.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/layout/toast_layout.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/UtilsLibiary/src/main/res/layout/verification_dialog.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/bg_black_yellow_34.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/checkbox_checked_ic.xml" value="0.132" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/checkbox_disable_ic.xml" value="0.1" />
@@ -120,6 +126,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_discover_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_mine_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/home_selected.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_align_left_grey.xml" value="0.1345" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_dicovery_cp.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_discovery_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_expand.xml" value="0.25333333333333335" />
@@ -128,6 +135,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_mine_normal.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_mine_selected.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ic_tag_indicator.xml" value="0.25729166666666664" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/login_selector.xml" value="0.1345" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/main_discovery_off_ic.xml" value="0.125" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/picker_sele.xml" value="0.25729166666666664" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/drawable/ps_image_placeholder.xml" value="0.25729166666666664" />
@@ -155,6 +163,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_jump2.xml" value="0.4" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_key_board.xml" value="0.2" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_kotlin.xml" value="0.24367816091954023" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_login.xml" value="0.11727456940222898" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_mmkvactivity.xml" value="0.25" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_motion_layouty.xml" value="0.2265625" />

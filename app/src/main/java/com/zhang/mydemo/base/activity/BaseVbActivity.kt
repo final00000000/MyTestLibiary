@@ -3,8 +3,6 @@ package com.zhang.mydemo.base.activity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.zhang.mydemo.base.manager.NetWorkState
 import com.zhang.mydemo.base.manager.NetworkManager
@@ -18,18 +16,18 @@ import com.zhang.utilslibiary.utils.getViewBindingForActivity
  */
 abstract class BaseVbActivity<VB : ViewBinding> : AppCompatActivity() {
 
-    lateinit var viewBinding: VB
+    lateinit var mViewBinding: VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        NetworkManager.instance.mNetworkStateCallback.observeSticky(this, {
+        NetworkManager.instance.mNetworkStateCallback.observeSticky(this) {
             onNetworkStateChanged(it)
-        })
+        }
     }
 
     fun initViewBinding(): View {
-        viewBinding = getViewBindingForActivity(layoutInflater)
-        return viewBinding.root
+        mViewBinding = getViewBindingForActivity(layoutInflater)
+        return mViewBinding.root
     }
 
     /**

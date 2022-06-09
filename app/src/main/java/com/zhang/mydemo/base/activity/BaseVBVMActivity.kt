@@ -23,7 +23,7 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
 
     lateinit var mViewModel: VM
 
-    lateinit var viewBinding: VB
+    lateinit var mViewBinding: VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +34,8 @@ abstract class BaseVBVMActivity<VB : ViewBinding, VM : ViewModel> : AppCompatAct
     }
 
     fun initViewBinding(): View {
-        viewBinding = getViewBindingForActivity(layoutInflater)
-        return viewBinding.root
+        mViewBinding = getViewBindingForActivity(layoutInflater)
+        return mViewBinding.root
     }
 
 }

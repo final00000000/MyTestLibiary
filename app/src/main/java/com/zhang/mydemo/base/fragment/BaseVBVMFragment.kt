@@ -24,7 +24,7 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
 
     lateinit var mViewModel: VM
 
-    lateinit var viewBinding: VB
+    lateinit var mViewBinding: VB
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -69,9 +69,8 @@ abstract class BaseVBVMFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
 
 
     private fun initViewBinding(): View {
-        viewBinding = getViewBindingForActivity(layoutInflater)
-
-        return viewBinding.root
+        mViewBinding = getViewBindingForActivity(layoutInflater)
+        return mViewBinding.root
     }
 
 

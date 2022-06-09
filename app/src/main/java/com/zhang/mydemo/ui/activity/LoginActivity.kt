@@ -35,6 +35,7 @@ class LoginActivity : BaseNetWorkActivity<ActivityLoginBinding, LoginViewModel>(
 
 
     override fun setListener() {
+
         tvLoginType.singleClick {
             if (tvLoginType.text.toString() == "验证码登录") {
                 passwordET.visibility = View.INVISIBLE
@@ -47,7 +48,7 @@ class LoginActivity : BaseNetWorkActivity<ActivityLoginBinding, LoginViewModel>(
                 verificationGroup.visibility = View.INVISIBLE
                 loginType = true
                 tvLoginType.text = getString(R.string.VerificationLogin)
-                if (handler != null) handler.removeCallbacks(runnable!!)
+                if (handler != null) handler.removeCallbacksAndMessages(runnable!!)
                 sendVerification.text = "发送验证码"
                 loginStatus(phoneET.text!!.length == 11 && passwordET.text!!.length >= 6 && checkBox_login.isChecked)
             }
@@ -179,7 +180,7 @@ class LoginActivity : BaseNetWorkActivity<ActivityLoginBinding, LoginViewModel>(
 
     override fun onDestroy() {
         super.onDestroy()
-        if (handler != null) handler.removeCallbacks(runnable!!)
+        if (handler != null) handler.removeCallbacksAndMessages(runnable!!)
     }
 
     override fun createObserver() {
