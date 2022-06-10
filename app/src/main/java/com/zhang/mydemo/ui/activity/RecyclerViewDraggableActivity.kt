@@ -13,6 +13,7 @@ import com.zhang.mydemo.R
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivityRecyclerViewDraggableBinding
 import com.zhang.mydemo.ui.adapter.RecyclerViewDraggableAdapter
+import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_recycler_view_draggable.*
 import timber.log.Timber
 

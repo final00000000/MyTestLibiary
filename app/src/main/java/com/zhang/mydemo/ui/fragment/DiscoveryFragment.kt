@@ -32,67 +32,74 @@ class DiscoveryFragment : BaseFragment<FragmentDiscoveryBinding>() {
     }
 
     override fun setListener() {
-        tv_01.singleClick {
-            startActivity<WebViewActivity>(
-                "url" to "https://www.baidu.com/"
-            )
-        }
-        tv_02.singleClick {
-            startActivity<KeyBoard>()
-        }
-        tv_03.singleClick {
-            startActivity<RichTextActivity>()
-        }
-        tv_04.singleClick {
-            startActivity<PopUpActivity>()
-        }
-        tv_05.singleClick {
-            startActivity<TestGlideActivity>()
-        }
-        tv_06.singleClick {
-            startActivity<PickViewActivity>()
-        }
-        tv_07.singleClick {
-            startActivity<TestTag>()
-        }
-        tv_08.singleClick {
-            startActivity<JumpActivity>()
-        }
-        tv_10.singleClick {
-            startActivity<GrammarActivity>()
-        }
-        tv_11.singleClick {
-            startActivity<TabViewPagerActivity>()
-        }
-        tv_12.singleClick {
-            startActivity<MMKVActivity>()
-        }
-        tv_14.singleClick {
-            startActivity<SayWhatActivity>()
-        }
-        tv_15.singleClick {
-            startActivity<ViewWorldActivity>()
-        }
-        tv_16.singleClick {
-            startActivity<DateUtilsActivity>()
-        }
-        tv_17.singleClick {
-            startActivity<JumpTextActivity>()
-        }
-        tv_18.singleClick {
-            startActivity<TestSurfaceViewActivity>()
-        }
-        tv_19.singleClick {
-            startActivity<HorizontalProActivity>()
-        }
-        tv_21.singleClick {
-            startActivity<ExpandTextViewActivity>()
-        }
-        tv_22.singleClick {
-            startActivity<LifeCycleActivity>()
-        }
-        tv_23.singleClick {
-            startActivity<SaveImageActivity>()
+        mViewBinding.apply {
+            tv01.singleClick {
+                startActivity<WebViewActivity>(
+                    "url" to "https://www.baidu.com/"
+                )
+            }
+            tv02.singleClick {
+                startActivity<KeyBoard>()
+            }
+            tv03.singleClick {
+                startActivity<RichTextActivity>()
+            }
+            tv04.singleClick {
+                startActivity<PopUpActivity>()
+            }
+            tv05.singleClick {
+                startActivity<TestGlideActivity>()
+            }
+            tv06.singleClick {
+                startActivity<PickViewActivity>()
+            }
+            tv07.singleClick {
+                startActivity<TestTag>()
+            }
+            tv08.singleClick {
+                startActivity<JumpActivity>()
+            }
+            tv10.singleClick {
+                startActivity<GrammarActivity>()
+            }
+            tv11.singleClick {
+                startActivity<TabViewPagerActivity>()
+            }
+            tv12.singleClick {
+                startActivity<MMKVActivity>()
+            }
+            tv14.singleClick {
+                startActivity<SayWhatActivity>()
+            }
+            tv15.singleClick {
+                startActivity<ViewWorldActivity>()
+            }
+            tv16.singleClick {
+                startActivity<DateUtilsActivity>()
+            }
+            tv17.singleClick {
+                startActivity<JumpTextActivity>()
+            }
+
+            tv18.singleClick {
+                startActivity<TestSurfaceViewActivity>()
+            }
+
+            tv19.singleClick {
+                startActivity<HorizontalProActivity>()
+            }
+
+            tv21.singleClick {
+                startActivity<ExpandTextViewActivity>()
+            }
+
+            tv22.singleClick {
+                startActivity<LifeCycleActivity>()
+            }
+
+            tv23.singleClick {
+                startActivity<SaveImageActivity>()
+            }
         }
     }
 }
