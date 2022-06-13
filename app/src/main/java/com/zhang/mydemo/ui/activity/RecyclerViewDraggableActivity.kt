@@ -15,6 +15,7 @@ import com.zhang.mydemo.databinding.ActivityRecyclerViewDraggableBinding
 import com.zhang.mydemo.ui.adapter.RecyclerViewDraggableAdapter
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_recycler_view_draggable.*
+import org.jetbrains.anko.startActivity
 import timber.log.Timber
 
 class RecyclerViewDraggableActivity : BaseActivity<ActivityRecyclerViewDraggableBinding>() {
@@ -23,6 +24,10 @@ class RecyclerViewDraggableActivity : BaseActivity<ActivityRecyclerViewDraggable
 
     override fun initView(savedInstanceState: Bundle?) {
         draggableRv.adapter = rAdapter
+        rAdapter.setOnItemClickListener { adapter, view, position ->
+            startActivity<RecyclerViewExpandListActivity>()
+        }
+
         rAdapter.draggableModule.apply {
             isDragEnabled = true
             isSwipeEnabled = true

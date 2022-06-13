@@ -9,9 +9,10 @@
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="@dimen/sp_20"
         android:layout_margin="@dimen/name_dp15"
+        android:gravity="center"
+        android:textColor="@color/errorColor"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="1111" />
 </androidx.constraintlayout.widget.ConstraintLayout>
