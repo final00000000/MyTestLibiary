@@ -23,7 +23,7 @@ class NodeTreeAdapter : BaseNodeAdapter() {
         const val EXPAND_COLLAPSE_PAYLOAD = 110
     }
 
-    init {
+    init {  
         addNodeProvider(FirstProvider())
         addNodeProvider(SecondProvider())
         //addNodeProvider(new ThirdProvider());

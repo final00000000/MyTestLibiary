@@ -29,6 +29,9 @@
         tools:replace="android:allowBackup"
         tools:targetApi="r">
         <activity
+            android:name=".ui.activity.TabLayoutViewPagerDeleteActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.RecyclerViewExpandListActivity"
             android:exported="false" />
         <activity

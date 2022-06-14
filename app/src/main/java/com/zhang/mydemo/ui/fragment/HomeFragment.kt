@@ -3,16 +3,15 @@ package com.zhang.mydemo.ui.fragment
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.core.app.ShareCompat
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
 import com.zhang.mydemo.ui.activity.LoginActivity
 import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
+import com.zhang.mydemo.ui.activity.TabLayoutViewPagerDeleteActivity
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
-import kotlinx.android.synthetic.main.fragment_home.*
 import org.jetbrains.anko.support.v4.startActivity
 import timber.log.Timber
 
@@ -49,6 +48,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             }
             tv03.singleClick {
                 startActivity<LoginActivity>()
+            }
+            tv04.singleClick {
+                startActivity<TabLayoutViewPagerDeleteActivity>()
             }
         }
     }

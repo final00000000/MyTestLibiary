@@ -169,6 +169,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_motion_layouty.xml" value="0.2265625" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_pick_view.xml" value="0.2" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_picker_date.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_recycler_view_draggable.xml" value="0.12335359675785208" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_recycler_view_expand_list.xml" value="0.2390625" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_rich_text.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_say_what.xml" value="0.264" />
@@ -179,6 +180,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab.xml" value="0.264" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab1.xml" value="0.2" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab_view_pager.xml" value="0.264" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_tab_view_pager_delete.xml" value="0.24547101449275363" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_test_recycler_view.xml" value="0.24114583333333334" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_test_surface_view.xml" value="0.22916666666666666" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/activity_time_divider.xml" value="0.1" />
@@ -196,7 +198,7 @@
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_message.xml" value="0.1" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_mine.xml" value="0.225" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test1.xml" value="0.176" />
-        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test2.xml" value="0.12083333333333333" />
+        <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test2.xml" value="0.152" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test3.xml" value="0.12083333333333333" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test4.xml" value="0.136" />
         <entry key="..\:/project/demo/MyDemo/app/src/main/res/layout/fragment_test_child1.xml" value="0.15989583333333332" />

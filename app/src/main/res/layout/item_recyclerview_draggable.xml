@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/name_dp95"
+    app:dragEdge="right"
+    app:mode="same_level">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv"
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ff4a57"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/name_dp15"
-        android:gravity="center"
-        android:textColor="@color/errorColor"
-        android:textSize="@dimen/sp_20"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="1111" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/name_dp15"
+            android:gravity="center"
+            android:textColor="@color/errorColor"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1111" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

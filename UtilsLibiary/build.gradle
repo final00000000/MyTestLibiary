@@ -85,4 +85,5 @@ dependencies {
     api Dp.Mmkv
     api Dp.BGASwipeBackLayout
     api Dp.BRV
+    api Dp.Delete
 }
