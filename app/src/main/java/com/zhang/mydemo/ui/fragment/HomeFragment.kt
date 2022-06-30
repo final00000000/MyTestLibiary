@@ -1,19 +1,25 @@
 package com.zhang.mydemo.ui.fragment
 
+import android.R.attr.path
 import android.annotation.SuppressLint
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.pm.ResolveInfo
+import android.net.Uri
 import android.os.Bundle
 import androidx.core.app.ShareCompat
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
-import com.zhang.mydemo.ui.activity.LoginActivity
 import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
 import com.zhang.mydemo.ui.activity.TabLayoutViewPagerDeleteActivity
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import org.jetbrains.anko.support.v4.startActivity
 import timber.log.Timber
+
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
@@ -42,28 +48,28 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     Timber.e("数字==>${i}")
                     Timber.e("setListener: $i")
                 }
+
             }
             tv02.singleClick {
                 startActivity<RecyclerViewDraggableActivity>()
             }
             tv03.singleClick {
-                startActivity<LoginActivity>()
-            }
-            tv04.singleClick {
                 startActivity<TabLayoutViewPagerDeleteActivity>()
             }
         }
     }
 
+
     @SuppressLint("StringFormatInvalid")
     private fun share() {
         val intent = ShareCompat.IntentBuilder(requireActivity())
-            .setType("text/plain")
-            .setChooserTitle(getString(R.string.DescribeWebView))
-//            .setText(getString(R.string.DescribeRichText))
-            .intent
+                .setType("text/plain")
+                .setChooserTitle(getString(R.string.DescribeWebView))
 
-        startActivity(Intent.createChooser(intent, ""))
+    //            .setText(getString(R.string.DescribeRichText))
+                .intent
+
+            startActivity(Intent.createChooser(intent, ""))
     }
 
 }

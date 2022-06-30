@@ -35,9 +35,6 @@
             android:name=".ui.activity.RecyclerViewExpandListActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.activity.RecyclerViewDraggableActivity"
             android:exported="false" />
         <activity

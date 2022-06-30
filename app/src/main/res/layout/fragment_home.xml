@@ -24,11 +24,5 @@
         android:id="@+id/tv_03"
         style="@style/tv_style"
         android:gravity="center"
-        android:text="@string/DescribeTestLogin" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_04"
-        style="@style/tv_style"
-        android:gravity="center"
         android:text="@string/DescribeTestTlVp" />
 </androidx.appcompat.widget.LinearLayoutCompat>
