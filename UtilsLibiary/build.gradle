@@ -19,6 +19,7 @@ android {
 }
 
 dependencies {
+    implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // Android X
@@ -31,12 +32,6 @@ dependencies {
     api Dp.Legacy
 
     api platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
-    api 'com.mpaas.android:push'
-    api 'com.mpaas.android:push-hms2'
-    api 'com.mpaas.android:push-hms5'
-    api 'com.mpaas.android:push-mi'
-    api 'com.mpaas.android:push-oppo'
-    api 'com.mpaas.android:push-vivo'
     api 'com.mpaas.android:scan'
 
     testImplementation Dp.Junit

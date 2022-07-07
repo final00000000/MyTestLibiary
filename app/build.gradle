@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply from: '../common.gradle'
 apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.alipay.apollo.baseline.config'
 
 android {
 
@@ -12,7 +13,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a","x86","x86_64"
+            abiFilters "armeabi-v7a", "arm64-v8a","x86_64"
         }
     }
 
@@ -82,9 +83,8 @@ static def releaseTime() {
 }
 
 dependencies {
+    implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
     implementation project(':UtilsLibiary')
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.mpaas.android:scan'
 }

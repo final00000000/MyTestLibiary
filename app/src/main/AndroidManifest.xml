@@ -28,6 +28,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup"
         tools:targetApi="r">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity
             android:name=".ui.activity.TabLayoutViewPagerDeleteActivity"
             android:exported="false" />

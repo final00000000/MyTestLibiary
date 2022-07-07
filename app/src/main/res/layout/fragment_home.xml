@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/name_dp20"
     android:orientation="vertical"
+    android:paddingTop="@dimen/name_dp20"
     tools:context=".ui.fragment.HomeFragment">
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_01"
@@ -25,4 +27,6 @@
         style="@style/tv_style"
         android:gravity="center"
         android:text="@string/DescribeTestTlVp" />
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
