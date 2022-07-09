@@ -13,7 +13,7 @@
         android:maxSdkVersion="28" /> <!-- 读取外部存储 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- WiFi状态 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 查看网络连接 -->
 
     <application
         android:name=".base.MyDemoAppLication"

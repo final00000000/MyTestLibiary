@@ -2,6 +2,7 @@ package com.zhang.mydemo.ui.fragment
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import com.alipay.android.phone.scancode.export.ScanCallback
@@ -80,7 +81,14 @@ class MineFragment : BaseNetWorkFragment<FragmentMineBinding, MainViewModel>() {
                     Toasty.error("扫码失败,请重试")
                     return
                 }
-                Toasty.success(result.data.toString())
+                if (result.data.toString().contains("www.")) {
+
+                    val parse = Uri.parse(result.data.toString())
+                    val intent = Intent(Intent.ACTION_VIEW,parse)
+                    startActivity(intent)
+
+                    Toasty.success(result.data.toString())
+                }
             }
 
         })

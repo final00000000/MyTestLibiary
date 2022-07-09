@@ -15,6 +15,7 @@ import com.zhang.mydemo.base.fragment.BaseFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
 import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
 import com.zhang.mydemo.ui.activity.TabLayoutViewPagerDeleteActivity
+import com.zhang.utilslibiary.utils.IpUtils
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import org.jetbrains.anko.support.v4.startActivity
@@ -33,6 +34,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun initView() {
+        Timber.e("HomeFragment_36行_2022/7/9_11:36：${IpUtils.ipAddress}")
+        Timber.e("HomeFragment_37行_2022/7/9_11:36：${IpUtils.outNetIP}")
+//        Timber.e("HomeFragment_38行_2022/7/9_11:36：${IpUtils.GetNetIp()}")
 
     }
 
