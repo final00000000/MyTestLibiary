@@ -128,6 +128,23 @@ object DialogUtils {
         return dialog
     }*/
 
+    // 居中显示dialog  点击外部是否消失
+    fun getCenterDialog(context: Context, view: View, gravity: Int, isDraggable: Boolean): Dialog {
+        val dialog = Dialog(context, R.style.BottomSheetDialog)
+        dialog.setContentView(view)
+        dialog.show()
+        dialog.setCanceledOnTouchOutside(isDraggable)
+        val window = dialog.window
+        window!!.setGravity(gravity)
+        window.setWindowAnimations(R.style.dialog_animation)
+        window.decorView.setPadding(80, 0, 80, 0)
+
+        val lp = window.attributes
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT
+        window.attributes = lp
+        return dialog
+    }
     private var mArray: IntArray = intArrayOf(
         R.drawable.picture,
         R.drawable.drawable1,
