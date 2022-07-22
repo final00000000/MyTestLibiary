@@ -11,13 +11,18 @@ import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.zhang.mydemo.base.activity.BaseActivity
 import com.zhang.mydemo.databinding.ActivitySaveImageBinding
+import com.zhang.utilslibiary.utils.getContentType
+import com.zhang.utilslibiary.utils.getUrlFileName
 import com.zhang.utilslibiary.utils.saveimage.FileSaveUtil
+import com.zhang.utilslibiary.utils.saveimage.SavePhoto
 import com.zhang.utilslibiary.utils.singleClick
+import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_save_image.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 
 class SaveImageActivity : BaseActivity<ActivitySaveImageBinding>() {
     //权限Code
@@ -37,7 +42,7 @@ class SaveImageActivity : BaseActivity<ActivitySaveImageBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
         // 判断权限
         val isHave = checkPermissions(this, permissionsREAD, REQUEST_CODE_LAUNCH)
-            showView()
+        showView()
     }
 
     /**
@@ -77,7 +82,9 @@ class SaveImageActivity : BaseActivity<ActivitySaveImageBinding>() {
             // 文件夹位置
             val parentPath = FileSaveUtil.getPath(this@SaveImageActivity)
             //文件名
-            val fileName = System.currentTimeMillis().toString() + ".png"
+            val fileName =
+                System.currentTimeMillis().toString() + path.substring(path.lastIndexOf("."))
+                    ?: ".jpg"
             //新文件文件地址
             val filePath = parentPath + fileName
             //复制地址(部分机型 不复制到指定文件夹,相册不更新)
@@ -162,7 +169,13 @@ class SaveImageActivity : BaseActivity<ActivitySaveImageBinding>() {
 
     override fun setListener() {
         btSaveImage.singleClick {
-            savePic(path)
+            SavePhoto.saveToGallery(this@SaveImageActivity, path) {
+                if (it) {
+                    Toasty.success("保存成功")
+                } else {
+                    Toasty.error("保存失败")
+                }
+            }
         }
     }
 }

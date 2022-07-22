@@ -4,6 +4,7 @@
 package com.zhang.utilslibiary.utils.saveimage
 
 import android.content.*
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
@@ -252,3 +253,4 @@ private fun ContentResolver.queryMediaImage28(imagePath: String): Uri? {
     }
     return null
 }
+

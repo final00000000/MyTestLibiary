@@ -4,20 +4,83 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.text.TextUtils
+import com.zhang.utilslibiary.utils.random.RandomUtils
+import timber.log.Timber
 import java.io.File
 import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Pattern
 import kotlin.math.roundToInt
 
 /**
  * 数据扩展类
  **/
 
-fun String?.mStr(): String {
-    return if (this.isNullOrEmpty()) "" else this
+/**
+ *判断手机号格式 是否中国手机号码
+ * @param phone 待校验的手机号码
+ * @return `true` yes, `false` no
+ */
+fun isPhone(phone: String?): Boolean {
+    return match(phoneFormat(), phone)
 }
 
+/**
+ * 通用匹配函数
+ * @param regex 正则表达式
+ * @param input 待校验的字符串
+ * @return `true` yes, `false` no
+ */
+fun match(regex: String?, input: String?): Boolean {
+    if (input!!.isNotEmpty()) {
+        try {
+            return Pattern.matches(regex, input)
+        } catch (e: Exception) {
+            Timber.e("DataExtension match== >异常  ")
+        }
+    }
+    return false
+}
+
+// 手机号格式
+fun phoneFormat(): String {
+    val builder = StringBuilder()
+    // 中国手机: 130 131 132 133 134 135 136 137 138 139
+    // 145 146 147 148 149
+    // 150 151 152 153 155 156 157 158 159
+    // 162 165 166 167 167
+    // 170 171 171 172 173 174 175 176 177 178
+    // 180 181 182 183 184 185 186 187 188 189
+    // 190 191 192 193 195 196 198 199
+    builder.append("^13[0,1,2,3,4,5,6,7,8,9]{1}\\d{8}$") // 13 开头
+        .append("|")
+        .append("^14[5,6,7,8,9]{1}\\d{8}$") // 14 开头
+        .append("|")
+        .append("^15[0,1,2,3,5,6,7,8,9]{1}\\d{8}$") // 15 开头
+        .append("|")
+        .append("^16[2,5,6,7,7]{1}\\d{8}$") // 16 开头
+        .append("|")
+        .append("^17[0,1,1,2,3,4,5,6,7,8]{1}\\d{8}$") // 17 开头
+        .append("|")
+        .append("^18[0,1,2,3,4,5,6,7,8,9]{1}\\d{8}$") // 18 开头
+        .append("|")
+        .append("^19[0,1,2,3,5,6,8,9]{1}\\d{8}$") // 19 开头
+    return builder.toString()
+}
+
+/**
+ * 随机获取假地址
+ */
+fun getRandomAddress(): String {
+    val result = StringBuilder(RandomUtils.genProvinceAndCity())
+    result.append(RandomUtils.genRandomLengthChineseChars(2, 3) + "路")
+    result.append((Random().nextInt(1) + 8000).toString() + "号")
+    result.append(RandomUtils.genRandomLengthChineseChars(2, 3) + "小区")
+    result.append((Random().nextInt(1) + 20).toString() + "单元")
+    result.append((Random().nextInt(101) + 2500).toString() + "室")
+    return result.toString()
+}
 
 /**
  * 时间戳转时间
@@ -39,7 +102,7 @@ fun String?.toTime(patten: String): Long {
     return if (isNullOrEmpty()) {
         0L
     } else {
-        SimpleDateFormat(patten).parse(this).time
+        SimpleDateFormat(patten).parse(this)!!.time
     }
 
 }
@@ -179,33 +242,10 @@ fun String?.compareDateTime(): String {
 }
 
 /**
- * String  -> Int
- */
-fun String?.strToInt(): Int {
-    return if (this.isNullOrEmpty()) {
-        0
-    } else {
-        this!!.toInt()
-    }
-}
-
-/**
- * String  -> Float
- */
-fun String?.strToFloat(): Float {
-    return if (this.isNullOrEmpty()) {
-        0.0f
-    } else {
-        this.toFloat()
-    }
-}
-
-/**
  * String  -> Float
  */
 fun String?.strToFloat2(): BigDecimal {
-    return BigDecimal(this ?: "0")
-        .setScale(2, BigDecimal.ROUND_DOWN)
+    return BigDecimal(this ?: "0").setScale(2, BigDecimal.ROUND_DOWN)
 }
 
 
@@ -220,49 +260,6 @@ fun String?.toStringNoNull(default: String = ""): String {
     }
 }
 
-/**
- * String  -> Long
- */
-fun String?.strToLong(): Long {
-    return if (this.isNullOrEmpty()) {
-        0
-    } else {
-        this!!.toLong()
-    }
-}
-
-/**
- * String  -> Double
- */
-fun String?.strToDouble(): Double {
-    return if (this.isNullOrEmpty()) {
-        0.0
-    } else {
-        this!!.toDouble()
-    }
-}
-
-/**
- * String  -> Short
- */
-fun String?.strToShort(): Short {
-    return if (this.isNullOrEmpty()) {
-        0
-    } else {
-        this!!.toShort()
-    }
-}
-
-/**
- * String  -> Boolean
- */
-fun String?.strToBoolean(): Boolean {
-    return if (this.isNullOrEmpty()) {
-        false
-    } else {
-        this!!.toBoolean()
-    }
-}
 
 /**
  *  String -> 内容 为 null 或者 “null”
@@ -271,7 +268,7 @@ fun String?.strToString(): String {
     return if (this == null || this == "null") {
         ""
     } else {
-        this.toString()
+        this
     }
 }
 
@@ -1016,11 +1013,6 @@ fun String.getUrlFileName(): String {
         substring(start + 1)
     else
         ""
-}
-
-
-fun String?.strIsEmpty(): Boolean {
-    return this.isNullOrEmpty() || "null" == this
 }
 
 /**

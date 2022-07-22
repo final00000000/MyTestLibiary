@@ -19,6 +19,7 @@ import com.zhang.mydemo.ui.activity.WebViewActivity
 import com.zhang.utilslibiary.utils.IpUtils
 import com.zhang.utilslibiary.utils.SimpleSpStringBuilder
 import com.zhang.utilslibiary.utils.dialog.DialogUtils
+import com.zhang.utilslibiary.utils.getRandomAddress
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import org.jetbrains.anko.find
@@ -41,7 +42,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         Timber.e("HomeFragment_36行_2022/7/9_11:36：${IpUtils.ipAddress}")
         Timber.e("HomeFragment_37行_2022/7/9_11:36：${IpUtils.outNetIP}")
 //        Timber.e("HomeFragment_38行_2022/7/9_11:36：${IpUtils.GetNetIp()}")
-
         initDialog()
     }
 
@@ -135,6 +135,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     Timber.e("数字==>${i}")
                     Timber.e("setListener: $i")
                 }
+                Timber.e("HomeFragment_44行_2022/7/21_17:58：${getRandomAddress()}")
 
             }
             tv02.singleClick {
