@@ -4,6 +4,8 @@ import java.util.*
 
 val random = Random()
 
+// 存放一些随机公共类
+// 函数在DataExtension 里面
 object RandomUtils {
 
 

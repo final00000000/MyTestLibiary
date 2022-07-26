@@ -17,7 +17,7 @@ android {
         }
     }
 
-    //签名
+    // Apk 签名的那些事：https://www.jianshu.com/p/a1f8e5896aa2
     signingConfigs {
         config {
             storeFile file(StoreFile)

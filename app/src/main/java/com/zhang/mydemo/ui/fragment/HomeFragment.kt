@@ -102,7 +102,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 textColorStr = "#1F47FF",
                 clickable = {
                     startActivity<WebViewActivity>(
-                        "url" to "http://82.156.54.119/xy/yhfwxy.html"
+                        "url" to "https://zhijiang-dev.oss-cn-hangzhou.aliyuncs.com/d9b8518cf8391278cf80b1296cb6659b.html"
                     )
                     Toasty.success("点击事件")
                 })
@@ -112,7 +112,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 textColorStr = "#1F47FF",
                 clickable = {
                     startActivity<WebViewActivity>(
-                        "url" to "http://82.156.54.119/xy/yhfwxy.html"
+                        "url" to "https://zhijiang-dev.oss-cn-hangzhou.aliyuncs.com/af6959024c4166fb20619a94bbb02aa3.html"
                     )
                     Toasty.success("点击事件")
                 }

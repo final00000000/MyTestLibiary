@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.DefaultLifecycleObserver
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.zhang.mydemo.R
 import com.zhang.mydemo.base.activity.BaseActivity

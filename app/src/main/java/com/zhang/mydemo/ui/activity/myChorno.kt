@@ -22,6 +22,7 @@ class myChorno : Chronometer, DefaultLifecycleObserver {
         defStyleAttr
     )
 
+
     constructor(
         context: Context?,
         attrs: AttributeSet?,

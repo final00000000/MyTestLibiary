@@ -15,6 +15,7 @@ import com.zhang.mydemo.ui.fragment.MineFragment
 import com.zhang.mydemo.viewmodel.MainViewModel
 import com.zhang.utilslibiary.utils.AppActivityManager
 import com.zhang.utilslibiary.utils.getDrawableRes
+import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.toast.Toasty
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -67,7 +68,11 @@ class MainActivity : BaseNetWorkActivity<ActivityMainBinding, MainViewModel>(),
     }
 
     override fun setListener() {
-
+        mViewBinding.apply {
+            draggBtn.singleClick {
+                Toasty.normal("点击")
+            }
+        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
