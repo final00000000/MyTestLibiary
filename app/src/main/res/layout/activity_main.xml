@@ -8,14 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.zhang.mydemo.ui.widget.DragFloatActionButton
-        android:id="@+id/dragg_btn"
-        android:layout_width="@dimen/name_dp48"
-        android:layout_height="@dimen/name_dp48"
-        android:layout_gravity="center_vertical"
-        android:clickable="true"
-        android:src="@mipmap/tianjia" />
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/mainViewPager"
         android:layout_width="match_parent"

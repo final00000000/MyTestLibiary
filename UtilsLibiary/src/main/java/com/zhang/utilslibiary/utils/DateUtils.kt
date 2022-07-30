@@ -556,4 +556,20 @@ object DateUtil {
         }
         return jj
     }
+
+
+    /**
+     * 获取对应时间格式线程安全 SimpleDateFormat
+     * @param pattern 时间格式
+     * @return [SimpleDateFormat]
+     */
+    fun getSafeDateFormat(pattern: String): SimpleDateFormat {
+        val sdfMap = mutableMapOf<String, SimpleDateFormat>()
+        var format = sdfMap[pattern]
+        if (format == null) {
+            format = SimpleDateFormat(pattern)
+            sdfMap[pattern] = format
+        }
+        return format
+    }
 }

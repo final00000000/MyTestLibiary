@@ -28,5 +28,20 @@
         android:gravity="center"
         android:text="@string/DescribeTestTlVp" />
 
+    <com.zhang.mydemo.ui.widget.DragFloatActionButton
+        android:id="@+id/dragg_btn"
+        android:layout_width="@dimen/name_dp48"
+        android:layout_height="@dimen/name_dp48"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:src="@mipmap/tianjia" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:shapeAppearanceOverlay="@style/avatarRoundStyle" />
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

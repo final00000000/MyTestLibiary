@@ -83,4 +83,5 @@ dependencies {
     api Dp.BGASwipeBackLayout
     api Dp.BRV
     api Dp.Delete
+    api Dp.CommonsLang
 }

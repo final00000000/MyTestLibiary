@@ -26,4 +26,14 @@
         <item name="android:windowEnterAnimation">@anim/enter</item>
         <item name="android:windowExitAnimation">@anim/exit</item>
     </style>
+    <!--   圆形头像  -->
+    <style name="avatarRoundStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!--   圆角为10 -->
+    <style name="Round_10_Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
 </resources>

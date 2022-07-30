@@ -8,26 +8,28 @@ import android.text.SpannableStringBuilder
 import android.text.method.LinkMovementMethod
 import android.text.style.StyleSpan
 import android.view.Gravity
+import android.view.View
 import android.widget.TextView
 import androidx.core.app.ShareCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.SizeReadyCallback
 import com.zhang.mydemo.R
-import com.zhang.mydemo.base.fragment.BaseFragment
+import com.zhang.mydemo.base.fragment.BaseNetWorkFragment
 import com.zhang.mydemo.databinding.FragmentHomeBinding
 import com.zhang.mydemo.ui.activity.RecyclerViewDraggableActivity
 import com.zhang.mydemo.ui.activity.TabLayoutViewPagerDeleteActivity
 import com.zhang.mydemo.ui.activity.WebViewActivity
-import com.zhang.utilslibiary.utils.IpUtils
-import com.zhang.utilslibiary.utils.SimpleSpStringBuilder
+import com.zhang.mydemo.viewmodel.HomeViewModel
+import com.zhang.utilslibiary.utils.*
 import com.zhang.utilslibiary.utils.dialog.DialogUtils
-import com.zhang.utilslibiary.utils.getRandomAddress
-import com.zhang.utilslibiary.utils.singleClick
+import com.zhang.utilslibiary.utils.random.random
 import com.zhang.utilslibiary.utils.toast.Toasty
 import org.jetbrains.anko.find
 import org.jetbrains.anko.support.v4.startActivity
 import timber.log.Timber
 
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class HomeFragment : BaseNetWorkFragment<FragmentHomeBinding, HomeViewModel>() {
 
     companion object {
         @JvmStatic
@@ -38,11 +40,47 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
         Timber.e("HomeFragment_36行_2022/7/9_11:36：${IpUtils.ipAddress}")
         Timber.e("HomeFragment_37行_2022/7/9_11:36：${IpUtils.outNetIP}")
 //        Timber.e("HomeFragment_38行_2022/7/9_11:36：${IpUtils.GetNetIp()}")
         initDialog()
+    }
+
+
+    private fun generate(str: String) {
+        val inflate = layoutInflater.inflate(R.layout.item_avatar, null, false)
+        val tv = inflate.find<TextView>(R.id.tv)
+
+        tv.text = when (str.length) {
+            3 -> {
+                str.substring(str.length - 2)
+            }
+            2 -> {
+                str
+            }
+            1 -> {
+                str
+            }
+            else -> {
+                if (str.length > 3) {
+                    str.substring(str.length - 2)
+                } else {
+                    ""
+                }
+            }
+        }
+
+
+        val viewBitmap = BitmapUtils.createBitmapByView(requireActivity(), inflate)
+        Timber.e("HomeFragment_50行_2022/7/29_16:59：${viewBitmap!!.byteCount}")
+        Glide.with(this).load(viewBitmap)
+            .into(mViewBinding.siv).getSize(object : SizeReadyCallback {
+                override fun onSizeReady(width: Int, height: Int) {
+                    Timber.e("HomeFragment_57行_2022/7/29_17:10：${width}  $height")
+                }
+
+            })
     }
 
     private fun initDialog() {
@@ -112,7 +150,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 textColorStr = "#1F47FF",
                 clickable = {
                     startActivity<WebViewActivity>(
-                        "url" to "https://zhijiang-dev.oss-cn-hangzhou.aliyuncs.com/af6959024c4166fb20619a94bbb02aa3.html"
+                        "url" to "http://h5test.juranzhijiang.com.cn/machineCheck"
                     )
                     Toasty.success("点击事件")
                 }
@@ -121,9 +159,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             .builder()
 
         return builder
-    }
-
-    override fun initData() {
     }
 
     override fun setListener() {
@@ -135,14 +170,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     Timber.e("数字==>${i}")
                     Timber.e("setListener: $i")
                 }
-                Timber.e("HomeFragment_44行_2022/7/21_17:58：${getRandomAddress()}")
-
             }
             tv02.singleClick {
                 startActivity<RecyclerViewDraggableActivity>()
             }
             tv03.singleClick {
                 startActivity<TabLayoutViewPagerDeleteActivity>()
+            }
+            val str = "张少鑫·闾丘渣"
+            draggBtn.singleClick {
+                generate(str)
+                mViewModel.mLiveData.value = random.nextInt(0, 10).toString()
+                Timber.e("HomeFragment_143行_2022/7/21_17:58：${getRandomAddress()}")
+                Timber.e("HomeFragment_144行_2022/7/21_17:58：${getRandomIdCard()}")
+                Timber.e("HomeFragment_145行_2022/7/21_17:58：${getRandomPhone()}")
+                Timber.e("HomeFragment_146行_2022/7/21_17:58：${getRandomName()}")
+
             }
         }
     }
@@ -158,6 +201,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             .intent
 
         startActivity(Intent.createChooser(intent, ""))
+    }
+
+    override fun createObserver() {
+        mViewModel.mLiveData.observe(this) {
+
+            Timber.e("HomeFragment_166行_2022/7/27_16:36：${it}")
+            Toasty.normal(it)
+        }
     }
 
 }

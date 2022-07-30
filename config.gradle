@@ -5,7 +5,7 @@ ext {
     As = [
             compileSdkVersion: 31,
             applicationId    : "com.zhang.mydemo",
-            minSdkVersion    : 21,
+            minSdkVersion    : 23,
             targetSdkVersion : 31,
             versionCode      : 1,
             versionName      : "1.0",
@@ -38,7 +38,7 @@ ext {
             Lifecycle              : "2.5.0-alpha03",
             LifecycleExtension     : "2.2.0",
             LiveData               : "2.5.0-alpha03",
-            UnpeekLiveData         : "7.2.0-beta1",
+            UnpeekLiveData         : "7.6.0",
             ViewModel              : "2.5.0-alpha03",
             Navigation             : "2.4.1",
             Retrofit               : "2.9.0",
@@ -127,6 +127,8 @@ ext {
 
             //侧滑删除
             Delete                 : 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1',
+            // 开发工具类            https://github.com/apache/commons-lang
+            CommonsLang            : 'org.apache.commons:commons-lang3:3.10',
 
             // ===============================================Kotlin体系==================================//
 

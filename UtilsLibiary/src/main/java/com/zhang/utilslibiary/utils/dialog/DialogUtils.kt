@@ -8,9 +8,12 @@ import android.os.Handler
 import android.os.Looper
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
+import androidx.annotation.StyleRes
 import androidx.appcompat.widget.AppCompatImageView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.zhang.utilslibiary.utils.singleClick
 import com.zhang.utilslibiary.utils.verification.DragImageView
 import com.zhang.utilslibiary.utils.verification.SwipeCaptchaView
@@ -68,12 +71,13 @@ object DialogUtils {
     }
 
     */
+
     /**
      *
      * @param context Context   上下文
      * @param layout View       布局
      * @return BottomSheetDialog
-     *//*
+     */
     fun bottomSheetDialog(context: Context, layout: View): BottomSheetDialog {
         val dialog = BottomSheetDialog(context, R.style.BottomSheetDialog)
         layout.layoutParams = ViewGroup.LayoutParams(
@@ -86,14 +90,13 @@ object DialogUtils {
         return dialog
     }
 
-    */
     /**
      *
      * @param context Context   上下文
      * @param layout View       布局
      * @param isDraggable Boolean 是否可以拖动
      * @return BottomSheetDialog
-     *//*
+     */
     fun bottomSheetDialog(context: Context, layout: View, @StyleRes theme: Int): BottomSheetDialog {
         val dialog = BottomSheetDialog(context, theme)
         layout.layoutParams = ViewGroup.LayoutParams(
@@ -106,14 +109,13 @@ object DialogUtils {
         return dialog
     }
 
-    */
     /**
      *
      * @param context Context   上下文
      * @param layout View       布局
      * @param isDraggable Boolean 是否可以拖动
      * @return BottomSheetDialog
-     *//*
+     */
     fun bottomSheetDialog(context: Context, layout: View, isDraggable: Boolean): BottomSheetDialog {
         val dialog = BottomSheetDialog(context, R.style.BottomSheetDialog)
         layout.layoutParams = ViewGroup.LayoutParams(
@@ -126,7 +128,7 @@ object DialogUtils {
 
         dialog.show()
         return dialog
-    }*/
+    }
 
     // 居中显示dialog  点击外部是否消失
     fun getCenterDialog(context: Context, view: View, gravity: Int, isDraggable: Boolean): Dialog {
